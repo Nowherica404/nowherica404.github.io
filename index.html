@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Nowherica 404 - Route 66 Travel Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background: #fafaf8; 
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+        
+        .navbar { 
+            background: rgba(255, 255, 255, 0.98);
+            color: #2c2c2c; 
+            padding: 12px 20px;
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-content { max-width: 1400px; margin: 0 auto; }
+        .navbar h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 28px; 
+            margin-bottom: 10px; 
+            text-align: center; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            color: #2c2c2c;
+        }
+        
+        .nav-menu { 
+            display: flex; 
+            gap: 12px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin-bottom: 10px; 
+            overflow-x: auto;
+        }
+        
+        .nav-menu a { 
+            background: transparent; 
+            color: #2c2c2c; 
+            border: 1px solid #d4c5b9; 
+            padding: 8px 18px; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            font-size: 13px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: inline-block;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            user-select: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-menu a:hover { 
+            background: #2c2c2c; 
+            color: white; 
+            border-color: #2c2c2c;
+        }
+        
+        .lang-toggle { display: flex; gap: 8px; justify-content: center; }
+        
+        .lang-toggle button { 
+            background: transparent; 
+            color: #2c2c2c; 
+            border: 1px solid #d4c5b9; 
+            padding: 6px 12px; 
+            border-radius: 4px; 
+            font-size: 12px; 
+            font-weight: 600; 
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            transition: all 0.3s;
+        }
+        
+        .lang-toggle button.active { 
+            background: #2c2c2c; 
+            color: white; 
+            border-color: #2c2c2c;
+        }
+        
+        .welcome-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .welcome-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        
+        .welcome-section p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero { 
+            background: url('images/hero-bg.jpg') center/cover;
+            color: white; 
+            padding: 0;
+            text-align: center; 
+            min-height: 450px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column;
+            position: relative;
+            margin: 0;
+        }
+        
+        .hero h2 { display: none; }
+        .hero p { display: none; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        
+        section { 
+            padding: 70px 30px; 
+            background: white; 
+            margin: 40px 0; 
+            border-radius: 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        section h2 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 42px; 
+            text-align: center; 
+            margin-bottom: 30px; 
+            color: #2c2c2c; 
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        section p { 
+            text-align: center; 
+            font-size: 16px; 
+            color: #666; 
+            margin-bottom: 30px; 
+            line-height: 1.8;
+        }
+        
+        .tabs { 
+            display: flex; 
+            gap: 12px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin-bottom: 40px; 
+            border-bottom: 2px solid #e8e3dd; 
+            padding-bottom: 20px;
+        }
+        
+        .tab-btn { 
+            background: transparent; 
+            border: 1px solid #d4c5b9; 
+            padding: 12px 24px; 
+            border-radius: 0; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 14px;
+            transition: all 0.3s;
+            color: #2c2c2c;
+            letter-spacing: 0.5px;
+        }
+        
+        .tab-btn.active { 
+            background: #2c2c2c; 
+            color: white; 
+            border-color: #2c2c2c;
+            box-shadow: none;
+        }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .info-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 30px; 
+            margin: 30px 0;
+        }
+        
+        .info-card { 
+            background: #fafaf8; 
+            padding: 30px; 
+            border-radius: 0;
+            border-left: 4px solid #2c2c2c;
+            transition: all 0.3s;
+        }
+        
+        .info-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        
+        .info-card h3 { 
+            color: #2c2c2c; 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-card p { 
+            color: #666; 
+            line-height: 1.8; 
+            text-align: left;
+            font-size: 15px;
+        }
+        
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin: 30px 0;
+        }
+        
+        .gallery-card { 
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .gallery-card:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        
+        .gallery-card img { 
+            width: 100%; 
+            height: 280px; 
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(44,44,44,0.9), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-card:hover .gallery-card-overlay { transform: translateY(0); }
+        
+        .map-container { 
+            width: 100%; 
+            height: 500px; 
+            border-radius: 0;
+            overflow: hidden; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        .video-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 25px; 
+            margin: 30px 0;
+        }
+        
+        .video-card { 
+            background: #fafaf8; 
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .video-card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+        
+        .video-card iframe { 
+            width: 100%; 
+            height: 300px; 
+            border: none;
+        }
+        
+        .video-card h3 { 
+            padding: 20px; 
+            font-size: 16px; 
+            color: #2c2c2c; 
+            background: white;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .social-links { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            align-items: center;
+            margin: 40px 0;
+        }
+        
+        .social-link { 
+            display: inline-block;
+            background: #2c2c2c; 
+            color: white; 
+            padding: 16px 40px; 
+            border-radius: 0;
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 16px; 
+            text-align: center; 
+            cursor: pointer;
+            width: 90%;
+            max-width: 340px;
+            -webkit-user-select: none;
+            user-select: none;
+            border: 2px solid #2c2c2c;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+        }
+        
+        .social-link:hover { 
+            background: white; 
+            color: #2c2c2c;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .social-link:active { transform: scale(0.98); }
+        
+        footer { 
+            background: #2c2c2c; 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            font-size: 14px; 
+            margin-top: 50px;
+        }
+        
+        footer p { margin: 10px 0; letter-spacing: 0.5px; }
+        
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { max-width: 90%; max-height: 90%; position: relative; }
+        .modal-content img { width: 100%; height: auto; }
+        .close { position: absolute; top: -40px; right: 0; font-size: 32px; font-weight: bold; color: white; cursor: pointer; }
+        
+        @media (min-width: 600px) { 
+            .info-grid { grid-template-columns: repeat(2, 1fr); } 
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-grid { grid-template-columns: repeat(2, 1fr); } 
+            .video-card iframe { height: 340px; }
+            .social-links { flex-direction: row; justify-content: center; gap: 15px; } 
+            .social-link { width: auto; }
+        }
+        
+        @media (min-width: 1000px) { 
+            .info-grid { grid-template-columns: repeat(3, 1fr); } 
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .video-grid { grid-template-columns: repeat(3, 1fr); } 
+            .video-card iframe { height: 380px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>🛣️ Nowherica 404</h1>
+            <div class="nav-menu">
+                <a href="#home" onclick="scrollToSection('home')">Home</a>
+                <a href="#about" onclick="scrollToSection('about')">Route 66</a>
+                <a href="#locations" onclick="scrollToSection('locations')">Locations</a>
+                <a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a>
+                <a href="#videos" onclick="scrollToSection('videos')">Videos</a>
+                <a href="#contact" onclick="scrollToSection('contact')">Follow</a>
+            </div>
+            <div class="lang-toggle">
+                <button class="active" onclick="setLang('en')">EN</button>
+                <button onclick="setLang('fa')">فا</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="welcome-section">
+        <h2>Welcome to Nowherica 404</h2>
+        <p id="welcome-desc">Exploring Route 66 and Hidden Gems of the American Southwest</p>
+    </section>
+    
+    <section id="home" class="hero"></section>
+
+    <div class="container">
+        <section id="about">
+            <h2 id="about-title">Route 66</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('what-is')">What is Route 66?</button>
+                <button class="tab-btn" onclick="switchTab('history')">History</button>
+                <button class="tab-btn" onclick="switchTab('vintage')">Vintage Americana</button>
+                <button class="tab-btn" onclick="switchTab('shopping')">Shopping</button>
+            </div>
+
+            <div id="what-is" class="tab-content active">
+                <p id="what-is-desc">Route 66, known as the "Main Street of America," is a historic highway connecting Chicago to Santa Monica. Spanning 2,448 miles through 8 states, it represents the golden age of American road travel.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📍 The Route</h3>
+                        <p>From Chicago to Santa Monica, passing through Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona, and California.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🚗 The Experience</h3>
+                        <p>Journey through authentic Americana with quirky attractions, vintage diners, and breathtaking desert landscapes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>⭐ The Legacy</h3>
+                        <p>Decommissioned in 1985 but celebrated by travelers seeking nostalgic road trip experiences and authentic Americana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="history" class="tab-content">
+                <p id="history-desc">Established in 1926, Route 66 became a major east-west highway crucial to American commerce and culture during the Great Depression and post-WWII era.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>1926 - Birth</h3>
+                        <p>Route 66 officially established as a major transcontinental highway connecting the Midwest to California.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>1930s-1940s - Golden Age</h3>
+                        <p>Primary route for westbound travelers during the Dust Bowl and post-WWII migration periods.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>1985 - Decommissioned</h3>
+                        <p>Officially removed from the U.S. Highway System but remains iconic in American culture and nostalgia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="vintage" class="tab-content">
+                <p id="vintage-desc">Vintage Americana is the heart of Route 66. Classic diners, retro motels, and roadside attractions define the authentic Route 66 experience.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🍔 Classic Diners</h3>
+                        <p>Authentic 1950s diners serving classic American burgers, milkshakes, and homemade pie with genuine hospitality.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🏨 Retro Motels</h3>
+                        <p>Historic motels with neon signs, vintage furnishings, and the authentic Route 66 road trip atmosphere.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎨 Roadside Art</h3>
+                        <p>Quirky attractions, vintage signs, and folk art that define the unique Route 66 aesthetic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shopping" class="tab-content">
+                <p id="shopping-desc">Route 66 is a shopper's paradise with unique vintage shops, antique stores, and local boutiques offering authentic Americana.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🛍️ Antique Shops</h3>
+                        <p>Browse authentic vintage collectibles, furniture, and memorabilia from different eras of American history.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎁 Local Boutiques</h3>
+                        <p>Support local artisans and find unique handmade crafts, jewelry, and souvenirs.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📦 Souvenirs</h3>
+                        <p>Authentic Route 66 memorabilia, vintage postcards, and classic Americana gifts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="locations">
+            <h2 id="locations-title">Explore Locations</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTabLocation('slingman')">Slingman</button>
+                <button class="tab-btn" onclick="switchTabLocation('nelson')">Nelson Ghost Town</button>
+                <button class="tab-btn" onclick="switchTabLocation('kingsman')">Kingsman</button>
+                <button class="tab-btn" onclick="switchTabLocation('map')">Map</button>
+            </div>
+
+            <div id="slingman" class="tab-content active">
+                <h3 style="color: #2c2c2c; margin-bottom: 15px; font-size: 24px; font-family: 'Playfair Display', serif;">Slingman, Arizona</h3>
+                <p id="slingman-desc">Historic stop on Route 66 known for quirky roadside attractions, vintage shops, and authentic Americana. A must-visit for Route 66 enthusiasts.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🏪 Attractions</h3>
+                        <p>Vintage shops, classic diners, and iconic Route 66 signs. Don't miss local burger joints and historic landmarks.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📸 Photo Ops</h3>
+                        <p>Instagram-worthy shots with vintage signs, classic cars, and desert landscapes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🍽️ Dining</h3>
+                        <p>Authentic Route 66 dining with classic burgers, milkshakes, and homemade pies.</p>
+                    </div>
+                </div>
+                <h3 style="color: #2c2c2c; margin: 40px 0 20px 0; font-size: 22px; font-family: 'Playfair Display', serif;">Slingman Gallery</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/3DF12A41-EAFC-4A0D-BE60-AFF7BCDFE2B9.jpg" alt="Slingman Photo 1">
+                        <div class="gallery-card-overlay"><p>Slingman Adventures</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/7D5D9516-6384-4464-A491-4009BB6F24BB.jpg" alt="Slingman Photo 2">
+                        <div class="gallery-card-overlay"><p>Route 66 Slingman</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/8A4ACED8-DC99-463C-82C3-B960CA57E337.jpg" alt="Slingman Photo 3">
+                        <div class="gallery-card-overlay"><p>Slingman Exploration</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/29991C5E-46FE-40C5-9D24-6B64068CD5A0.jpg" alt="Slingman Photo 4">
+                        <div class="gallery-card-overlay"><p>Desert Landscape</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/34868311-E00F-4C55-B1C1-AC452F76B106.jpg" alt="Slingman Photo 5">
+                        <div class="gallery-card-overlay"><p>Slingman Attractions</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/4145C555-2738-4450-A3E8-4F4C808886B7.jpg" alt="Slingman Photo 6">
+                        <div class="gallery-card-overlay"><p>Route 66 Experience</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/EEA46DD1-C43F-43DA-A707-CF472BAFC1D0.jpg" alt="Slingman Photo 7">
+                        <div class="gallery-card-overlay"><p>Slingman Memories</p></div>
+                    </div>
+                    <div class="gallery-card" onclick="openModal(this)">
+                        <img src="images/FB08492D-4E93-4ECE-BCA8-570D31427D00.jpg" alt="Slingman Photo 8">
+                        <div class="gallery-card-overlay"><p>Arizona Adventure</p></div>
+                    </div>
+                </div>
+                <h3 style="color: #2c2c2c; margin: 40px 0 20px 0; font-size: 22px; font-family: 'Playfair Display', serif;">Slingman Videos</h3>
+                <div class="video-grid" style="grid-template-columns: 1fr;">
+                    <div class="video-card">
+                        <video width="100%" height="300" controls style="background: #000;">
+                            <source src="images/IMG_7602.MOV" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Slingman Adventure Video 1</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nelson" class="tab-content">
+                <h3 style="color: #2c2c2c; margin-bottom: 15px; font-size: 24px; font-family: 'Playfair Display', serif;">Nelson Ghost Town</h3>
+                <p id="nelson-desc">Fascinating ghost town near Route 66 offering a glimpse into Arizona's mining history and abandoned structures frozen in time.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>👻 History</h3>
+                        <p>Abandoned mining town from the late 1800s. Explore historic buildings and learn about mining heritage.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🏚️ Exploration</h3>
+                        <p>Walk through preserved structures and experience the eerie atmosphere of a true American ghost town.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📷 Photography</h3>
+                        <p>Incredible photo opportunities with weathered buildings, vintage relics, and stunning desert vistas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kingsman" class="tab-content">
+                <h3 style="color: #2c2c2c; margin-bottom: 15px; font-size: 24px; font-family: 'Playfair Display', serif;">Kingsman, Arizona</h3>
+                <p id="kingsman-desc">Charming Route 66 town offering authentic Americana, local character, and a true taste of the old highway experience.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🚗 Route 66 Spirit</h3>
+                        <p>Experience authentic Route 66 atmosphere with vintage signs, classic architecture, and local hospitality.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🏜️ Desert Beauty</h3>
+                        <p>Stunning desert landscapes and wide-open spaces perfect for road trip photography.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🤠 Local Culture</h3>
+                        <p>Meet friendly locals and experience genuine small-town American culture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map" class="tab-content">
+                <h3 style="color: #2c2c2c; margin-bottom: 15px; font-size: 24px; font-family: 'Playfair Display', serif;">Route 66 Map</h3>
+                <p id="map-desc">Interactive map showing the locations we explore</p>
+                <div class="map-container" id="map"></div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 id="gallery-title">Gallery</h2>
+            <p id="gallery-desc">Route 66 adventures through photography</p>
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/OrYUGDGt5gG1.jpg" alt="Copper Cart">
+                    <div class="gallery-card-overlay">
+                        <p>Copper Cart - Slingman</p>
+                    </div>
+                </div>
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/K8AFvYMZdYKB.jpg" alt="Route 66 Sign">
+                    <div class="gallery-card-overlay">
+                        <p>Historic Route 66 Sign</p>
+                    </div>
+                </div>
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/bPwlEKzZ2hGS.jpg" alt="Seligman Historic">
+                    <div class="gallery-card-overlay">
+                        <p>Seligman Historic District</p>
+                    </div>
+                </div>
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/4kgEe5aorO9b.jpg" alt="Desert Sunrise">
+                    <div class="gallery-card-overlay">
+                        <p>Desert Sunrise</p>
+                    </div>
+                </div>
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/ZsHfOIQOcmvE.jpg" alt="Desert Road">
+                    <div class="gallery-card-overlay">
+                        <p>Desert Road</p>
+                    </div>
+                </div>
+                <div class="gallery-card" onclick="openModal(this)">
+                    <img src="images/m4zbP4JImzec.jpg" alt="Route 66 Backdrop">
+                    <div class="gallery-card-overlay">
+                        <p>Route 66 Backdrop</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2 id="videos-title">Latest Videos</h2>
+            <p id="videos-desc">Route 66 adventures and explorations on YouTube</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Nowherica404" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Route 66 Explorations</h3>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Nowherica404" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Ghost Towns & Haunted Places</h3>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Nowherica404" allowfullscreen="" loading="lazy"></iframe>
+                    <h3>Road Trip Adventures</h3>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="https://youtube.com/@nowherica404" target="_blank" class="social-link">🎥 Subscribe on YouTube</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 id="social-title">Follow Us</h2>
+            <p id="social-desc">Stay connected and follow our adventures</p>
+            <div class="social-links">
+                <a href="https://instagram.com/Nowherica404" target="_blank" class="social-link">📷 Instagram</a>
+                <a href="https://youtube.com/@nowherica404" target="_blank" class="social-link">🎥 YouTube</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p id="footer-text">© 2026 Nowherica 404 - Route 66 Travel Blog</p>
+        <p style="font-size: 13px; opacity: 0.8;">Exploring the legendary Route 66 and hidden gems of the American Southwest</p>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const translations = {
+            en: {
+                'hero-title': 'Nowherica 404',
+                'hero-desc': 'Route 66 Adventures & Hidden Gems',
+                'about-title': 'Route 66',
+                'what-is-desc': 'Route 66, known as the "Main Street of America," is a historic highway connecting Chicago to Santa Monica. Spanning 2,448 miles through 8 states, it represents the golden age of American road travel.',
+                'history-desc': 'Established in 1926, Route 66 became a major east-west highway crucial to American commerce and culture during the Great Depression and post-WWII era.',
+                'vintage-desc': 'Vintage Americana is the heart of Route 66. Classic diners, retro motels, and roadside attractions define the authentic Route 66 experience.',
+                'shopping-desc': 'Route 66 is a shopper\'s paradise with unique vintage shops, antique stores, and local boutiques offering authentic Americana.',
+                'locations-title': 'Explore Locations',
+                'slingman-desc': 'Historic stop on Route 66 known for quirky roadside attractions, vintage shops, and authentic Americana.',
+                'nelson-desc': 'Fascinating ghost town near Route 66 offering a glimpse into Arizona\'s mining history and abandoned structures.',
+                'kingsman-desc': 'Charming Route 66 town offering authentic Americana, local character, and a true taste of the old highway experience.',
+                'map-desc': 'Interactive map showing the locations we explore',
+                'gallery-title': 'Gallery',
+                'gallery-desc': 'Route 66 adventures through photography',
+                'videos-title': 'Latest Videos',
+                'videos-desc': 'Route 66 adventures and explorations on YouTube',
+                'social-title': 'Follow Us',
+                'social-desc': 'Stay connected and follow our adventures',
+                'footer-text': '© 2026 Nowherica 404 - Route 66 Travel Blog'
+            },
+            fa: {
+                'hero-title': 'Nowherica 404',
+                'hero-desc': 'ماجراهای Route 66 و جواهرهای پنهان',
+                'about-title': 'Route 66',
+                'what-is-desc': 'Route 66 که به عنوان "خیابان اصلی آمریکا" شناخته می‌شود، یک بزرگراه تاریخی است که شیکاگو را به سانتا مونیکا متصل می‌کند.',
+                'history-desc': 'Route 66 در سال 1926 تأسیس شد و به یک بزرگراه شرق-غرب اصلی تبدیل شد.',
+                'vintage-desc': 'Vintage Americana قلب Route 66 است. رستوران‌های کلاسیک، موتل‌های رترو، و جاذبه‌های کنار جاده تجربه اصلی Route 66 را تعریف می‌کنند.',
+                'shopping-desc': 'Route 66 بهشت خریداران است با فروشگاه‌های Vintage منحصر به فرد و فروشگاه‌های آنتیک.',
+                'locations-title': 'مکان‌های ما را کاوش کنید',
+                'slingman-desc': 'ایستگاه تاریخی در Route 66 معروف به جاذبه‌های کنار جاده عجیب و غریب و فروشگاه‌های Vintage.',
+                'nelson-desc': 'شهر شبح جذاب نزدیک Route 66 که نگاهی به تاریخ معدن‌کاری آریزونا می‌اندازد.',
+                'kingsman-desc': 'شهر دلپذیر Route 66 با Americana اصلی و فرهنگ محلی.',
+                'map-desc': 'نقشه تعاملی نشان دهنده مکان‌های ما',
+                'gallery-title': 'گالری',
+                'gallery-desc': 'ماجراهای Route 66 از طریق عکاسی',
+                'videos-title': 'آخرین ویدیوها',
+                'videos-desc': 'ماجراهای Route 66 در YouTube',
+                'social-title': 'ما را دنبال کنید',
+                'social-desc': 'با ماجراهای ما متصل بمانید',
+                'footer-text': '© 2026 Nowherica 404 - وبلاگ سفر Route 66'
+            }
+        };
+
+        let map;
+
+        function initMap() {
+            if (document.getElementById('map').hasChildNodes()) return;
+            
+            map = L.map('map').setView([35.5, -114.5], 7);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+
+            const locations = [
+                { name: 'Slingman, AZ', lat: 35.3667, lng: -114.1667, color: '#8B4513' },
+                { name: 'Nelson Ghost Town, AZ', lat: 35.4, lng: -114.3, color: '#A0522D' },
+                { name: 'Kingsman, AZ', lat: 35.1833, lng: -113.8833, color: '#CD853F' }
+            ];
+
+            locations.forEach(loc => {
+                L.circleMarker([loc.lat, loc.lng], {
+                    radius: 10,
+                    fillColor: loc.color,
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                }).bindPopup(`<b>${loc.name}</b>`).addTo(map);
+            });
+        }
+
+        function setLang(lang) {
+            document.querySelectorAll('.lang-toggle button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            Object.keys(translations[lang]).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = translations[lang][id];
+            });
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (sectionId === 'locations') {
+                    setTimeout(initMap, 100);
+                }
+            }
+            return false;
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('#about .tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelectorAll('#about .tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function switchTabLocation(tabName) {
+            document.querySelectorAll('#locations .tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelectorAll('#locations .tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (tabName === 'map') {
+                setTimeout(initMap, 100);
+            }
+        }
+
+        function openModal(element) {
+            const img = element.querySelector('img');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = img.src;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+
+        window.addEventListener('load', () => {
+            if (document.getElementById('map')) {
+                initMap();
+            }
+        });
+    </script>
+</body>
+</html>
