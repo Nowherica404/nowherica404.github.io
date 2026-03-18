@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: white;
   color: #333;
 }
@@ -17,9 +17,19 @@ body {
   flex-direction: column;
 }
 
+.app.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.app.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
 /* NAVBAR */
 .navbar {
-  background: linear-gradient(135deg, #c41e3a 0%, #ff6b6b 100%);
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
   color: white;
   padding: 15px;
   display: flex;
@@ -40,6 +50,7 @@ body {
 .nav-logo h1 {
   font-size: 20px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -60,6 +71,10 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.nav-menu button:hover {
+  background: rgba(255,255,255,0.2);
 }
 
 .nav-menu button:active {
@@ -84,37 +99,44 @@ body {
   transition: 0.3s;
 }
 
+.language-toggle button:hover {
+  background: rgba(255,255,255,0.5);
+}
+
 .language-toggle button.active {
   background: white;
-  color: #c41e3a;
+  color: #8B4513;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
-  min-height: 300px;
+  min-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-content h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .hero-content p {
   font-size: 16px;
   margin-bottom: 20px;
-  opacity: 0.9;
+  opacity: 0.95;
+  font-weight: 300;
 }
 
 .cta-button {
-  background: #ff6b6b;
+  background: #C41E3A;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -123,74 +145,169 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(255,107,107,0.4);
+  box-shadow: 0 4px 12px rgba(196,30,58,0.4);
+}
+
+.cta-button:hover {
+  background: #A01830;
 }
 
 .cta-button:active {
   transform: scale(0.95);
 }
 
-/* ABOUT */
-.about {
-  padding: 30px 20px;
-  background: #f8f9fa;
+/* SECTION CONTAINER */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
 }
 
-.about h2 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.about p {
-  text-align: center;
-  font-size: 14px;
+.subtitle {
+  font-size: 18px;
   color: #666;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-.highlights {
+.description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* ROUTE 66 SECTION */
+.route66 {
+  padding: 40px 20px;
+  background: #F5F5F0;
+}
+
+.route66 h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.route-info-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.card {
+.route-card {
   background: white;
-  padding: 16px;
+  padding: 25px;
   border-radius: 8px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: 0.3s;
+  border-left: 4px solid #C41E3A;
 }
 
-.card:active {
-  transform: scale(0.98);
+.route-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: bold;
+}
+
+.route-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* LOCATIONS SECTION */
+.locations {
+  padding: 40px 20px;
+  background: white;
+}
+
+.locations h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.location-card {
+  background: #F5F5F0;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-top: 4px solid #D2691E;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.location-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.location-card h4 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.location-card > p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.location-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.detail-item {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 3px solid #C41E3A;
+}
+
+.detail-item h4 {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.detail-item p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* GALLERY */
 .gallery {
-  padding: 30px 20px;
+  padding: 40px 20px;
   background: white;
 }
 
 .gallery h2 {
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   margin-bottom: 10px;
   color: #333;
+  font-weight: bold;
 }
 
-.gallery > p {
+.gallery > .description {
   text-align: center;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .gallery-grid {
@@ -201,7 +318,7 @@ body {
 
 .gallery-card {
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -215,21 +332,71 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .gallery-card:active {
   transform: scale(0.95);
 }
 
+/* VIDEOS SECTION */
+.videos {
+  padding: 40px 20px;
+  background: #F5F5F0;
+}
+
+.videos h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.videos > .description {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.video-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.video-container h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.video-container iframe {
+  border-radius: 6px;
+  border: none;
+}
+
 /* SOCIAL */
 .social {
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
   color: white;
   text-align: center;
 }
 
 .social h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
 .social-links {
@@ -252,9 +419,13 @@ body {
   transition: 0.3s;
 }
 
+.social-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
 .social-btn:active {
   background: white;
-  color: #f5576c;
+  color: #8B4513;
   transform: scale(0.95);
 }
 
@@ -282,29 +453,52 @@ body {
   }
 
   .hero {
-    padding: 60px 30px;
+    padding: 80px 30px;
   }
 
   .hero-content h2 {
-    font-size: 36px;
+    font-size: 40px;
   }
 
-  .about {
-    padding: 40px 30px;
+  .hero-content p {
+    font-size: 18px;
   }
 
-  .highlights {
+  .route66 {
+    padding: 50px 30px;
+  }
+
+  .route-info-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  }
+
+  .locations {
+    padding: 50px 30px;
+  }
+
+  .location-details {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery {
-    padding: 40px 30px;
+    padding: 50px 30px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+  }
+
+  .videos {
+    padding: 50px 30px;
+  }
+
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social {
+    padding: 50px 30px;
   }
 
   .social-links {
@@ -320,11 +514,23 @@ body {
 
 /* DESKTOP */
 @media (min-width: 1000px) {
-  .highlights {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-logo h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .route-card {
+    padding: 30px;
+  }
+
+  .location-card {
+    padding: 30px;
   }
 }

@@ -13,38 +13,147 @@ export default function App() {
 
   const content = {
     en: {
-      title: 'Route 66 Slingman',
-      nav: { home: 'Home', about: 'About', gallery: 'Gallery', contact: 'Contact' },
-      hero: { heading: 'Route 66 Slingman', subheading: 'Historic Arizona Adventure', cta: 'Explore' },
-      about: { title: 'About Us', description: 'Located in Seligman, Arizona, Route 66 Slingman is a legendary stop on the iconic Mother Road.' },
-      gallery: { title: 'Gallery', description: 'Explore the colorful world' },
-      social: { title: 'Follow Us' },
-      footer: 'Route 66 Slingman © 2026'
+      title: 'Nowherica 404',
+      nav: {
+        home: 'Home',
+        route66: 'Route 66',
+        locations: 'Locations',
+        gallery: 'Gallery',
+        videos: 'Videos',
+        follow: 'Follow'
+      },
+      hero: {
+        heading: 'Nowherica 404',
+        subheading: 'Route 66 Adventures & Explorations',
+        cta: 'Explore'
+      },
+      route66: {
+        title: 'Route 66',
+        subtitle: 'The Mother Road',
+        description: 'Route 66, known as "The Main Street of America," is a historic U.S. Route that stretches from Chicago to Santa Monica, passing through Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona, and California.',
+        routeTitle: '🚩 The Route',
+        routeDesc: 'From Chicago to Santa Monica, passing through Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona, and California.',
+        experienceTitle: '🚗 The Experience',
+        experienceDesc: 'Journey through authentic Americana with quirky attractions, vintage diners, and breathtaking desert landscapes.'
+      },
+      locations: {
+        title: 'Locations',
+        slingman: {
+          title: 'Slingman, Arizona',
+          subtitle: 'Historic Route 66 Stop',
+          description: 'Known for its iconic Route 66 attractions, Slingman is a historic stop on the Mother Road featuring vintage shops, quirky diners, and strange shops.',
+          attractionsTitle: '🏪 Attractions',
+          attractionsDesc: 'Vintage shops, classic diners, and iconic Route 66 signs. Don\'t miss local burger joints and historic landmarks.',
+          photoOpsTitle: '📸 Photo Ops',
+          photoOpsDesc: 'Instagram-worthy shots with vintage signs, classic cars, and desert landscapes.'
+        },
+        nelson: {
+          title: 'Nelson Ghost Town',
+          subtitle: 'Historic Mining Community',
+          description: 'A historic ghost town with preserved buildings and rich mining heritage.'
+        },
+        kingsman: {
+          title: 'Kingsman, Arizona',
+          subtitle: 'Route 66 Heritage',
+          description: 'A charming Route 66 town with historic landmarks and vintage attractions.'
+        }
+      },
+      gallery: {
+        title: 'Gallery',
+        description: 'Explore the colorful world of Route 66'
+      },
+      videos: {
+        title: 'Latest Videos',
+        subtitle: 'Route 66 adventures and explorations on YouTube',
+        unavailable: 'Video unavailable'
+      },
+      social: {
+        title: 'Follow Us',
+        instagram: 'Instagram',
+        youtube: 'YouTube'
+      },
+      footer: 'Nowherica 404 © 2026'
     },
     fa: {
-      title: 'رت 66 اسلینگمن',
-      nav: { home: 'خانه', about: 'درباره', gallery: 'گالری', contact: 'تماس' },
-      hero: { heading: 'رت 66 اسلینگمن', subheading: 'ماجرای تاریخی آریزونا', cta: 'کاوش' },
-      about: { title: 'درباره ما', description: 'رت 66 اسلینگمن در سلیگمن، آریزونا واقع است.' },
-      gallery: { title: 'گالری', description: 'دنیای رنگارنگ را کاوش کنید' },
-      social: { title: 'ما را دنبال کنید' },
-      footer: 'رت 66 اسلینگمن © 2026'
+      title: 'ناوهریکا 404',
+      nav: {
+        home: 'خانه',
+        route66: 'رت 66',
+        locations: 'مکان‌ها',
+        gallery: 'گالری',
+        videos: 'ویدیوها',
+        follow: 'دنبال کنید'
+      },
+      hero: {
+        heading: 'ناوهریکا 404',
+        subheading: 'ماجراهای رت 66 و اکتشافات',
+        cta: 'کاوش'
+      },
+      route66: {
+        title: 'رت 66',
+        subtitle: 'جاده مادر',
+        description: 'رت 66، به عنوان "خیابان اصلی آمریکا" شناخته می‌شود، یک مسیر تاریخی آمریکایی است که از شیکاگو تا سانتا مونیکا امتداد دارد و از ایلینویز، میسوری، کانزاس، اوکلاهما، تگزاس، نیومکزیکو، آریزونا و کالیفرنیا می‌گذرد.',
+        routeTitle: '🚩 مسیر',
+        routeDesc: 'از شیکاگو تا سانتا مونیکا، از ایلینویز، میسوری، کانزاس، اوکلاهما، تگزاس، نیومکزیکو، آریزونا و کالیفرنیا می‌گذرد.',
+        experienceTitle: '🚗 تجربه',
+        experienceDesc: 'سفری در میان آمریکانای اصیل با جاذبه‌های عجیب، رستوران‌های کلاسیک و منظره‌های بیابانی خیره‌کننده.'
+      },
+      locations: {
+        title: 'مکان‌ها',
+        slingman: {
+          title: 'اسلینگمن، آریزونا',
+          subtitle: 'ایستگاه تاریخی رت 66',
+          description: 'اسلینگمن به دلیل جاذبه‌های نمادین رت 66 شناخته می‌شود و یک ایستگاه تاریخی در جاده مادر است که دارای فروشگاه‌های کلاسیک، رستوران‌های عجیب و فروشگاه‌های غریب است.',
+          attractionsTitle: '🏪 جاذبه‌ها',
+          attractionsDesc: 'فروشگاه‌های کلاسیک، رستوران‌های تاریخی و نشانه‌های نمادین رت 66. از رستوران‌های برگر محلی و نقاط تاریخی غفلت نکنید.',
+          photoOpsTitle: '📸 نقاط عکاسی',
+          photoOpsDesc: 'عکس‌های شایسته اینستاگرام با نشانه‌های کلاسیک، ماشین‌های قدیمی و منظره‌های بیابانی.'
+        },
+        nelson: {
+          title: 'شهر شبح نلسون',
+          subtitle: 'جامعه معدن کاری تاریخی',
+          description: 'یک شهر شبح تاریخی با ساختمان‌های حفظ‌شده و میراث معدن کاری غنی.'
+        },
+        kingsman: {
+          title: 'کینگزمن، آریزونا',
+          subtitle: 'میراث رت 66',
+          description: 'یک شهر دلکش رت 66 با نقاط تاریخی و جاذبه‌های کلاسیک.'
+        }
+      },
+      gallery: {
+        title: 'گالری',
+        description: 'دنیای رنگارنگ رت 66 را کاوش کنید'
+      },
+      videos: {
+        title: 'آخرین ویدیوها',
+        subtitle: 'ماجراهای رت 66 و اکتشافات در یوتیوب',
+        unavailable: 'ویدیو در دسترس نیست'
+      },
+      social: {
+        title: 'ما را دنبال کنید',
+        instagram: 'اینستاگرام',
+        youtube: 'یوتیوب'
+      },
+      footer: 'ناوهریکا 404 © 2026'
     }
   };
 
   const t = content[language];
+  const isRTL = language === 'fa';
 
   return (
-    <div className="app">
+    <div className={`app ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <nav className="navbar">
         <div className="nav-logo" onClick={() => handleScroll('home')}>
           <h1>🛣️ {t.title}</h1>
         </div>
         <div className="nav-menu">
           <button onClick={() => handleScroll('home')}>{t.nav.home}</button>
-          <button onClick={() => handleScroll('about')}>{t.nav.about}</button>
+          <button onClick={() => handleScroll('route66')}>{t.nav.route66}</button>
+          <button onClick={() => handleScroll('locations')}>{t.nav.locations}</button>
           <button onClick={() => handleScroll('gallery')}>{t.nav.gallery}</button>
-          <button onClick={() => handleScroll('contact')}>{t.nav.contact}</button>
+          <button onClick={() => handleScroll('videos')}>{t.nav.videos}</button>
+          <button onClick={() => handleScroll('follow')}>{t.nav.follow}</button>
         </div>
         <div className="language-toggle">
           <button className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')}>EN</button>
@@ -56,40 +165,124 @@ export default function App() {
         <div className="hero-content">
           <h2>{t.hero.heading}</h2>
           <p>{t.hero.subheading}</p>
-          <button className="cta-button" onClick={() => handleScroll('gallery')}>{t.hero.cta}</button>
+          <button className="cta-button" onClick={() => handleScroll('route66')}>{t.hero.cta}</button>
         </div>
       </section>
 
-      <section id="about" className="about">
-        <h2>{t.about.title}</h2>
-        <p>{t.about.description}</p>
-        <div className="highlights">
-          <div className="card">✨ Historic Route 66</div>
-          <div className="card">🎨 Vintage Americana</div>
-          <div className="card">📍 Seligman, AZ</div>
-          <div className="card">🚗 Road Trip Hub</div>
-          <div className="card">🛍️ Shopping</div>
+      <section id="route66" className="route66">
+        <div className="section-container">
+          <h2>{t.route66.title}</h2>
+          <h3 className="subtitle">{t.route66.subtitle}</h3>
+          <p className="description">{t.route66.description}</p>
+          
+          <div className="route-info-grid">
+            <div className="route-card">
+              <h3>{t.route66.routeTitle}</h3>
+              <p>{t.route66.routeDesc}</p>
+            </div>
+            <div className="route-card">
+              <h3>{t.route66.experienceTitle}</h3>
+              <p>{t.route66.experienceDesc}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" className="locations">
+        <div className="section-container">
+          <h2>{t.locations.title}</h2>
+          
+          <div className="location-card">
+            <h3>{t.locations.slingman.title}</h3>
+            <h4>{t.locations.slingman.subtitle}</h4>
+            <p>{t.locations.slingman.description}</p>
+            <div className="location-details">
+              <div className="detail-item">
+                <h4>{t.locations.slingman.attractionsTitle}</h4>
+                <p>{t.locations.slingman.attractionsDesc}</p>
+              </div>
+              <div className="detail-item">
+                <h4>{t.locations.slingman.photoOpsTitle}</h4>
+                <p>{t.locations.slingman.photoOpsDesc}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="location-card">
+            <h3>{t.locations.nelson.title}</h3>
+            <h4>{t.locations.nelson.subtitle}</h4>
+            <p>{t.locations.nelson.description}</p>
+          </div>
+
+          <div className="location-card">
+            <h3>{t.locations.kingsman.title}</h3>
+            <h4>{t.locations.kingsman.subtitle}</h4>
+            <p>{t.locations.kingsman.description}</p>
+          </div>
         </div>
       </section>
 
       <section id="gallery" className="gallery">
-        <h2>{t.gallery.title}</h2>
-        <p>{t.gallery.description}</p>
-        <div className="gallery-grid">
-          <div className="gallery-card">🏜️<br/>Desert</div>
-          <div className="gallery-card">🚗<br/>Cars</div>
-          <div className="gallery-card">🏪<br/>Shops</div>
-          <div className="gallery-card">🌅<br/>Sunset</div>
-          <div className="gallery-card">🛣️<br/>Signs</div>
-          <div className="gallery-card">🎨<br/>Art</div>
+        <div className="section-container">
+          <h2>{t.gallery.title}</h2>
+          <p className="description">{t.gallery.description}</p>
+          <div className="gallery-grid">
+            <div className="gallery-card">🏜️<br/>Desert</div>
+            <div className="gallery-card">🚗<br/>Cars</div>
+            <div className="gallery-card">🏪<br/>Shops</div>
+            <div className="gallery-card">🌅<br/>Sunset</div>
+            <div className="gallery-card">🛣️<br/>Signs</div>
+            <div className="gallery-card">🎨<br/>Art</div>
+          </div>
         </div>
       </section>
 
-      <section id="contact" className="social">
-        <h2>{t.social.title}</h2>
-        <div className="social-links">
-          <a href="https://instagram.com/Nowherica404" target="_blank" rel="noopener noreferrer" className="social-btn">📷 Instagram</a>
-          <a href="https://youtube.com/@nowherica404" target="_blank" rel="noopener noreferrer" className="social-btn">🎥 YouTube</a>
+      <section id="videos" className="videos">
+        <div className="section-container">
+          <h2>{t.videos.title}</h2>
+          <p className="description">{t.videos.subtitle}</p>
+          
+          <div className="videos-grid">
+            <div className="video-container">
+              <h3>Route 66 Explorations</h3>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Route 66 Explorations"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+              </iframe>
+            </div>
+            
+            <div className="video-container">
+              <h3>Slingman Adventures</h3>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Slingman Adventures"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="follow" className="social">
+        <div className="section-container">
+          <h2>{t.social.title}</h2>
+          <div className="social-links">
+            <a href="https://instagram.com/Nowherica404" target="_blank" rel="noopener noreferrer" className="social-btn">
+              📷 {t.social.instagram}
+            </a>
+            <a href="https://youtube.com/@nowherica404" target="_blank" rel="noopener noreferrer" className="social-btn">
+              🎥 {t.social.youtube}
+            </a>
+          </div>
         </div>
       </section>
 
