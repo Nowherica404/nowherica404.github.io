@@ -245,9 +245,9 @@ export default function App() {
           <div className="videos-grid">
             <div className="video-card">
               <a href="https://youtu.be/v8Dz2O7oXbA" target="_blank" rel="noopener noreferrer" className="video-card-link">
-                <div className="video-thumbnail-wrapper">
-                  <img src="/video1.jpg" alt="Route 66 Adventures" className="video-thumbnail" />
+                <div className="video-thumbnail-wrapper" style={{background: 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)'}}>
                   <div className="play-icon">▶</div>
+                  <div style={{position: 'absolute', bottom: '10px', left: '10px', color: 'white', fontSize: '12px', fontWeight: 'bold'}}>Route 66 Adventures</div>
                 </div>
                 <div className="video-title">Watch on YouTube</div>
               </a>
@@ -255,9 +255,9 @@ export default function App() {
             
             <div className="video-card">
               <a href="https://youtu.be/W4Y2LnqS0ew" target="_blank" rel="noopener noreferrer" className="video-card-link">
-                <div className="video-thumbnail-wrapper">
-                  <img src="/video2.jpg" alt="Ghost Towns & Haunted Places" className="video-thumbnail" />
+                <div className="video-thumbnail-wrapper" style={{background: 'linear-gradient(135deg, #2c1b47 0%, #5a189a 100%)'}}>
                   <div className="play-icon">▶</div>
+                  <div style={{position: 'absolute', bottom: '10px', left: '10px', color: 'white', fontSize: '12px', fontWeight: 'bold'}}>Ghost Towns & Haunted</div>
                 </div>
                 <div className="video-title">Watch on YouTube</div>
               </a>
@@ -265,9 +265,9 @@ export default function App() {
             
             <div className="video-card">
               <a href="https://youtu.be/LZxvZICG21Q" target="_blank" rel="noopener noreferrer" className="video-card-link">
-                <div className="video-thumbnail-wrapper">
-                  <img src="/video3.jpg" alt="Road Trip Adventures" className="video-thumbnail" />
+                <div className="video-thumbnail-wrapper" style={{background: 'linear-gradient(135deg, #ff4757 0%, #ffa502 100%)'}}>
                   <div className="play-icon">▶</div>
+                  <div style={{position: 'absolute', bottom: '10px', left: '10px', color: 'white', fontSize: '12px', fontWeight: 'bold'}}>Road Trip Adventures</div>
                 </div>
                 <div className="video-title">Watch on YouTube</div>
               </a>
