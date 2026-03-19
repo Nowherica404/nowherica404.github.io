@@ -244,12 +244,12 @@ export default function App() {
           
           <div className="videos-grid">
             <div className="video-container">
-              <h3>Route 66 Explorations</h3>
+              <h3>اینجا کسی نمی خوابه…They Don't Sleep Here…The Haunted Truth of Denver's Oldest Cemetery</h3>
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Route 66 Explorations"
+                src="https://www.youtube.com/embed/LZxvZICG21Q"
+                title="They Don't Sleep Here…The Haunted Truth of Denver's Oldest Cemetery"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
@@ -257,12 +257,12 @@ export default function App() {
             </div>
             
             <div className="video-container">
-              <h3>Slingman Adventures</h3>
+              <h3>The Lafayette Shadow That Never Left</h3>
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Slingman Adventures"
+                src="https://www.youtube.com/embed/3UvAtbh3vzc"
+                title="The Lafayette Shadow That Never Left"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
