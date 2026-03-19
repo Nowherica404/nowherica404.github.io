@@ -242,41 +242,23 @@ export default function App() {
           <h2>{t.videos.title}</h2>
           <p className="description">{t.videos.subtitle}</p>
           
-          <div className="videos-grid">
-            <div className="video-container">
-              <iframe
-                width="100%"
-                height="400"
-                src="https://www.youtube.com/embed/v8Dz2O7oXbA"
-                title="Nowherica 404 Video 1"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen>
-              </iframe>
+          <div className="videos-list">
+            <div className="video-item">
+              <a href="https://youtu.be/v8Dz2O7oXbA" target="_blank" rel="noopener noreferrer" className="video-link-text">
+                🎬 Video 1 - Watch on YouTube
+              </a>
             </div>
             
-            <div className="video-container">
-              <iframe
-                width="100%"
-                height="400"
-                src="https://www.youtube.com/embed/W4Y2LnqS0ew"
-                title="Nowherica 404 Video 2"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen>
-              </iframe>
+            <div className="video-item">
+              <a href="https://youtu.be/W4Y2LnqS0ew" target="_blank" rel="noopener noreferrer" className="video-link-text">
+                🎬 Video 2 - Watch on YouTube
+              </a>
             </div>
             
-            <div className="video-container">
-              <iframe
-                width="100%"
-                height="400"
-                src="https://www.youtube.com/embed/LZxvZICG21Q"
-                title="Nowherica 404 Video 3"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen>
-              </iframe>
+            <div className="video-item">
+              <a href="https://youtu.be/LZxvZICG21Q" target="_blank" rel="noopener noreferrer" className="video-link-text">
+                🎬 Video 3 - Watch on YouTube
+              </a>
             </div>
           </div>
         </div>

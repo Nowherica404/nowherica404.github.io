@@ -385,6 +385,39 @@ body {
   border: none;
 }
 
+.videos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.video-link-text {
+  color: #C41E3A;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.video-link-text:hover {
+  color: #8B4513;
+  text-decoration: underline;
+}
+
+.video-link-text:active {
+  transform: scale(0.98);
+}
+
 /* SOCIAL */
 .social {
   padding: 40px 20px;
