@@ -247,8 +247,8 @@ export default function App() {
               <iframe
                 width="100%"
                 height="400"
-                src="https://www.youtube.com/embed/XDj947ghHDU"
-                title="Nowherica 404 Short 1"
+                src="https://www.youtube.com/embed/v8Dz2O7oXbA"
+                title="Nowherica 404 Video 1"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
@@ -259,8 +259,20 @@ export default function App() {
               <iframe
                 width="100%"
                 height="400"
-                src="https://www.youtube.com/embed/p9vBF41N7eM"
-                title="Nowherica 404 Short 2"
+                src="https://www.youtube.com/embed/W4Y2LnqS0ew"
+                title="Nowherica 404 Video 2"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+              </iframe>
+            </div>
+            
+            <div className="video-container">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/LZxvZICG21Q"
+                title="Nowherica 404 Video 3"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
