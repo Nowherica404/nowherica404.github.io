@@ -244,12 +244,11 @@ export default function App() {
           
           <div className="videos-grid">
             <div className="video-container">
-              <h3>اینجا کسی نمی خوابه…They Don't Sleep Here…The Haunted Truth of Denver's Oldest Cemetery</h3>
               <iframe
                 width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/LZxvZICG21Q"
-                title="They Don't Sleep Here…The Haunted Truth of Denver's Oldest Cemetery"
+                height="400"
+                src="https://www.youtube.com/embed/XDj947ghHDU"
+                title="Nowherica 404 Short 1"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
@@ -257,12 +256,11 @@ export default function App() {
             </div>
             
             <div className="video-container">
-              <h3>The Lafayette Shadow That Never Left</h3>
               <iframe
                 width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/3UvAtbh3vzc"
-                title="The Lafayette Shadow That Never Left"
+                height="400"
+                src="https://www.youtube.com/embed/p9vBF41N7eM"
+                title="Nowherica 404 Short 2"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
