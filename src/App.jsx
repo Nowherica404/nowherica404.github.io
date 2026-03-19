@@ -56,6 +56,17 @@ export default function App() {
           title: 'Kingsman, Arizona',
           subtitle: 'Route 66 Heritage',
           description: 'A charming Route 66 town with historic landmarks and vintage attractions.'
+        },
+        riverside: {
+          title: 'Riverside Cemetery, Denver',
+          subtitle: 'Historic & Haunted Grounds',
+          description: 'One of Denver\'s oldest and most mysterious cemeteries, Riverside Cemetery holds the graves of Civil War soldiers, prominent figures, and untold stories of the American West.',
+          historyTitle: '📜 History & Hauntings',
+          historyDesc: 'Established in the 1800s, Riverside Cemetery is home to some of the most intriguing graves in America. From Civil War soldiers to mysterious figures, each gravestone tells a story.',
+          notableFigures: '⚰️ Notable Graves',
+          notableFiguresDesc: 'Nathan Baker (Civil War soldier with horse Frank), Silas Soule (Federal officer), Marie Contas (grave with broken angel statue), Kiku Zane (Japanese grave), and many Civil War veterans.',
+          ghostStories: '👻 Ghost Stories',
+          ghostStoriesDesc: 'Visitors report seeing the spirits of a mother and child near the riverbank. The grave of Nathan Baker is mysteriously broken, and many report unexplained phenomena at night.'
         }
       },
       gallery: {
@@ -118,6 +129,17 @@ export default function App() {
           title: 'کینگزمن، آریزونا',
           subtitle: 'میراث رت 66',
           description: 'یک شهر دلکش رت 66 با نقاط تاریخی و جاذبه‌های کلاسیک.'
+        },
+        riverside: {
+          title: 'قبرستان ریورساید، دنور',
+          subtitle: 'مکان تاریخی و مرموز',
+          description: 'یکی از قدیمی‌ترین و مرموزترین قبرستان‌های دنور، قبرستان ریورساید خانه قبرهای سربازان جنگ داخلی، شخصیت‌های برجسته و داستان‌های ناگفته غرب آمریکا است.',
+          historyTitle: '📜 تاریخ و داستان‌های ترسناک',
+          historyDesc: 'در دهه 1800 تأسیس شد، قبرستان ریورساید خانه برخی از جالب‌ترین قبرهای آمریکا است. از سربازان جنگ داخلی تا شخصیت‌های مرموز، هر سنگ قبر داستانی دارد.',
+          notableFigures: '⚰️ قبرهای معروف',
+          notableFiguresDesc: 'ناتان بیکر (سرباز جنگ داخلی با اسب فرنک)، سیلاس سول (افسر فدرال)، ماری کونتاس (قبر با فرشته شکسته شده)، کیکو زین (قبر ژاپنی)، و بسیاری از سربازان جنگ داخلی.',
+          ghostStories: '👻 داستان‌های روح‌ها',
+          ghostStoriesDesc: 'بازدیدکنندگان گزارش می‌دهند که روح مادر و نوزاد را نزدیک رودخانه دیده‌اند. قبر ناتان بیکر به طریقی مرموز شکسته شده است و بسیاری از پدیده‌های غیرقابل توضیح در شب گزارش شده‌اند.'
         }
       },
       gallery: {
@@ -218,6 +240,41 @@ export default function App() {
             <h3>{t.locations.kingsman.title}</h3>
             <h4>{t.locations.kingsman.subtitle}</h4>
             <p>{t.locations.kingsman.description}</p>
+          </div>
+
+          <div className="location-card riverside-card">
+            <h3>{t.locations.riverside.title}</h3>
+            <h4>{t.locations.riverside.subtitle}</h4>
+            <p>{t.locations.riverside.description}</p>
+            
+            <div className="cemetery-image-grid">
+              <div className="cemetery-image cemetery-photo">
+                <img src="/IMG_3388.JPG" alt="Riverside Cemetery" />
+                <div className="image-label">📸 Cemetery Grounds</div>
+              </div>
+              <div className="cemetery-image cemetery-photo">
+                <img src="/Silas soule.JPG" alt="Silas Soule Grave" />
+                <div className="image-label">⚰️ Silas Soule - Federal Officer</div>
+              </div>
+              <div className="cemetery-image" style={{background: 'linear-gradient(135deg, #5a4a3a 0%, #3a2a1a 100%)'}}>
+                <div className="image-label">👻 Haunted Grounds</div>
+              </div>
+            </div>
+            
+            <div className="location-details">
+              <div className="detail-item">
+                <h4>{t.locations.riverside.historyTitle}</h4>
+                <p>{t.locations.riverside.historyDesc}</p>
+              </div>
+              <div className="detail-item">
+                <h4>{t.locations.riverside.notableFigures}</h4>
+                <p>{t.locations.riverside.notableFiguresDesc}</p>
+              </div>
+              <div className="detail-item">
+                <h4>{t.locations.riverside.ghostStories}</h4>
+                <p>{t.locations.riverside.ghostStoriesDesc}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

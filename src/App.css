@@ -291,6 +291,53 @@ body {
   line-height: 1.6;
 }
 
+/* CEMETERY IMAGES */
+.cemetery-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.cemetery-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cemetery-photo {
+  background: #333;
+  padding: 0;
+}
+
+.cemetery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cemetery-image .image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.riverside-card {
+  border-top-color: #5a4a3a;
+}
+
 /* GALLERY */
 .gallery {
   padding: 40px 20px;
