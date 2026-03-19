@@ -242,22 +242,34 @@ export default function App() {
           <h2>{t.videos.title}</h2>
           <p className="description">{t.videos.subtitle}</p>
           
-          <div className="videos-list">
-            <div className="video-item">
-              <a href="https://youtu.be/v8Dz2O7oXbA" target="_blank" rel="noopener noreferrer" className="video-link-text">
-                🎬 Video 1 - Watch on YouTube
+          <div className="videos-grid">
+            <div className="video-card">
+              <a href="https://youtu.be/v8Dz2O7oXbA" target="_blank" rel="noopener noreferrer" className="video-card-link">
+                <div className="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/v8Dz2O7oXbA/hqdefault.jpg" alt="Video 1" className="video-thumbnail" />
+                  <div className="play-icon">▶</div>
+                </div>
+                <div className="video-title">Watch on YouTube</div>
               </a>
             </div>
             
-            <div className="video-item">
-              <a href="https://youtu.be/W4Y2LnqS0ew" target="_blank" rel="noopener noreferrer" className="video-link-text">
-                🎬 Video 2 - Watch on YouTube
+            <div className="video-card">
+              <a href="https://youtu.be/W4Y2LnqS0ew" target="_blank" rel="noopener noreferrer" className="video-card-link">
+                <div className="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/W4Y2LnqS0ew/hqdefault.jpg" alt="Video 2" className="video-thumbnail" />
+                  <div className="play-icon">▶</div>
+                </div>
+                <div className="video-title">Watch on YouTube</div>
               </a>
             </div>
             
-            <div className="video-item">
-              <a href="https://youtu.be/LZxvZICG21Q" target="_blank" rel="noopener noreferrer" className="video-link-text">
-                🎬 Video 3 - Watch on YouTube
+            <div className="video-card">
+              <a href="https://youtu.be/LZxvZICG21Q" target="_blank" rel="noopener noreferrer" className="video-card-link">
+                <div className="video-thumbnail-wrapper">
+                  <img src="https://img.youtube.com/vi/LZxvZICG21Q/hqdefault.jpg" alt="Video 3" className="video-thumbnail" />
+                  <div className="play-icon">▶</div>
+                </div>
+                <div className="video-title">Watch on YouTube</div>
               </a>
             </div>
           </div>
