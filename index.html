@@ -805,9 +805,9 @@
 
     <!-- RIVERSIDE CEMETERY SECTION -->
     <section id="riverside">
-        <h2>⚰️ Riverside Cemetery</h2>
-        <p class="cemetery-subtitle">Denver's Oldest &amp; Most Haunted Burial Ground — Est. 1876</p>
-        <p style="text-align:center; color:#666; max-width:750px; margin:0 auto 50px auto; font-size:15px; line-height:1.9;">Nestled on Denver's northeast border, Riverside Cemetery is the city's oldest active burial ground, established in 1876. Girded by the flaring flames and brimstone stench of the nearby Suncor refinery, this forgotten necropolis holds the bones of Denver's founders, outlaws, murder victims, and war heroes. The cemetery stopped selling new plots years ago, and the grass grows wild over the forgotten dead. Visitors report strange photographs, slamming doors on windless days, and apparitions drifting between the headstones at dusk. <em style="color:#8b0000;">These are their stories.</em></p>
+        <h2 id="riverside-title">⚰️ Riverside Cemetery</h2>
+        <p class="cemetery-subtitle" id="riverside-subtitle">Denver's Oldest &amp; Most Haunted Burial Ground — Est. 1876</p>
+        <p id="riverside-intro" style="text-align:center; color:#888; max-width:750px; margin:0 auto 50px auto; font-size:15px; line-height:1.9;">Nestled on Denver's northeast border, Riverside Cemetery is the city's oldest active burial ground, established in 1876. Girded by the flaring flames and brimstone stench of the nearby Suncor refinery, this forgotten necropolis holds the bones of Denver's founders, outlaws, murder victims, and war heroes. The cemetery stopped selling new plots years ago, and the grass grows wild over the forgotten dead. Visitors report strange photographs, slamming doors on windless days, and apparitions drifting between the headstones at dusk. <em style="color:#8b0000;">These are their stories.</em></p>
 
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTabCemetery('archer')">James Archer</button>
@@ -825,17 +825,18 @@
             <div class="grave-header">
                 <h3>James Archer</h3>
                 <div class="grave-dates">1824 — 1882</div>
-                <div class="grave-epitaph">"He stood above the city he built — and still watches over it."</div>
+                <div class="grave-epitaph" id="archer-epitaph">"He stood above the city he built — and still watches over it."</div>
             </div>
-            <p class="horror-story-title">👁️ THE WATCHER</p>
-            <p class="horror-story-body">James Archer's grave is unlike any other at Riverside Cemetery. A towering bronze statue of the man himself — hat in hand, coat buttoned against the Colorado wind — stands atop a massive stone pedestal, his cold metal eyes fixed permanently on the Denver skyline. He does not look down at the earth. He looks outward. Always outward.</p>
-            <p class="horror-story-body">Archer was a prominent Denver businessman and civic figure who helped shape the city's early commercial identity. He died in 1882, and his family commissioned this imposing monument as a testament to his legacy. But visitors who come at dusk report something unsettling: the statue seems to shift. Photographs taken from one angle show the figure facing east; taken minutes later from the same spot, it appears to face north. No one has ever caught the movement on camera.</p>
-            <p class="horror-story-body">Local legend holds that on the anniversary of his death, a figure in a long dark coat is seen walking the cemetery paths at midnight — always heading toward the statue, never away from it. Those who have followed the figure say it simply vanishes when it reaches the pedestal. The bronze man stands alone. Waiting.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">Dogs brought to the cemetery consistently refuse to approach the Archer monument. They sit at a distance, ears flat, and will not move.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 1 — First encounter with the Archer monument at Riverside Cemetery
+            <!-- Season 1 Video -->
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1GM6iVISHvEE60p0HbJ_GgmjTDVHYzgIb/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="archer-video-label">Season 1 — James Archer</p>
             </div>
+            <p class="horror-story-title" id="archer-story-title">👁️ THE WATCHER</p>
+            <p class="horror-story-body" id="archer-p1">James Archer's grave is unlike any other at Riverside Cemetery. A towering bronze statue of the man himself — hat in hand, coat buttoned against the Colorado wind — stands atop a massive stone pedestal, his cold metal eyes fixed permanently on the Denver skyline. He does not look down at the earth. He looks outward. Always outward.</p>
+            <p class="horror-story-body" id="archer-p2">Archer was a prominent Denver businessman and civic figure who helped shape the city's early commercial identity. He died in 1882, and his family commissioned this imposing monument as a testament to his legacy. But visitors who come at dusk report something unsettling: the statue seems to shift. Photographs taken from one angle show the figure facing east; taken minutes later from the same spot, it appears to face north. No one has ever caught the movement on camera.</p>
+            <p class="horror-story-body" id="archer-p3">Local legend holds that on the anniversary of his death, a figure in a long dark coat is seen walking the cemetery paths at midnight — always heading toward the statue, never away from it. Those who have followed the figure say it simply vanishes when it reaches the pedestal. The bronze man stands alone. Waiting.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="archer-p4">Dogs brought to the cemetery consistently refuse to approach the Archer monument. They sit at a distance, ears flat, and will not move.</p>
         </div>
 
         <!-- NATHAN BAKER -->
@@ -843,17 +844,46 @@
             <div class="grave-header">
                 <h3>Nathan Baker &amp; Frank</h3>
                 <div class="grave-dates">1843 — 1934</div>
-                <div class="grave-epitaph">"A man is nothing without his horse. They buried them apart. Neither rests."</div>
+                <div class="grave-epitaph" id="baker-epitaph">"A man is nothing without his horse. They buried them apart. Neither rests."</div>
             </div>
-            <p class="horror-story-title">🐴 THE HORSE THAT WOULD NOT LEAVE</p>
-            <p class="horror-story-body">Nathan Baker's headstone is broken — the bottom half sheared clean off, as if something pushed up from below. The stone has been broken for decades. No one has repaired it. The cemetery staff say it keeps happening: they reset the stone, and within weeks it is broken again. The ground beneath it, they note, is always disturbed.</p>
-            <p class="horror-story-body">Baker was a Colorado pioneer and horse trader who reportedly loved his horse Frank more than any human being. He outlived Frank by eleven years, and by all accounts never recovered from the loss. He requested in his will that Frank be buried in the same plot. The request was denied. Frank was buried in a separate section of the cemetery. Baker was buried alone.</p>
-            <p class="horror-story-body">Visitors to the Baker grave at night report the sound of hooves on the gravel paths — a slow, deliberate walk that circles the headstone and then stops. No animal is ever found. Photographs taken near the grave frequently show a blurred shape at ground level, low and elongated, like a large animal lying down.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">One groundskeeper, who worked at Riverside for thirty years, refused to enter the Baker section after dark. He never explained why. He simply would not go.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 3 — The broken headstone of Nathan Baker and the legend of Frank
+            <!-- Baker images -->
+            <div class="grave-image-grid">
+                <div class="grave-image-card" onclick="openModal(this)">
+                    <img src="images/riverside/cemetery_general.jpg" alt="Riverside Cemetery">
+                </div>
             </div>
+            <!-- Baker small videos -->
+            <div style="max-width:800px; margin:0 auto 20px auto;">
+                <video width="100%" height="360" controls style="border:1px solid #1e1e1e; display:block; background:#000;">
+                    <source src="videos/riverside/baker_broken_grave.mov" type="video/quicktime">
+                    <source src="videos/riverside/baker_broken_grave.mov" type="video/mp4">
+                </video>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="baker-video1-label">Baker's Broken Grave — Close Up</p>
+            </div>
+            <div style="max-width:800px; margin:0 auto 20px auto;">
+                <video width="100%" height="360" controls style="border:1px solid #1e1e1e; display:block; background:#000;">
+                    <source src="videos/riverside/baker_frank_grave.mov" type="video/quicktime">
+                    <source src="videos/riverside/baker_frank_grave.mov" type="video/mp4">
+                </video>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="baker-video2-label">Baker &amp; Frank's Grave</p>
+            </div>
+            <div style="max-width:800px; margin:0 auto 20px auto;">
+                <video width="100%" height="360" controls style="border:1px solid #1e1e1e; display:block; background:#000;">
+                    <source src="videos/riverside/baker_reaction.mov" type="video/quicktime">
+                    <source src="videos/riverside/baker_reaction.mov" type="video/mp4">
+                </video>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="baker-video3-label">Ella &amp; Ray React to Baker &amp; Frank's Grave</p>
+            </div>
+            <!-- Full Season Video -->
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1WYyhqESBQ6g-Nt-uhXwI6y4KdY0qo7y-/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="baker-video4-label">Season 2 &amp; 3 — Nathan Baker &amp; Edward</p>
+            </div>
+            <p class="horror-story-title" id="baker-story-title">🐴 THE HORSE THAT WOULD NOT LEAVE</p>
+            <p class="horror-story-body" id="baker-p1">Nathan Baker's headstone is broken — the bottom half sheared clean off, as if something pushed up from below. The stone has been broken for decades. No one has repaired it. The cemetery staff say it keeps happening: they reset the stone, and within weeks it is broken again. The ground beneath it, they note, is always disturbed.</p>
+            <p class="horror-story-body" id="baker-p2">Baker was a Colorado pioneer and horse trader who reportedly loved his horse Frank more than any human being. He outlived Frank by eleven years, and by all accounts never recovered from the loss. He requested in his will that Frank be buried in the same plot. The request was denied. Frank was buried in a separate section of the cemetery. Baker was buried alone.</p>
+            <p class="horror-story-body" id="baker-p3">Visitors to the Baker grave at night report the sound of hooves on the gravel paths — a slow, deliberate walk that circles the headstone and then stops. No animal is ever found. Photographs taken near the grave frequently show a blurred shape at ground level, low and elongated, like a large animal lying down.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="baker-p4">One groundskeeper, who worked at Riverside for thirty years, refused to enter the Baker section after dark. He never explained why. He simply would not go.</p>
         </div>
 
         <!-- SILAS SOULE -->
@@ -861,22 +891,22 @@
             <div class="grave-header">
                 <h3>Captain Silas Soule</h3>
                 <div class="grave-dates">1838 — 1865</div>
-                <div class="grave-epitaph">"He refused the order. He told the truth. He was shot dead at 26."</div>
+                <div class="grave-epitaph" id="soule-epitaph">"He refused the order. He told the truth. He was shot dead at 26."</div>
             </div>
             <div class="grave-image-grid">
                 <div class="grave-image-card" onclick="openModal(this)">
-                    <img src="images/silas_soule.jpg" alt="Silas Soule historical photograph">
+                    <img src="images/riverside/silas_soule.jpg" alt="Silas Soule historical photograph">
                 </div>
             </div>
-            <p class="horror-story-title">⚖️ THE MURDERED WITNESS</p>
-            <p class="horror-story-body">On November 29, 1864, Colonel John Chivington ordered his troops to attack a peaceful encampment of Cheyenne and Arapaho people at Sand Creek, Colorado. It was not a battle. It was a massacre. Between 150 and 200 men, women, and children were killed. Captain Silas Soule refused to give the order to his men. He stood down. He watched. And then he testified.</p>
-            <p class="horror-story-body">Soule gave damning testimony against Chivington at the military inquiry. He named names. He described what he saw. He was the only officer who did. On April 23, 1865 — less than a month after his wedding — Silas Soule was shot dead in the street in Denver. The killer was never convicted. The case was dropped. Chivington was never charged.</p>
-            <p class="horror-story-body">Visitors to Soule's grave report a persistent cold spot, even on warm summer days. Some have heard what sounds like a man speaking quietly — not in distress, but urgently, as if giving testimony to someone just out of earshot. The words are never clear. The voice always stops when you get close.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">Silas Soule was 26 years old. He had been married for 23 days.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 9 — The grave of Silas Soule and the ghost of Sand Creek
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/14ujxkXPGX77QFif4gnmjyu_PyE-DS-p1/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="soule-video-label">Season 9 — Silas Soule with Grave Background</p>
             </div>
+            <p class="horror-story-title" id="soule-story-title">⚖️ THE MURDERED WITNESS</p>
+            <p class="horror-story-body" id="soule-p1">On November 29, 1864, Colonel John Chivington ordered his troops to attack a peaceful encampment of Cheyenne and Arapaho people at Sand Creek, Colorado. It was not a battle. It was a massacre. Between 150 and 200 men, women, and children were killed. Captain Silas Soule refused to give the order to his men. He stood down. He watched. And then he testified.</p>
+            <p class="horror-story-body" id="soule-p2">Soule gave damning testimony against Chivington at the military inquiry. He named names. He described what he saw. He was the only officer who did. On April 23, 1865 — less than a month after his wedding — Silas Soule was shot dead in the street in Denver. The killer was never convicted. The case was dropped. Chivington was never charged.</p>
+            <p class="horror-story-body" id="soule-p3">Visitors to Soule's grave report a persistent cold spot, even on warm summer days. Some have heard what sounds like a man speaking quietly — not in distress, but urgently, as if giving testimony to someone just out of earshot. The words are never clear. The voice always stops when you get close.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="soule-p4">Silas Soule was 26 years old. He had been married for 23 days.</p>
         </div>
 
         <!-- MARIE CONTASSOT -->
@@ -884,25 +914,28 @@
             <div class="grave-header">
                 <h3>Marie Contassot</h3>
                 <div class="grave-dates">1871 — 1894</div>
-                <div class="grave-epitaph">"Morte à Denver le 28 Octobre 1894. Elle avait 23 ans."</div>
+                <div class="grave-epitaph" id="contassot-epitaph">"Morte à Denver le 28 Octobre 1894. Elle avait 23 ans."</div>
             </div>
             <div class="grave-image-grid">
                 <div class="grave-image-card" onclick="openModal(this)">
-                    <img src="images/mary_contaso_grave.jpg" alt="Marie Contassot grave inscription">
+                    <img src="images/riverside/mary_grave_inscription.jpg" alt="Marie Contassot grave inscription">
                 </div>
                 <div class="grave-image-card" onclick="openModal(this)">
-                    <img src="images/mary_grave_angel.jpg" alt="Marie Contassot angel monument">
+                    <img src="images/riverside/mary_angel_before.jpg" alt="Marie Contassot angel monument">
+                </div>
+                <div class="grave-image-card" onclick="openModal(this)">
+                    <img src="images/riverside/mary_grave_night.jpg" alt="Marie Contassot grave at night">
                 </div>
             </div>
-            <p class="horror-story-title">👼 THE STRANGLER'S VICTIM</p>
-            <p class="horror-story-body">Marie Contassot was a young French woman, 23 years old, who died in Denver on October 28, 1894. Her grave is marked with a large stone angel — or what remains of one. The angel's arms are broken. Its face has been worn smooth by weather and, some say, by hands. The inscription is in French. She is far from home.</p>
-            <p class="horror-story-body">Denver in the 1890s had a strangler. Between 1893 and 1895, several young women were found dead under circumstances that were never fully explained. The cases were closed without convictions. Marie Contassot's death was officially recorded as illness. But her family, who traveled from France to bury her, reportedly told the cemetery staff she had been found in her room with marks on her throat.</p>
-            <p class="horror-story-body">The angel monument has been vandalized twice. Both times, the vandalism was discovered in the morning with no witnesses. Security footage from a nearby camera showed only static during the hours in question. The broken forearm of the angel was found placed upright in the ground several feet away, as if planted there deliberately.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">The crematorium near her grave has a door that slams on windless days. Staff have stopped trying to latch it. It opens again within the hour.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 8 — Marie Contassot and the broken angel of Riverside Cemetery
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1VjIY1ZUtum4y65QG5diaL2AWNDYmTDF7/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="contassot-video-label">Season 8 — Marie Contassot</p>
             </div>
+            <p class="horror-story-title" id="contassot-story-title">👼 THE STRANGLER'S VICTIM</p>
+            <p class="horror-story-body" id="contassot-p1">Marie Contassot was a young French woman, 23 years old, who died in Denver on October 28, 1894. Her grave is marked with a large stone angel — or what remains of one. The angel's arms are broken. Its face has been worn smooth by weather and, some say, by hands. The inscription is in French. She is far from home.</p>
+            <p class="horror-story-body" id="contassot-p2">Denver in the 1890s had a strangler. Between 1893 and 1895, several young women were found dead under circumstances that were never fully explained. The cases were closed without convictions. Marie Contassot's death was officially recorded as illness. But her family, who traveled from France to bury her, reportedly told the cemetery staff she had been found in her room with marks on her throat.</p>
+            <p class="horror-story-body" id="contassot-p3">The angel monument has been vandalized twice. Both times, the vandalism was discovered in the morning with no witnesses. Security footage from a nearby camera showed only static during the hours in question. The broken forearm of the angel was found placed upright in the ground several feet away, as if planted there deliberately.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="contassot-p4">The crematorium near her grave has a door that slams on windless days. Staff have stopped trying to latch it. It opens again within the hour.</p>
         </div>
 
         <!-- RICHARD WHITSITT -->
@@ -910,17 +943,17 @@
             <div class="grave-header">
                 <h3>Richard Whitsitt</h3>
                 <div class="grave-dates">1830 — 1881</div>
-                <div class="grave-epitaph">"Denver's first duel. One man walked away. One did not."</div>
+                <div class="grave-epitaph" id="whitsitt-epitaph">"Denver's first duel. One man walked away. One did not."</div>
             </div>
-            <p class="horror-story-title">🔫 THE DUELIST</p>
-            <p class="horror-story-body">Richard Whitsitt holds a grim distinction: he was killed in Denver's first recorded duel. In 1881, a dispute over a business deal escalated to pistols at dawn. Whitsitt was shot through the chest. His opponent walked away. The duel was technically illegal, but no charges were filed. Denver was still a frontier town. These things happened.</p>
-            <p class="horror-story-body">His grave is marked by a stone angel — but the angel is missing its right forearm. No one knows when it was lost or where it went. Cemetery records show the stone was intact as recently as 1940. By 1960, the arm was gone. There is no record of vandalism, no fragment found nearby. The arm simply ceased to exist.</p>
-            <p class="horror-story-body">Visitors who linger near the Whitsitt grave after sunset report hearing a single sharp crack — like a pistol shot — from somewhere in the cemetery. It happens once. It does not repeat. Those who turn toward the sound find nothing. Those who do not turn say the silence that follows feels like someone standing very close behind them.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">A local historian who spent three nights at Riverside documenting paranormal activity reported the crack sound on all three nights, always between 11 PM and midnight, always from the direction of the Whitsitt grave.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 6 — Richard Whitsitt and the pistol shot that echoes through time
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1q81v8aLhTSRgI0jM5BTGl37ghQu6vNij/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="whitsitt-video-label">Season 6 — Richard Whitsitt</p>
             </div>
+            <p class="horror-story-title" id="whitsitt-story-title">🔫 THE DUELIST</p>
+            <p class="horror-story-body" id="whitsitt-p1">Richard Whitsitt holds a grim distinction: he was killed in Denver's first recorded duel. In 1881, a dispute over a business deal escalated to pistols at dawn. Whitsitt was shot through the chest. His opponent walked away. The duel was technically illegal, but no charges were filed. Denver was still a frontier town. These things happened.</p>
+            <p class="horror-story-body" id="whitsitt-p2">His grave is marked by a stone angel — but the angel is missing its right forearm. No one knows when it was lost or where it went. Cemetery records show the stone was intact as recently as 1940. By 1960, the arm was gone. There is no record of vandalism, no fragment found nearby. The arm simply ceased to exist.</p>
+            <p class="horror-story-body" id="whitsitt-p3">Visitors who linger near the Whitsitt grave after sunset report hearing a single sharp crack — like a pistol shot — from somewhere in the cemetery. It happens once. It does not repeat. Those who turn toward the sound find nothing. Those who do not turn say the silence that follows feels like someone standing very close behind them.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="whitsitt-p4">A local historian who spent three nights at Riverside documenting paranormal activity reported the crack sound on all three nights, always between 11 PM and midnight, always from the direction of the Whitsitt grave.</p>
         </div>
 
         <!-- CIVIL WAR VETERANS -->
@@ -928,17 +961,17 @@
             <div class="grave-header">
                 <h3>Civil War Veterans</h3>
                 <div class="grave-dates">Sand Creek Massacre — 1864</div>
-                <div class="grave-epitaph">"They followed orders. Some of them regretted it for the rest of their lives."</div>
+                <div class="grave-epitaph" id="civilwar-epitaph">"They followed orders. Some of them regretted it for the rest of their lives."</div>
             </div>
-            <p class="horror-story-title">🪖 THE RESTLESS REGIMENT</p>
-            <p class="horror-story-body">In the northeast corner of Riverside Cemetery, rows of white military headstones stand in precise formation — the graves of Colorado's Civil War veterans, many of whom also served at Sand Creek. The stones are identical. The names are different. The silence here is different from the rest of the cemetery. It is not peaceful. It is held.</p>
-            <p class="horror-story-body">Several of the men buried here participated in the Sand Creek Massacre under Colonel Chivington. Some later testified that they had been ordered to fire. Some testified they had refused. The record is incomplete. The truth, as with most frontier violence, was buried alongside the men who knew it.</p>
-            <p class="horror-story-body">Visitors to this section at dawn — particularly in late November, near the anniversary of the massacre — report seeing figures moving between the headstones in the early morning mist. The figures are dressed in period military clothing. They do not respond when called to. They disappear when the sun fully rises.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">One visitor photographed what appeared to be a full company of soldiers standing at attention between the headstones. When she looked up from her camera, the section was empty. The photograph was later analyzed by a photography expert who found no evidence of manipulation.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 2 — The Civil War section and the ghosts of Sand Creek
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1_-tMS5Bus-FjEtqCAvxFWA-3ShNLTGGI/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="civilwar-video-label">Civil War Veterans &amp; Sand Creek Massacre</p>
             </div>
+            <p class="horror-story-title" id="civilwar-story-title">🪖 THE RESTLESS REGIMENT</p>
+            <p class="horror-story-body" id="civilwar-p1">In the northeast corner of Riverside Cemetery, rows of white military headstones stand in precise formation — the graves of Colorado's Civil War veterans, many of whom also served at Sand Creek. The stones are identical. The names are different. The silence here is different from the rest of the cemetery. It is not peaceful. It is held.</p>
+            <p class="horror-story-body" id="civilwar-p2">Several of the men buried here participated in the Sand Creek Massacre under Colonel Chivington. Some later testified that they had been ordered to fire. Some testified they had refused. The record is incomplete. The truth, as with most frontier violence, was buried alongside the men who knew it.</p>
+            <p class="horror-story-body" id="civilwar-p3">Visitors to this section at dawn — particularly in late November, near the anniversary of the massacre — report seeing figures moving between the headstones in the early morning mist. The figures are dressed in period military clothing. They do not respond when called to. They disappear when the sun fully rises.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="civilwar-p4">One visitor photographed what appeared to be a full company of soldiers standing at attention between the headstones. When she looked up from her camera, the section was empty. The photograph was later analyzed by a photography expert who found no evidence of manipulation.</p>
         </div>
 
         <!-- THE RIVERSIDE RIVER -->
@@ -946,17 +979,17 @@
             <div class="grave-header">
                 <h3>The Riverside River</h3>
                 <div class="grave-dates">The South Platte — Always</div>
-                <div class="grave-epitaph">"She is always looking for something in the water. She never finds it."</div>
+                <div class="grave-epitaph" id="river-epitaph">"She is always looking for something in the water. She never finds it."</div>
             </div>
-            <p class="horror-story-title">🌊 LA LLORONA OF DENVER</p>
-            <p class="horror-story-body">The South Platte River runs along the eastern edge of Riverside Cemetery, separating the dead from the living city beyond. The river is narrow here, shallow, unremarkable in daylight. At night, it is something else entirely.</p>
-            <p class="horror-story-body">For decades, residents of the neighborhoods bordering the cemetery have reported seeing a woman standing at the river's edge after midnight — always on the cemetery side, always facing the water. She is described consistently: long dark hair, pale dress, standing very still. When approached, she does not move. When called to, she does not respond. She is simply there, and then she is not.</p>
-            <p class="horror-story-body">Cemetery records from the 1890s reference the burial of a young mother and infant in the section nearest the river. The circumstances of their deaths are not recorded. The graves are unmarked. No one knows their names. But the woman at the water has been reported for over a hundred years, and the descriptions have never changed.</p>
-            <p class="horror-story-body" style="color:#666; font-style:italic;">Children who live near the cemetery are told not to go near the river at night. They are not told why. They learn not to ask.</p>
-            <div class="video-note">
-                <strong>📹 Video From The Grave</strong>
-                Season 5 — The woman at the river and the unnamed graves of Riverside
+            <div style="max-width:800px; margin:0 auto 30px auto;">
+                <iframe src="https://drive.google.com/file/d/1CoMmTAf_2Wa5RIKNlwbyt1wbp3PucZyK/preview" width="100%" height="420" allow="autoplay" style="border:1px solid #1e1e1e; display:block;"></iframe>
+                <p style="color:#666; font-size:12px; text-align:center; margin-top:8px; letter-spacing:2px; text-transform:uppercase;" id="river-video-label">The Riverside River — Where the Mother &amp; Baby Spirits Are Seen</p>
             </div>
+            <p class="horror-story-title" id="river-story-title">🌊 LA LLORONA OF DENVER</p>
+            <p class="horror-story-body" id="river-p1">The South Platte River runs along the eastern edge of Riverside Cemetery, separating the dead from the living city beyond. The river is narrow here, shallow, unremarkable in daylight. At night, it is something else entirely.</p>
+            <p class="horror-story-body" id="river-p2">For decades, residents of the neighborhoods bordering the cemetery have reported seeing a woman standing at the river's edge after midnight — always on the cemetery side, always facing the water. She is described consistently: long dark hair, pale dress, standing very still. When approached, she does not move. When called to, she does not respond. She is simply there, and then she is not.</p>
+            <p class="horror-story-body" id="river-p3">Cemetery records from the 1890s reference the burial of a young mother and infant in the section nearest the river. The circumstances of their deaths are not recorded. The graves are unmarked. No one knows their names. But the woman at the water has been reported for over a hundred years, and the descriptions have never changed.</p>
+            <p class="horror-story-body" style="color:#555; font-style:italic;" id="river-p4">Children who live near the cemetery are told not to go near the river at night. They are not told why. They learn not to ask.</p>
         </div>
 
         <!-- OVERVIEW & MAP -->
@@ -1090,7 +1123,62 @@
                 'videos-desc': 'Route 66 adventures and explorations on YouTube',
                 'social-title': 'Follow Us',
                 'social-desc': 'Stay connected and follow our adventures',
-                'footer-text': '© 2026 Nowherica 404 - Route 66 Travel Blog'
+                'footer-text': '© 2026 Nowherica 404 - Route 66 Travel Blog',
+                'riverside-title': '⚰️ Riverside Cemetery',
+                'riverside-subtitle': 'قدیمی\u200cترین و ترسناک\u200cترین قبرستان دنور — تأسیس ۱۸۷۶',
+                'riverside-intro': 'قبرستان ریورساید در مرز شمال\u200cشرقی دنور، قدیمی\u200cترین قبرستان فعال این شهر است که در سال ۱۸۷۶ تأسیس شد. در کنار شعله\u200cهای پالایشگاه Suncor، این گورستان فراموش\u200cشده استخوان\u200cهای بنیان\u200cگذاران، جنایتکاران، قربانیان قتل و قهرمانان جنگ دنور را در خود نگه می\u200cدارد. بازدیدکنندگان از عکس\u200cهای عجیب، درهای کوبیده\u200cشده در روزهای بی\u200cباد، و اشباحی که در غروب بین سنگ\u200cقبرها سرگردانند، خبر می\u200cدهند. <em style="color:#8b0000;">اینها داستان\u200cهای آن\u200cهاست.</em>',
+                'archer-epitaph': '"او بالای شهری که ساخت ایستاد — و هنوز بر آن نظارت می\u200cکند."',
+                'archer-video-label': 'فصل ۱ — جیمز آرچر',
+                'archer-story-title': '👁️ نگهبان',
+                'archer-p1': 'قبر جیمز آرچر با هیچ قبر دیگری در قبرستان ریورساید قابل مقایسه نیست. مجسمه\u200cای برنزی از خود او — کلاه به دست، کت دکمه\u200cبسته در برابر باد کلرادو — بر فراز یک پایه سنگی عظیم ایستاده و چشمان فلزی سردش به طور دائم به افق دنور خیره شده. او به زمین نگاه نمی\u200cکند. به بیرون نگاه می\u200cکند. همیشه به بیرون.',
+                'archer-p2': 'آرچر یک تاجر و شخصیت مدنی برجسته دنور بود که در شکل\u200cگیری هویت تجاری اولیه شهر نقش داشت. در سال ۱۸۸۲ درگذشت و خانواده\u200cاش این بنای یادبود باشکوه را به عنوان گواهی بر میراثش سفارش دادند. اما بازدیدکنندگانی که در غروب می\u200cآیند چیز ناراحت\u200cکننده\u200cای گزارش می\u200cدهند: مجسمه به نظر می\u200cرسد جابجا می\u200cشود.',
+                'archer-p3': 'افسانه محلی می\u200cگوید که در سالگرد مرگش، شبحی با پالتوی بلند تاریک در نیمه شب در مسیرهای قبرستان دیده می\u200cشود — همیشه به سمت مجسمه می\u200cرود، نه از آن دور می\u200cشود. کسانی که دنبالش رفته\u200cاند می\u200cگویند وقتی به پایه می\u200cرسد ناپدید می\u200cشود. مرد برنزی تنها می\u200cایستد. منتظر.',
+                'archer-p4': 'سگ\u200cهایی که به قبرستان آورده می\u200cشوند به طور مداوم از نزدیک شدن به بنای آرچر امتناع می\u200cکنند. از فاصله\u200cای می\u200cنشینند، گوش\u200cهایشان تخت، و تکان نمی\u200cخورند.',
+                'baker-epitaph': '"مرد بدون اسبش هیچ است. آن\u200cها را جدا دفن کردند. هیچ\u200cکدام آرام ندارند."',
+                'baker-video1-label': 'سنگ قبر شکسته بیکر — نمای نزدیک',
+                'baker-video2-label': 'قبر بیکر و اسبش فرنک',
+                'baker-video3-label': 'ایلا و ری اکشن به قبر بیکر و فرنک',
+                'baker-video4-label': 'فصل ۲ و ۳ — ناتان بیکر و ادوارد',
+                'baker-story-title': '🐴 اسبی که نرفت',
+                'baker-p1': 'سنگ قبر ناتان بیکر شکسته است — نیمه پایینی کاملاً جدا شده، انگار چیزی از زیر فشار آورده. سنگ دهه\u200cهاست شکسته. کسی تعمیرش نکرده. کارکنان قبرستان می\u200cگویند همیشه اتفاق می\u200cافتد: سنگ را تنظیم می\u200cکنند و چند هفته بعد دوباره شکسته است.',
+                'baker-p2': 'بیکر یک پیشگام کلرادو و تاجر اسب بود که گفته می\u200cشود اسبش فرنک را بیشتر از هر انسانی دوست داشت. یازده سال پس از فرنک زنده ماند و به گفته همه هرگز از این ضرر بهبود نیافت. در وصیتنامه\u200cاش خواست فرنک در همان قطعه دفن شود. درخواست رد شد.',
+                'baker-p3': 'بازدیدکنندگان از قبر بیکر در شب صدای سم اسب روی مسیرهای شنی گزارش می\u200cدهند — راهی آرام و عمدی که دور سنگ قبر می\u200cچرخد و بعد متوقف می\u200cشود. هیچ حیوانی پیدا نمی\u200cشود.',
+                'baker-p4': 'یک نگهبان که سی سال در ریورساید کار کرد، بعد از تاریکی از ورود به بخش بیکر امتناع می\u200cکرد. هرگز توضیح نداد چرا. فقط نمی\u200cرفت.',
+                'soule-epitaph': '"دستور را رد کرد. حقیقت را گفت. در ۲۶ سالگی کشته شد."',
+                'soule-video-label': 'فصل ۹ — سایلاس سول با پس\u200cزمینه قبر',
+                'soule-story-title': '⚖️ شاهد کشته\u200cشده',
+                'soule-p1': 'در ۲۹ نوامبر ۱۸۶۴، کلنل چیوینگتون به سربازانش دستور داد به یک اردوگاه صلح\u200cآمیز از مردم چیین و آراپاهو در Sand Creek، کلرادو حمله کنند. این یک نبرد نبود. این یک قتل عام بود. بین ۱۵۰ تا ۲۰۰ مرد، زن و کودک کشته شدند. کاپیتان سایلاس سول از دادن دستور به سربازانش امتناع کرد.',
+                'soule-p2': 'سول در تحقیقات نظامی علیه چیوینگتون شهادت دادمند. اسم برد. آنچه دید توصیف کرد. تنها افسری بود که این کار را کرد. در ۲۳ آوریل ۱۸۶۵ — کمتر از یک ماه پس از عروسیش — سایلاس سول در خیابان\u200cهای دنور کشته شد. قاتل هرگز محکوم نشد.',
+                'soule-p3': 'بازدیدکنندگان از قبر سول یک نقطه سرد مداوم گزارش می\u200cدهند، حتی در روزهای گرم تابستان. برخی صدای مردی را شنیده\u200cاند که آرام صحبت می\u200cکند — نه در پریشانی، بلکه با فوریت، انگار شهادت می\u200cدهد.',
+                'soule-p4': 'سایلاس سول ۲۶ ساله بود. ۲۳ روز از ازدواجش گذشته بود.',
+                'contassot-epitaph': '"در دنور درگذشت، ۲۸ اکتبر ۱۸۹۴. ۲۳ ساله بود."',
+                'contassot-video-label': 'فصل ۸ — ماری کونتاسو',
+                'contassot-story-title': '👼 قربانی خفه\u200cکننده',
+                'contassot-p1': 'ماری کونتاسو یک زن جوان فرانسوی بود، ۲۳ ساله، که در ۲۸ اکتبر ۱۸۹۴ در دنور درگذشت. قبرش با یک فرشته سنگی بزرگ مشخص شده — یا آنچه از آن باقی مانده. بازوهای فرشته شکسته\u200cاند. صورتش از هوا و، به گفته برخی، از دست\u200cها صاف شده. کتیبه به فرانسوی است. او از خانه دور است.',
+                'contassot-p2': 'دنور در دهه ۱۸۹۰ یک خفه\u200cکننده داشت. بین ۱۸۹۳ و ۱۸۹۵، چندین زن جوان در شرایطی که هرگز به طور کامل توضیح داده نشد مرده پیدا شدند. مرگ ماری کونتاسو رسماً به عنوان بیماری ثبت شد. اما خانواده\u200cاش که از فرانسه آمدند گفتند او را در اتاقش با آثار خفگی روی گلو یافتند.',
+                'contassot-p3': 'بنای فرشته دو بار خراب\u200cکاری شده. هر بار صبح کشف شد بدون هیچ شاهدی. دوربین\u200cهای امنیتی فقط استاتیک نشان دادند. بازوی شکسته فرشته چند متر دورتر عمودی در زمین فرو رفته پیدا شد، انگار عمداً کاشته شده بود.',
+                'contassot-p4': 'در سوزاندن\u200cخانه نزدیک قبرش دری دارد که در روزهای بی\u200cباد می\u200cکوبد. کارکنان دیگر سعی نمی\u200cکنند آن را ببندند. در یک ساعت دوباره باز می\u200cشود.',
+                'whitsitt-epitaph': '"اولین دوئل دنور. یک مرد رفت. یکی نرفت."',
+                'whitsitt-video-label': 'فصل ۶ — ریچارد ویتست',
+                'whitsitt-story-title': '🔫 دوئل\u200cباز',
+                'whitsitt-p1': 'ریچارد ویتست یک افتخار تاریک دارد: در اولین دوئل ثبت\u200cشده دنور کشته شد. در سال ۱۸۸۱، اختلافی بر سر یک معامله تجاری به تپانچه در سپیده\u200cدم تبدیل شد. ویتست از سینه شلیک شد. حریفش رفت.',
+                'whitsitt-p2': 'قبرش با یک فرشته سنگی مشخص شده — اما فرشته ساعد راستش را ندارد. هیچ\u200cکس نمی\u200cداند کِی گم شد. سوابق قبرستان نشان می\u200cدهد سنگ تا سال ۱۹۴۰ سالم بود. تا ۱۹۶۰ بازو رفته بود.',
+                'whitsitt-p3': 'بازدیدکنندگانی که بعد از غروب نزدیک قبر ویتست می\u200cمانند یک صدای تیز گزارش می\u200cدهند — مثل شلیک تپانچه — از جایی در قبرستان. یک بار اتفاق می\u200cافتد. تکرار نمی\u200cشود.',
+                'whitsitt-p4': 'یک مورخ محلی که سه شب در ریورساید برای مستندسازی فعالیت\u200cهای پارانرمال گذراند، صدای شلیک را در هر سه شب گزارش کرد، همیشه بین ۱۱ شب و نیمه\u200cشب.',
+                'civilwar-epitaph': '"دستورات را اجرا کردند. برخی تا آخر عمر پشیمان بودند."',
+                'civilwar-video-label': 'سربازان جنگ داخلی و قتل عام Sand Creek',
+                'civilwar-story-title': '🪖 هنگ بی\u200cآرام',
+                'civilwar-p1': 'در گوشه شمال\u200cشرقی قبرستان ریورساید، ردیف\u200cهای سنگ\u200cقبر نظامی سفید در تشکیل دقیق ایستاده\u200cاند — قبور کهنه\u200cسربازان جنگ داخلی کلرادو، بسیاری از آن\u200cها که در Sand Creek نیز خدمت کردند. سنگ\u200cها یکسانند. نام\u200cها متفاوتند.',
+                'civilwar-p2': 'چندین نفر از مردانی که اینجا دفن شده\u200cاند در قتل عام Sand Creek تحت فرمان کلنل چیوینگتون شرکت داشتند. برخی بعداً شهادت دادند که دستور شلیک گرفتند. برخی گفتند امتناع کردند. سوابق ناقص است.',
+                'civilwar-p3': 'بازدیدکنندگان از این بخش در سپیده\u200cدم — به\u200cویژه در اواخر نوامبر، نزدیک سالگرد قتل عام — اشکالی را گزارش می\u200cدهند که در مه صبحگاهی بین سنگ\u200cقبرها حرکت می\u200cکنند. اشکال لباس نظامی دوره را پوشیده\u200cاند.',
+                'civilwar-p4': 'یک بازدیدکننده از آنچه به نظر می\u200cرسید یک گروهان کامل سرباز بین سنگ\u200cقبرها ایستاده عکس گرفت. وقتی از دوربین نگاه کرد، بخش خالی بود.',
+                'river-epitaph': '"همیشه دنبال چیزی در آب می\u200cگردد. هرگز پیدا نمی\u200cکند."',
+                'river-video-label': 'رودخانه ریورساید — جایی که روح مادر و نوزاد دیده می\u200cشود',
+                'river-story-title': '🌊 لا یورونا دنور',
+                'river-p1': 'رودخانه South Platte در امتداد لبه شرقی قبرستان ریورساید جریان دارد و مردگان را از شهر زندگان جدا می\u200cکند. رودخانه اینجا باریک است، کم\u200cعمق، در روز معمولی. در شب، چیز دیگری است.',
+                'river-p2': 'دهه\u200cهاست ساکنان محله\u200cهای مجاور قبرستان زنی را گزارش می\u200cدهند که بعد از نیمه\u200cشب کنار رودخانه ایستاده — همیشه در طرف قبرستان، همیشه رو به آب. توصیف\u200cها یکسان است: موهای بلند تاریک، لباس روشن، کاملاً ساکن.',
+                'river-p3': 'سوابق قبرستان از دهه ۱۸۹۰ به دفن یک مادر جوان و نوزاد در بخش نزدیک رودخانه اشاره می\u200cکند. شرایط مرگشان ثبت نشده. قبرها بی\u200cنام هستند. اما زن کنار آب بیش از صد سال گزارش شده.',
+                'river-p4': 'به بچه\u200cهایی که نزدیک قبرستان زندگی می\u200cکنند گفته می\u200cشود شب\u200cها به رودخانه نزدیک نشوند. دلیلش گفته نمی\u200cشود. یاد می\u200cگیرند نپرسند.'
             },
             fa: {
                 'hero-title': 'Nowherica 404',
@@ -1111,7 +1199,62 @@
                 'videos-desc': 'ماجراهای Route 66 در YouTube',
                 'social-title': 'ما را دنبال کنید',
                 'social-desc': 'با ماجراهای ما متصل بمانید',
-                'footer-text': '© 2026 Nowherica 404 - وبلاگ سفر Route 66'
+                'footer-text': '© 2026 Nowherica 404 - وبلاگ سفر Route 66',
+                'riverside-title': '⚰️ قبرستان ریورساید',
+                'riverside-subtitle': 'قدیمی‌ترین و ترسناک‌ترین قبرستان دنور — تأسیس ۱۸۷۶',
+                'riverside-intro': 'قبرستان ریورساید در مرز شمال‌شرقی دنور، قدیمی‌ترین قبرستان فعال این شهر است که در سال ۱۸۷۶ تأسیس شد. در کنار شعله‌های پالایشگاه Suncor، این گورستان فراموش‌شده استخوان‌های بنیان‌گذاران، جنایتکاران، قربانیان قتل و قهرمانان جنگ دنور را در خود نگه می‌دارد. <em style="color:#8b0000;">اینها داستان‌های آن‌هاست.</em>',
+                'archer-epitaph': '"او بالای شهری که ساخت ایستاد — و هنوز بر آن نظارت می‌کند."',
+                'archer-video-label': 'فصل ۱ — جیمز آرچر',
+                'archer-story-title': '👁️ نگهبان',
+                'archer-p1': 'قبر جیمز آرچر با هیچ قبر دیگری در قبرستان ریورساید قابل مقایسه نیست. مجسمه‌ای برنزی از خود او بر فراز یک پایه سنگی عظیم ایستاده و چشمان فلزی سردش به طور دائم به افق دنور خیره شده.',
+                'archer-p2': 'آرچر یک تاجر برجسته دنور بود. در سال ۱۸۸۲ درگذشت. بازدیدکنندگانی که در غروب می‌آیند چیز ناراحت‌کننده‌ای گزارش می‌دهند: مجسمه به نظر می‌رسد جابجا می‌شود.',
+                'archer-p3': 'افسانه محلی می‌گوید در سالگرد مرگش، شبحی در نیمه شب دیده می‌شود — همیشه به سمت مجسمه می‌رود، نه از آن دور می‌شود.',
+                'archer-p4': 'سگ‌هایی که به قبرستان آورده می‌شوند به طور مداوم از نزدیک شدن به بنای آرچر امتناع می‌کنند.',
+                'baker-epitaph': '"مرد بدون اسبش هیچ است. آن‌ها را جدا دفن کردند. هیچ‌کدام آرام ندارند."',
+                'baker-video1-label': 'سنگ قبر شکسته بیکر — نمای نزدیک',
+                'baker-video2-label': 'قبر بیکر و اسبش فرنک',
+                'baker-video3-label': 'ایلا و ری اکشن به قبر بیکر و فرنک',
+                'baker-video4-label': 'فصل ۲ و ۳ — ناتان بیکر و ادوارد',
+                'baker-story-title': '🐴 اسبی که نرفت',
+                'baker-p1': 'سنگ قبر ناتان بیکر شکسته است. کارکنان قبرستان می‌گویند سنگ را تنظیم می‌کنند و چند هفته بعد دوباره شکسته است.',
+                'baker-p2': 'بیکر یک پیشگام کلرادو و تاجر اسب بود که اسبش فرنک را بیشتر از هر انسانی دوست داشت. درخواست رد شد.',
+                'baker-p3': 'بازدیدکنندگان از قبر بیکر در شب صدای سم اسب روی مسیرهای شنی گزارش می‌دهند. هیچ حیوانی پیدا نمی‌شود.',
+                'baker-p4': 'یک نگهبان که سی سال در ریورساید کار کرد، بعد از تاریکی از ورود به بخش بیکر امتناع می‌کرد. هرگز توضیح نداد.',
+                'soule-epitaph': '"دستور را رد کرد. حقیقت را گفت. در ۲۶ سالگی کشته شد."',
+                'soule-video-label': 'فصل ۹ — سایلاس سول',
+                'soule-story-title': '⚖️ شاهد کشته‌شده',
+                'soule-p1': 'در ۲۹ نوامبر ۱۸۶۴، کلنل چیوینگتون دستور حمله به مردم صلح‌آمیز Sand Creek داد. این یک قتل عام بود. کاپیتان سایلاس سول از دادن دستور امتناع کرد.',
+                'soule-p2': 'سول در تحقیقات نظامی علیه چیوینگتون شهادت داد. در ۲۳ آوریل ۱۸۶۵ — کمتر از یک ماه پس از عروسیش — سایلاس سول در خیابان‌های دنور کشته شد. قاتل هرگز محکوم نشد.',
+                'soule-p3': 'بازدیدکنندگان از قبر سول یک نقطه سرد مداوم گزارش می‌دهند. برخی صدای مردی را شنیده‌اند که آرام صحبت می‌کند — انگار شهادت می‌دهد.',
+                'soule-p4': 'سایلاس سول ۲۶ ساله بود. ۲۳ روز از ازدواجش گذشته بود.',
+                'contassot-epitaph': '"در دنور درگذشت، ۲۸ اکتبر ۱۸۹۴. ۲۳ ساله بود."',
+                'contassot-video-label': 'فصل ۸ — ماری کونتاسو',
+                'contassot-story-title': '👼 قربانی خفه‌کننده',
+                'contassot-p1': 'ماری کونتاسو یک زن جوان فرانسوی بود، ۲۳ ساله، که در ۲۸ اکتبر ۱۸۹۴ در دنور درگذشت. قبرش با یک فرشته سنگی بزرگ مشخص شده.',
+                'contassot-p2': 'دنور در دهه ۱۸۹۰ یک خفه‌کننده داشت. مرگ ماری رسماً به عنوان بیماری ثبت شد. اما خانواده‌اش گفتند او را با آثار خفگی روی گلو یافتند.',
+                'contassot-p3': 'بنای فرشته دو بار خراب‌کاری شد. دوربین‌های امنیتی فقط استاتیک نشان دادند.',
+                'contassot-p4': 'در سوزاندن‌خانه نزدیک قبرش دری دارد که در روزهای بی‌باد می‌کوبد. در یک ساعت دوباره باز می‌شود.',
+                'whitsitt-epitaph': '"اولین دوئل دنور. یک مرد رفت. یکی نرفت."',
+                'whitsitt-video-label': 'فصل ۶ — ریچارد ویتست',
+                'whitsitt-story-title': '🔫 دوئل‌باز',
+                'whitsitt-p1': 'ریچارد ویتست در اولین دوئل ثبت‌شده دنور کشته شد. در سال ۱۸۸۱، اختلاف تجاری به تپانچه تبدیل شد. ویتست از سینه شلیک شد.',
+                'whitsitt-p2': 'قبرش با یک فرشته سنگی مشخص شده — اما فرشته ساعد راستش را ندارد. هیچ‌کس نمی‌داند کی گم شد.',
+                'whitsitt-p3': 'بازدیدکنندگانی که بعد از غروب نزدیک قبر ویتست می‌مانند یک صدای تیز گزارش می‌دهند — مثل شلیک تپانچه. یک بار اتفاق می‌افتد. تکرار نمی‌شود.',
+                'whitsitt-p4': 'یک مورخ محلی که سه شب در ریورساید گذراند، صدای شلیک را در هر سه شب گزارش کرد.',
+                'civilwar-epitaph': '"دستورات را اجرا کردند. برخی تا آخر عمر پشیمان بودند."',
+                'civilwar-video-label': 'سربازان جنگ داخلی و قتل عام Sand Creek',
+                'civilwar-story-title': '🪖 هنگ بی‌آرام',
+                'civilwar-p1': 'در گوشه شمال‌شرقی قبرستان ریورساید، ردیف‌های سنگ‌قبر نظامی سفید در تشکیل دقیق ایستاده‌اند. سنگ‌ها یکسانند. نام‌ها متفاوتند.',
+                'civilwar-p2': 'چندین نفر از مردانی که اینجا دفن شده‌اند در قتل عام Sand Creek شرکت داشتند. سوابق ناقص است.',
+                'civilwar-p3': 'بازدیدکنندگان از این بخش در سپیده‌دم — به‌ویژه در اواخر نوامبر — اشکالی را گزارش می‌دهند که در مه صبحگاهی بین سنگ‌قبرها حرکت می‌کنند.',
+                'civilwar-p4': 'یک بازدیدکننده از آنچه به نظر می‌رسید یک گروهان کامل سرباز بین سنگ‌قبرها ایستاده عکس گرفت. وقتی از دوربین نگاه کرد، بخش خالی بود.',
+                'river-epitaph': '"همیشه دنبال چیزی در آب می‌گردد. هرگز پیدا نمی‌کند."',
+                'river-video-label': 'رودخانه ریورساید — جایی که روح مادر و نوزاد دیده می‌شود',
+                'river-story-title': '🌊 لا یورونا دنور',
+                'river-p1': 'رودخانه South Platte در امتداد لبه شرقی قبرستان ریورساید جریان دارد. در شب، چیز دیگری است.',
+                'river-p2': 'دهه‌هاست ساکنان محله‌های مجاور زنی را گزارش می‌دهند که بعد از نیمه‌شب کنار رودخانه ایستاده — همیشه در طرف قبرستان، همیشه رو به آب.',
+                'river-p3': 'سوابق قبرستان از دهه ۱۸۹۰ به دفن یک مادر جوان و نوزاد اشاره می‌کند. قبرها بی‌نام هستند. اما زن کنار آب بیش از صد سال گزارش شده.',
+                'river-p4': 'به بچه‌هایی که نزدیک قبرستان زندگی می‌کنند گفته می‌شود شب‌ها به رودخانه نزدیک نشوند. دلیلش گفته نمی‌شود.'
             }
         };
 
