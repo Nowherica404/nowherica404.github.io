@@ -577,7 +577,6 @@
             <h1>🛣️ Nowherica 404</h1>
             <div class="nav-menu">
                 <a href="#home" onclick="scrollToSection('home')">Home</a>
-                <a href="#about" onclick="scrollToSection('about')">Route 66</a>
                 <a href="#locations" onclick="scrollToSection('locations')">Locations</a>
                 <a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a>
                 <a href="#videos" onclick="scrollToSection('videos')">Videos</a>
@@ -599,98 +598,121 @@
     <section id="home" class="hero"></section>
 
     <div class="container">
-        <section id="about">
-            <h2 id="about-title">Route 66</h2>
-            
-            <div class="tabs">
-                <button class="tab-btn active" onclick="switchTab('what-is')">What is Route 66?</button>
-                <button class="tab-btn" onclick="switchTab('history')">History</button>
-                <button class="tab-btn" onclick="switchTab('vintage')">Vintage Americana</button>
-                <button class="tab-btn" onclick="switchTab('shopping')">Shopping</button>
-            </div>
-
-            <div id="what-is" class="tab-content active">
-                <p id="what-is-desc">Route 66, known as the "Main Street of America," is a historic highway connecting Chicago to Santa Monica. Spanning 2,448 miles through 8 states, it represents the golden age of American road travel.</p>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>📍 The Route</h3>
-                        <p>From Chicago to Santa Monica, passing through Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona, and California.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🚗 The Experience</h3>
-                        <p>Journey through authentic Americana with quirky attractions, vintage diners, and breathtaking desert landscapes.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>⭐ The Legacy</h3>
-                        <p>Decommissioned in 1985 but celebrated by travelers seeking nostalgic road trip experiences and authentic Americana.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="history" class="tab-content">
-                <p id="history-desc">Established in 1926, Route 66 became a major east-west highway crucial to American commerce and culture during the Great Depression and post-WWII era.</p>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>1926 - Birth</h3>
-                        <p>Route 66 officially established as a major transcontinental highway connecting the Midwest to California.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>1930s-1940s - Golden Age</h3>
-                        <p>Primary route for westbound travelers during the Dust Bowl and post-WWII migration periods.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>1985 - Decommissioned</h3>
-                        <p>Officially removed from the U.S. Highway System but remains iconic in American culture and nostalgia.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="vintage" class="tab-content">
-                <p id="vintage-desc">Vintage Americana is the heart of Route 66. Classic diners, retro motels, and roadside attractions define the authentic Route 66 experience.</p>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>🍔 Classic Diners</h3>
-                        <p>Authentic 1950s diners serving classic American burgers, milkshakes, and homemade pie with genuine hospitality.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🏨 Retro Motels</h3>
-                        <p>Historic motels with neon signs, vintage furnishings, and the authentic Route 66 road trip atmosphere.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🎨 Roadside Art</h3>
-                        <p>Quirky attractions, vintage signs, and folk art that define the unique Route 66 aesthetic.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="shopping" class="tab-content">
-                <p id="shopping-desc">Route 66 is a shopper's paradise with unique vintage shops, antique stores, and local boutiques offering authentic Americana.</p>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>🛍️ Antique Shops</h3>
-                        <p>Browse authentic vintage collectibles, furniture, and memorabilia from different eras of American history.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🎁 Local Boutiques</h3>
-                        <p>Support local artisans and find unique handmade crafts, jewelry, and souvenirs.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>📦 Souvenirs</h3>
-                        <p>Authentic Route 66 memorabilia, vintage postcards, and classic Americana gifts.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="locations">
             <h2 id="locations-title">Explore Locations</h2>
             
             <div class="tabs">
-                <button class="tab-btn active" onclick="switchTabLocation('slingman')">Slingman</button>
-                <button class="tab-btn" onclick="switchTabLocation('nelson')">Nelson Ghost Town</button>
-                <button class="tab-btn" onclick="switchTabLocation('kingsman')">Kingsman</button>
-                <button class="tab-btn" onclick="switchTabLocation('map')">Map</button>
+                <button class="tab-btn" onclick="switchTabLocation('route66')" id="btn-route66">🛣️ Route 66</button>
+                <button class="tab-btn active" onclick="switchTabLocation('slingman')" id="btn-slingman">Seligman</button>
+                <button class="tab-btn" onclick="switchTabLocation('nelson')" id="btn-nelson">Nelson Ghost Town</button>
+                <button class="tab-btn" onclick="switchTabLocation('kingsman')" id="btn-kingsman">Kingman</button>
+                <button class="tab-btn" onclick="switchTabLocation('map')" id="btn-map">Map</button>
             </div>
+
+            <!-- ===== ROUTE 66 TAB ===== -->
+            <div id="route66" class="tab-content">
+                <h3 id="route66-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Route 66 — The Mother Road</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="route66-tagline">🛣️ Chicago to Santa Monica — 2,448 Miles of American History</p>
+                <p id="route66-intro" style="font-size:15px; line-height:1.9; color:#555; margin-bottom:25px;">Route 66, known as the "Mother Road" and the "Main Street of America," is the most iconic highway in the world. Established in 1926, it stretches 2,448 miles through 8 states — Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona, and California — connecting the heartland to the Pacific coast. Decommissioned in 1985, it lives on as a symbol of freedom, adventure, and the open road.</p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3 id="route66-card1-title">📍 The Route</h3>
+                        <p id="route66-card1-body">From Chicago, Illinois to Santa Monica, California — passing through the Great Plains, the Ozarks, the Texas Panhandle, the New Mexico desert, the Arizona highlands, and the Mojave Desert before reaching the Pacific Ocean.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card2-title">📅 1926 — Birth of the Mother Road</h3>
+                        <p id="route66-card2-body">Route 66 was officially established on November 11, 1926. It was one of the first numbered highways in the US Highway System, designed to connect rural communities to urban centers and provide a reliable cross-country route.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card3-title">🌾 1930s — The Dust Bowl Migration</h3>
+                        <p id="route66-card3-body">During the Great Depression and the Dust Bowl of the 1930s, Route 66 became the primary escape route for hundreds of thousands of displaced families fleeing Oklahoma, Texas, and Kansas for California. John Steinbeck immortalized this exodus in <em>The Grapes of Wrath</em> (1939), calling Route 66 "the Mother Road."</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card4-title">🚗 1950s — Golden Age of Road Travel</h3>
+                        <p id="route66-card4-body">Post-WWII prosperity and the rise of the automobile made Route 66 the ultimate road trip destination. Iconic diners, neon-lit motels, drive-in theaters, and roadside attractions flourished. Bobby Troup's 1946 song <em>"(Get Your Kicks on) Route 66"</em> — covered by Nat King Cole, the Rolling Stones, and Depeche Mode — made it a global symbol of freedom.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card5-title">🛣️ 1985 — Decommissioned</h3>
+                        <p id="route66-card5-body">The Interstate Highway System gradually replaced Route 66, and on June 27, 1985, it was officially removed from the US Highway System. But the road refused to die. Preservation groups, nostalgic travelers, and international tourists kept the spirit alive — and today Historic Route 66 is one of the most visited tourist routes in the world.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card6-title">🍔 Vintage Americana</h3>
+                        <p id="route66-card6-body">The soul of Route 66 lives in its diners, motels, and roadside art. Delgadillo's Snow Cap Drive-In in Seligman, the Blue Swallow Motel in Tucumcari, the Wigwam Motel in Holbrook, and the Cadillac Ranch in Amarillo are just a few of the legendary stops that define the authentic Route 66 experience.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card7-title">🎬 Route 66 in Pop Culture</h3>
+                        <p id="route66-card7-body">Route 66 has inspired countless films, TV shows, songs, and books. Pixar's <em>Cars</em> (2006) was directly modeled after Seligman, AZ. The TV series <em>Route 66</em> (1960–1964) filmed on location along the highway. Easy Rider (1969), National Lampoon's Vacation (1983), and Rain Man (1988) all featured iconic Route 66 scenes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 id="route66-card8-title">🛍️ Shopping & Souvenirs</h3>
+                        <p id="route66-card8-body">Route 66 is a treasure trove for collectors and souvenir hunters. Antique shops, trading posts, and roadside stands sell everything from vintage Route 66 signs and license plates to Native American jewelry and hand-painted pottery. Every stop has something unique that you won't find anywhere else.</p>
+                    </div>
+                </div>
+
+                <!-- Route 66 Photo Gallery -->
+                <h3 style="color:#2c2c2c; margin:40px 0 20px 0; font-size:22px; font-family:'Playfair Display',serif;" id="route66-photos-title">📸 Our Route 66 Journey</h3>
+                <div class="gallery-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:15px; margin-bottom:40px;">
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7762.jpg" alt="Lightning McQueen Cars art car Seligman Route 66" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo1-label">Lightning McQueen — Seligman</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7634.jpg" alt="Historic Route 66 and Lorraine Ave intersection" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo2-label">Historic Route 66 & Lorraine Ave</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7622.jpg" alt="Juan's Garden Route 66 Seligman" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo3-label">Juan's Garden — Seligman</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7689.jpg" alt="Grand Canyon State Route 66 sign" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo4-label">Grand Canyon State — Route 66</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7712.jpg" alt="Route 66 Police Car art Seligman" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo5-label">Route 66 Police Car Art</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7680.jpg" alt="Curios shop Route 66 I-40 signs" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo6-label">Curios Shop — Route 66 & I-40</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7643.jpg" alt="Snow Cap tin man robot Seligman" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo7-label">Snow Cap Drive-In — Seligman</p></div>
+                    </div>
+                    <div class="gallery-card" style="position:relative; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="images/seligman/IMG_7668.jpg" alt="Vintage cars Route 66 main street Seligman" style="width:100%; height:200px; object-fit:cover;">
+                        <div class="gallery-card-overlay" style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.7)); padding:15px;"><p style="color:#fff; margin:0; font-size:13px;" id="route66-photo8-label">Vintage Cars — Main Street</p></div>
+                    </div>
+                </div>
+
+                <!-- Route 66 Videos -->
+                <h3 style="color:#2c2c2c; margin:40px 0 20px 0; font-size:22px; font-family:'Playfair Display',serif;" id="route66-videos-title">🎬 Our Route 66 Videos</h3>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/W4Y2LnqS0ew" width="100%" height="300" allowfullscreen loading="lazy" style="border:none; border-radius:8px;"></iframe>
+                        <h3 id="route66-vid1-title">Roadtrip EP.1 — Something Moved in the Dark</h3>
+                        <p style="font-size:13px; color:#888;" id="route66-vid1-desc">The beginning of our Route 66 road trip — Cathedral Gorge, Nevada. Something moved in the dark.</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/tWD41OFy4Qg" width="100%" height="300" allowfullscreen loading="lazy" style="border:none; border-radius:8px;"></iframe>
+                        <h3 id="route66-vid2-title">Roadtrip EP.2 — Lost in Goblin Valley</h3>
+                        <p style="font-size:13px; color:#888;" id="route66-vid2-desc">Lost in Goblin Valley, Utah — where the rocks are alive and the desert plays tricks on your mind.</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/7cQbEiPT8Dk" width="100%" height="300" allowfullscreen loading="lazy" style="border:none; border-radius:8px;"></iframe>
+                        <h3 id="route66-vid3-title">THE FINAL STONE — End of Route 66</h3>
+                        <p style="font-size:13px; color:#888;" id="route66-vid3-desc">The final chapter of our Route 66 road trip — Seligman, the last stone on the Mother Road.</p>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/arvxZ4sinfU" width="100%" height="300" allowfullscreen loading="lazy" style="border:none; border-radius:8px;"></iframe>
+                        <h3 id="route66-vid4-title">Lake Dolores — The Abandoned Water Park</h3>
+                        <p style="font-size:13px; color:#888;" id="route66-vid4-desc">Lake Dolores Waterpark — abandoned since 2004, cursed past, and the ghost of a summer that never ended.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END ROUTE 66 TAB ===== -->
 
             <div id="slingman" class="tab-content active">
                 <h3 style="color: #2c2c2c; margin-bottom: 8px; font-size: 28px; font-family: 'Playfair Display', serif;">Seligman, Arizona</h3>
@@ -1324,11 +1346,52 @@
                 'hero-title': 'Nowherica 404',
                 'hero-desc': 'ماجراهای Route 66 و جواهرهای پنهان',
                 'about-title': 'Route 66',
+                'locations-title': 'مکان‌های ما را کاوش کنید',
+
+                // ===== ROUTE 66 TAB FARSI =====
+                'route66-title': 'Route 66 — جاده مادر',
+                'route66-tagline': '🛣️ شیکاگو تا سانتا مونیکا — ۳،۹۳۶ کیلومتر تاریخ آمریکا',
+                'route66-intro': 'Route 66، به نام "جاده مادر" و "خیابان اصلی آمریکا"، افسانه‌ای‌ترین بزرگراه دنیا است. در سال ۱۹۲۶ احداث شد، ۳،۹۳۶ کیلومتر از میان ۸ ایالت — ایلینوی، میسوری، کانزاس، اوکلاهما، تگزاس، نیومکزیکو، آریزونا، و کالیفرنیا — قلب آمریکا را به ساحل اقیانوس آرام وصل می‌کند. در سال ۱۹۸۵ لغو شد، اما به عنوان نمادی از آزادی، ماجراجویی، و جاده باز زنده ماند.',
+                'route66-card1-title': '📍 مسیر',
+                'route66-card1-body': 'از شیکاگو، ایلینوی تا سانتا مونیکا، کالیفرنیا — از دشت‌های بزرگ، کوه‌های Ozark، دشت برهوت Texas، بیابان نیومکزیکو، فلات‌های آریزونا، و بیابان Mojave تا رسیدن به اقیانوس آرام.',
+                'route66-card2-title': '📅 ۱۹۲۶ — تولد جاده مادر',
+                'route66-card2-body': 'Route 66 رسماً در ۱۱ نوامبر ۱۹۲۶ احداث شد. یکی از اولین بزرگراه‌های شماره‌گذاری‌شده در سیستم بزرگراه‌های آمریکا بود، برای اتصال جوامع روستایی به مراکز شهری و فراهم کردن مسیر سراسری قابل اطمینان.',
+                'route66-card3-title': '🌾 دهه ۱۹۳۰ — مهاجرت طوفان غبار',
+                'route66-card3-body': 'در دوران رکود بزرگ و طوفان غبار دهه ۱۹۳۰، Route 66 مسیر فرار صدها هزار خانواده آواره از اوکلاهما، تگزاس، و کانزاس به کالیفرنیا شد. جان استاینبک این کوچ را در رمان خوشه‌های خشم (1939) جاودانه کرد و Route 66 را "جاده مادر" نامید.',
+                'route66-card4-title': '🚗 دهه ۱۹۵۰ — عصر طلایی سفر جاده‌ای',
+                'route66-card4-body': 'رونق پس از جنگ جهانی دوم و رشد صنعت خودرو، Route 66 به مقصد نهایی سفر جاده‌ای تبدیل شد. رستوران‌های افسانه‌ای، موتل‌های نئونی، سینماهای ماشینی، و جاذبه‌های کنار جاده شکوفا گرفتند. ترانه معروف بابی تروپ (1946) — که توسط Nat King Cole، Rolling Stones، و Depeche Mode اجرا شد — آن را به نمادی جهانی آزادی تبدیل کرد.',
+                'route66-card5-title': '🛣️ ۱۹۸۵ — لغو رسمی',
+                'route66-card5-body': 'سیستم بزرگراه‌های بین‌ایالتی به تدریج Route 66 را جایگزین کرد، و در ۲۷ ژوئن ۱۹۸۵ رسماً از سیستم بزرگراه‌های آمریکا حذف شد. اما جاده نمرد. گروه‌های حفاظتی، مسافران نوستالژیک، و توریست‌های بین‌المللی روح آن را زنده نگه داشتند — و امروز Route 66 تاریخی یکی از پربازدیدترین مسیرهای توریستی دنیا است.',
+                'route66-card6-title': '🍔 Vintage Americana',
+                'route66-card6-body': 'روح Route 66 در رستوران‌ها، موتل‌ها، و هنر کنار جاده زنده است. Snow Cap Drive-In دلگادیلو در سلیگمن، Blue Swallow Motel در Tucumcari، Wigwam Motel در Holbrook، و Cadillac Ranch در Amarillo تنها چند نمونه از توقفگاه‌های افسانه‌ای هستند که تجربه واقعی Route 66 را تعریف می‌کنند.',
+                'route66-card7-title': '🎬 Route 66 در فرهنگ عامه',
+                'route66-card7-body': 'Route 66 الهام‌بخش فیلم‌ها، سریال‌ها، ترانه‌ها، و کتاب‌های بیشماری بوده. فیلم Cars پیکسار (2006) مستقیماً از سلیگمن، آریزونا الگو گرفته شد. Easy Rider (1969)، National Lampoon\'s Vacation (1983)، و Rain Man (1988) همه صحنه‌های ایکونیک Route 66 داشتند.',
+                'route66-card8-title': '🛍️ خرید و سوغات',
+                'route66-card8-body': 'Route 66 گنجینه برای جمع‌آوران و سوغاتی‌خران است. فروشگاه‌های آنتیک، پست‌های تجارتی، و غرفه‌های کنار جاده همه چیز می‌فروشند — از تابلوهای قدیمی Route 66 و پلاک‌های شماره تا جواهرات بومی سرخ‌پوستان و سفالین‌های دست‌ساز. هر توقفگاه چیز منحصربه‌فردی دارد.',
+                'route66-photos-title': '📸 سفر ما روی Route 66',
+                'route66-photo1-label': 'Lightning McQueen — سلیگمن',
+                'route66-photo2-label': 'Route 66 تاریخی و خیابان Lorraine',
+                'route66-photo3-label': 'باغ خوان — سلیگمن',
+                'route66-photo4-label': 'ایالت Grand Canyon — Route 66',
+                'route66-photo5-label': 'ماشین پلیس Route 66',
+                'route66-photo6-label': 'فروشگاه کنجکاوی — Route 66 و I-40',
+                'route66-photo7-label': 'Snow Cap Drive-In — سلیگمن',
+                'route66-photo8-label': 'ماشین‌های کلاسیک — خیابان اصلی',
+                'route66-videos-title': '🎬 ویدیوهای Route 66 ما',
+                'route66-vid1-title': 'سفر جاده‌ای قسمت ۱ — چیزی در تاریکی حرکت کرد',
+                'route66-vid1-desc': 'آغاز سفر Route 66 ما — Cathedral Gorge، نوادا. چیزی در تاریکی حرکت کرد.',
+                'route66-vid2-title': 'سفر جاده‌ای قسمت ۲ — گم در دره Goblin',
+                'route66-vid2-desc': 'گم در دره Goblin، یوتا — جایی که سنگ‌ها زنده‌اند و بیابان با ذهن شما بازی می‌کند.',
+                'route66-vid3-title': 'سنگ آخر — پایان Route 66',
+                'route66-vid3-desc': 'فصل آخر سفر Route 66 ما — سلیگمن، آخرین سنگ روی جاده مادر.',
+                'route66-vid4-title': 'دریاچه Dolores — پارک آبی متروکه',
+                'route66-vid4-desc': 'پارک آبی Lake Dolores — متروک از سال 2004، گذشته نفرین، و روح تابستانی که هرگز تمام نشد.',
+
+                // ===== EXISTING FARSI KEYS =====
                 'what-is-desc': 'Route 66 که به عنوان "خیابان اصلی آمریکا" شناخته می‌شود، یک بزرگراه تاریخی است که شیکاگو را به سانتا مونیکا متصل می‌کند.',
                 'history-desc': 'Route 66 در سال 1926 تأسیس شد و به یک بزرگراه شرق-غرب اصلی تبدیل شد.',
                 'vintage-desc': 'Vintage Americana قلب Route 66 است. رستوران‌های کلاسیک، موتل‌های رترو، و جاذبه‌های کنار جاده تجربه اصلی Route 66 را تعریف می‌کنند.',
                 'shopping-desc': 'Route 66 بهشت خریداران است با فروشگاه‌های Vintage منحصر به فرد و فروشگاه‌های آنتیک.',
-                'locations-title': 'مکان‌های ما را کاوش کنید',
                 'slingman-desc': 'سلیگمن، آریزونا — زادگاه Route 66 تاریخی. وقتی در سال ۱۹۷۸ بزرگراه I-40 شهر را دور زد، آرایشگر محلی آنجل دلگادیلو جنبش حفاظت از Route 66 را بنیان گذاشت و سلیگمن رسماً به عنوان «زادگاه Route 66 تاریخی» شناخته شد. سلیگمن الهام فیلم محبوب Pixar یعنی Cars (۲۰۰۶) بود.',
                 'nelson-desc': 'شهر شبح نلسون (El Dorado) در دره Eldorado Canyon نوادا قرار دارد — ۴۵ دقیقه جنوب لاس وگاس. معدن Techatticup در سال ۱۸۶۱ یکی از خشن‌ترین تب طلای تاریخ نوادا را رقم زد. امروز مکانی محبوب برای فیلمبرداری با ماشین‌های قدیمی زنگزده، هواپیمای سقوط‌کرده و تور معدن زیرزمینی.',
                 'kingsman-desc': 'کینگمن، آریزونا — قلب Route 66 تاریخی. طولانی‌ترین بخش حفاظت‌شده Route 66 در سراسر آمریکا از میان این شهر می‌گذرد. مرکز بازدید Powerhouse (۱۹۰۷) میزبان موزه Route 66 آریزوناست. کینگمن زادگاه بازیگر آندی دیواین و دروازه ورودی به Oatman — شهر الاغهای وحشی — است.',
