@@ -381,6 +381,194 @@
             .video-grid { grid-template-columns: repeat(3, 1fr); } 
             .video-card iframe { height: 380px; }
         }
+
+        /* ===== RIVERSIDE CEMETERY STYLES ===== */
+        .nav-cemetery {
+            background: #8b0000 !important;
+            color: white !important;
+            border-color: #8b0000 !important;
+        }
+        .nav-cemetery:hover {
+            background: #5c0000 !important;
+            border-color: #5c0000 !important;
+            color: white !important;
+        }
+
+        #riverside {
+            background: #0a0a0a;
+            color: #e8e0d5;
+            margin: 0;
+            padding: 80px 30px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        #riverside h2 {
+            color: #c8a96e;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 30px rgba(200,169,110,0.4);
+        }
+
+        .cemetery-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        #riverside .tabs {
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        #riverside .tab-btn {
+            background: transparent;
+            border: 1px solid #3a3a3a;
+            color: #888;
+            font-size: 13px;
+            padding: 10px 18px;
+        }
+
+        #riverside .tab-btn.active,
+        #riverside .tab-btn:hover {
+            background: #8b0000;
+            color: #e8e0d5;
+            border-color: #8b0000;
+        }
+
+        .grave-header {
+            text-align: center;
+            padding: 40px 0 30px 0;
+            border-bottom: 1px solid #1e1e1e;
+            margin-bottom: 40px;
+        }
+
+        .grave-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #c8a96e;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .grave-dates {
+            color: #666;
+            font-size: 14px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .grave-epitaph {
+            color: #888;
+            font-style: italic;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .horror-story-title {
+            color: #8b0000;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .horror-story-body {
+            color: #b0a898;
+            line-height: 1.9;
+            font-size: 15px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .grave-image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .grave-image-card {
+            border-radius: 0;
+            overflow: hidden;
+            border: 1px solid #1e1e1e;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .grave-image-card:hover {
+            border-color: #8b0000;
+            transform: scale(1.02);
+        }
+
+        .grave-image-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(30%) contrast(1.1);
+        }
+
+        .grave-image-card:hover img {
+            filter: grayscale(0%) contrast(1.2);
+        }
+
+        .video-note {
+            background: #111;
+            border-left: 3px solid #8b0000;
+            padding: 20px 25px;
+            margin: 30px auto;
+            max-width: 700px;
+            color: #888;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .video-note strong {
+            color: #c8a96e;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .cemetery-map-container {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #1e1e1e;
+            margin: 30px 0;
+            filter: grayscale(80%) invert(90%) contrast(0.8);
+        }
+
+        .overview-card {
+            background: #111;
+            border: 1px solid #1e1e1e;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .overview-card h4 {
+            color: #c8a96e;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .overview-card p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -394,6 +582,7 @@
                 <a href="#gallery" onclick="scrollToSection('gallery')">Gallery</a>
                 <a href="#videos" onclick="scrollToSection('videos')">Videos</a>
                 <a href="#contact" onclick="scrollToSection('contact')">Follow</a>
+                <a href="#riverside" onclick="scrollToSection('riverside')" class="nav-cemetery">⚰️ Riverside Cemetery</a>
             </div>
             <div class="lang-toggle">
                 <button class="active" onclick="setLang('en')">EN</button>
@@ -612,6 +801,184 @@
             </div>
         </section>
 
+    </div>
+
+    <!-- RIVERSIDE CEMETERY SECTION -->
+    <section id="riverside">
+        <h2>⚰️ Riverside Cemetery</h2>
+        <p class="cemetery-subtitle">Denver's Oldest &amp; Most Haunted Burial Ground — Est. 1876</p>
+        <p style="text-align:center; color:#666; max-width:750px; margin:0 auto 50px auto; font-size:15px; line-height:1.9;">Nestled on Denver's northeast border, Riverside Cemetery is the city's oldest active burial ground, established in 1876. Girded by the flaring flames and brimstone stench of the nearby Suncor refinery, this forgotten necropolis holds the bones of Denver's founders, outlaws, murder victims, and war heroes. The cemetery stopped selling new plots years ago, and the grass grows wild over the forgotten dead. Visitors report strange photographs, slamming doors on windless days, and apparitions drifting between the headstones at dusk. <em style="color:#8b0000;">These are their stories.</em></p>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTabCemetery('archer')">James Archer</button>
+            <button class="tab-btn" onclick="switchTabCemetery('baker')">Nathan Baker</button>
+            <button class="tab-btn" onclick="switchTabCemetery('soule')">Silas Soule</button>
+            <button class="tab-btn" onclick="switchTabCemetery('contassot')">Marie Contassot</button>
+            <button class="tab-btn" onclick="switchTabCemetery('whitsitt')">Richard Whitsitt</button>
+            <button class="tab-btn" onclick="switchTabCemetery('civilwar')">Civil War Veterans</button>
+            <button class="tab-btn" onclick="switchTabCemetery('river')">The Riverside River</button>
+            <button class="tab-btn" onclick="switchTabCemetery('overview')">Overview &amp; Map</button>
+        </div>
+
+        <!-- JAMES ARCHER -->
+        <div id="archer" class="tab-content active">
+            <div class="grave-header">
+                <h3>James Archer</h3>
+                <div class="grave-dates">1824 — 1882</div>
+                <div class="grave-epitaph">"He stood above the city he built — and still watches over it."</div>
+            </div>
+            <p class="horror-story-title">👁️ THE WATCHER</p>
+            <p class="horror-story-body">James Archer's grave is unlike any other at Riverside Cemetery. A towering bronze statue of the man himself — hat in hand, coat buttoned against the Colorado wind — stands atop a massive stone pedestal, his cold metal eyes fixed permanently on the Denver skyline. He does not look down at the earth. He looks outward. Always outward.</p>
+            <p class="horror-story-body">Archer was a prominent Denver businessman and civic figure who helped shape the city's early commercial identity. He died in 1882, and his family commissioned this imposing monument as a testament to his legacy. But visitors who come at dusk report something unsettling: the statue seems to shift. Photographs taken from one angle show the figure facing east; taken minutes later from the same spot, it appears to face north. No one has ever caught the movement on camera.</p>
+            <p class="horror-story-body">Local legend holds that on the anniversary of his death, a figure in a long dark coat is seen walking the cemetery paths at midnight — always heading toward the statue, never away from it. Those who have followed the figure say it simply vanishes when it reaches the pedestal. The bronze man stands alone. Waiting.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">Dogs brought to the cemetery consistently refuse to approach the Archer monument. They sit at a distance, ears flat, and will not move.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 1 — First encounter with the Archer monument at Riverside Cemetery
+            </div>
+        </div>
+
+        <!-- NATHAN BAKER -->
+        <div id="baker" class="tab-content">
+            <div class="grave-header">
+                <h3>Nathan Baker &amp; Frank</h3>
+                <div class="grave-dates">1843 — 1934</div>
+                <div class="grave-epitaph">"A man is nothing without his horse. They buried them apart. Neither rests."</div>
+            </div>
+            <p class="horror-story-title">🐴 THE HORSE THAT WOULD NOT LEAVE</p>
+            <p class="horror-story-body">Nathan Baker's headstone is broken — the bottom half sheared clean off, as if something pushed up from below. The stone has been broken for decades. No one has repaired it. The cemetery staff say it keeps happening: they reset the stone, and within weeks it is broken again. The ground beneath it, they note, is always disturbed.</p>
+            <p class="horror-story-body">Baker was a Colorado pioneer and horse trader who reportedly loved his horse Frank more than any human being. He outlived Frank by eleven years, and by all accounts never recovered from the loss. He requested in his will that Frank be buried in the same plot. The request was denied. Frank was buried in a separate section of the cemetery. Baker was buried alone.</p>
+            <p class="horror-story-body">Visitors to the Baker grave at night report the sound of hooves on the gravel paths — a slow, deliberate walk that circles the headstone and then stops. No animal is ever found. Photographs taken near the grave frequently show a blurred shape at ground level, low and elongated, like a large animal lying down.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">One groundskeeper, who worked at Riverside for thirty years, refused to enter the Baker section after dark. He never explained why. He simply would not go.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 3 — The broken headstone of Nathan Baker and the legend of Frank
+            </div>
+        </div>
+
+        <!-- SILAS SOULE -->
+        <div id="soule" class="tab-content">
+            <div class="grave-header">
+                <h3>Captain Silas Soule</h3>
+                <div class="grave-dates">1838 — 1865</div>
+                <div class="grave-epitaph">"He refused the order. He told the truth. He was shot dead at 26."</div>
+            </div>
+            <div class="grave-image-grid">
+                <div class="grave-image-card" onclick="openModal(this)">
+                    <img src="images/silas_soule.jpg" alt="Silas Soule historical photograph">
+                </div>
+            </div>
+            <p class="horror-story-title">⚖️ THE MURDERED WITNESS</p>
+            <p class="horror-story-body">On November 29, 1864, Colonel John Chivington ordered his troops to attack a peaceful encampment of Cheyenne and Arapaho people at Sand Creek, Colorado. It was not a battle. It was a massacre. Between 150 and 200 men, women, and children were killed. Captain Silas Soule refused to give the order to his men. He stood down. He watched. And then he testified.</p>
+            <p class="horror-story-body">Soule gave damning testimony against Chivington at the military inquiry. He named names. He described what he saw. He was the only officer who did. On April 23, 1865 — less than a month after his wedding — Silas Soule was shot dead in the street in Denver. The killer was never convicted. The case was dropped. Chivington was never charged.</p>
+            <p class="horror-story-body">Visitors to Soule's grave report a persistent cold spot, even on warm summer days. Some have heard what sounds like a man speaking quietly — not in distress, but urgently, as if giving testimony to someone just out of earshot. The words are never clear. The voice always stops when you get close.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">Silas Soule was 26 years old. He had been married for 23 days.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 9 — The grave of Silas Soule and the ghost of Sand Creek
+            </div>
+        </div>
+
+        <!-- MARIE CONTASSOT -->
+        <div id="contassot" class="tab-content">
+            <div class="grave-header">
+                <h3>Marie Contassot</h3>
+                <div class="grave-dates">1871 — 1894</div>
+                <div class="grave-epitaph">"Morte à Denver le 28 Octobre 1894. Elle avait 23 ans."</div>
+            </div>
+            <div class="grave-image-grid">
+                <div class="grave-image-card" onclick="openModal(this)">
+                    <img src="images/mary_contaso_grave.jpg" alt="Marie Contassot grave inscription">
+                </div>
+                <div class="grave-image-card" onclick="openModal(this)">
+                    <img src="images/mary_grave_angel.jpg" alt="Marie Contassot angel monument">
+                </div>
+            </div>
+            <p class="horror-story-title">👼 THE STRANGLER'S VICTIM</p>
+            <p class="horror-story-body">Marie Contassot was a young French woman, 23 years old, who died in Denver on October 28, 1894. Her grave is marked with a large stone angel — or what remains of one. The angel's arms are broken. Its face has been worn smooth by weather and, some say, by hands. The inscription is in French. She is far from home.</p>
+            <p class="horror-story-body">Denver in the 1890s had a strangler. Between 1893 and 1895, several young women were found dead under circumstances that were never fully explained. The cases were closed without convictions. Marie Contassot's death was officially recorded as illness. But her family, who traveled from France to bury her, reportedly told the cemetery staff she had been found in her room with marks on her throat.</p>
+            <p class="horror-story-body">The angel monument has been vandalized twice. Both times, the vandalism was discovered in the morning with no witnesses. Security footage from a nearby camera showed only static during the hours in question. The broken forearm of the angel was found placed upright in the ground several feet away, as if planted there deliberately.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">The crematorium near her grave has a door that slams on windless days. Staff have stopped trying to latch it. It opens again within the hour.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 8 — Marie Contassot and the broken angel of Riverside Cemetery
+            </div>
+        </div>
+
+        <!-- RICHARD WHITSITT -->
+        <div id="whitsitt" class="tab-content">
+            <div class="grave-header">
+                <h3>Richard Whitsitt</h3>
+                <div class="grave-dates">1830 — 1881</div>
+                <div class="grave-epitaph">"Denver's first duel. One man walked away. One did not."</div>
+            </div>
+            <p class="horror-story-title">🔫 THE DUELIST</p>
+            <p class="horror-story-body">Richard Whitsitt holds a grim distinction: he was killed in Denver's first recorded duel. In 1881, a dispute over a business deal escalated to pistols at dawn. Whitsitt was shot through the chest. His opponent walked away. The duel was technically illegal, but no charges were filed. Denver was still a frontier town. These things happened.</p>
+            <p class="horror-story-body">His grave is marked by a stone angel — but the angel is missing its right forearm. No one knows when it was lost or where it went. Cemetery records show the stone was intact as recently as 1940. By 1960, the arm was gone. There is no record of vandalism, no fragment found nearby. The arm simply ceased to exist.</p>
+            <p class="horror-story-body">Visitors who linger near the Whitsitt grave after sunset report hearing a single sharp crack — like a pistol shot — from somewhere in the cemetery. It happens once. It does not repeat. Those who turn toward the sound find nothing. Those who do not turn say the silence that follows feels like someone standing very close behind them.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">A local historian who spent three nights at Riverside documenting paranormal activity reported the crack sound on all three nights, always between 11 PM and midnight, always from the direction of the Whitsitt grave.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 6 — Richard Whitsitt and the pistol shot that echoes through time
+            </div>
+        </div>
+
+        <!-- CIVIL WAR VETERANS -->
+        <div id="civilwar" class="tab-content">
+            <div class="grave-header">
+                <h3>Civil War Veterans</h3>
+                <div class="grave-dates">Sand Creek Massacre — 1864</div>
+                <div class="grave-epitaph">"They followed orders. Some of them regretted it for the rest of their lives."</div>
+            </div>
+            <p class="horror-story-title">🪖 THE RESTLESS REGIMENT</p>
+            <p class="horror-story-body">In the northeast corner of Riverside Cemetery, rows of white military headstones stand in precise formation — the graves of Colorado's Civil War veterans, many of whom also served at Sand Creek. The stones are identical. The names are different. The silence here is different from the rest of the cemetery. It is not peaceful. It is held.</p>
+            <p class="horror-story-body">Several of the men buried here participated in the Sand Creek Massacre under Colonel Chivington. Some later testified that they had been ordered to fire. Some testified they had refused. The record is incomplete. The truth, as with most frontier violence, was buried alongside the men who knew it.</p>
+            <p class="horror-story-body">Visitors to this section at dawn — particularly in late November, near the anniversary of the massacre — report seeing figures moving between the headstones in the early morning mist. The figures are dressed in period military clothing. They do not respond when called to. They disappear when the sun fully rises.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">One visitor photographed what appeared to be a full company of soldiers standing at attention between the headstones. When she looked up from her camera, the section was empty. The photograph was later analyzed by a photography expert who found no evidence of manipulation.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 2 — The Civil War section and the ghosts of Sand Creek
+            </div>
+        </div>
+
+        <!-- THE RIVERSIDE RIVER -->
+        <div id="river" class="tab-content">
+            <div class="grave-header">
+                <h3>The Riverside River</h3>
+                <div class="grave-dates">The South Platte — Always</div>
+                <div class="grave-epitaph">"She is always looking for something in the water. She never finds it."</div>
+            </div>
+            <p class="horror-story-title">🌊 LA LLORONA OF DENVER</p>
+            <p class="horror-story-body">The South Platte River runs along the eastern edge of Riverside Cemetery, separating the dead from the living city beyond. The river is narrow here, shallow, unremarkable in daylight. At night, it is something else entirely.</p>
+            <p class="horror-story-body">For decades, residents of the neighborhoods bordering the cemetery have reported seeing a woman standing at the river's edge after midnight — always on the cemetery side, always facing the water. She is described consistently: long dark hair, pale dress, standing very still. When approached, she does not move. When called to, she does not respond. She is simply there, and then she is not.</p>
+            <p class="horror-story-body">Cemetery records from the 1890s reference the burial of a young mother and infant in the section nearest the river. The circumstances of their deaths are not recorded. The graves are unmarked. No one knows their names. But the woman at the water has been reported for over a hundred years, and the descriptions have never changed.</p>
+            <p class="horror-story-body" style="color:#666; font-style:italic;">Children who live near the cemetery are told not to go near the river at night. They are not told why. They learn not to ask.</p>
+            <div class="video-note">
+                <strong>📹 Video From The Grave</strong>
+                Season 5 — The woman at the river and the unnamed graves of Riverside
+            </div>
+        </div>
+
+        <!-- OVERVIEW & MAP -->
+        <div id="overview" class="tab-content">
+            <div class="grave-header">
+                <h3>Overview &amp; Map</h3>
+                <div class="grave-dates">Riverside Cemetery, Denver, CO — Est. 1876</div>
+                <div class="grave-epitaph">"5201 Brighton Blvd, Denver, CO 80216"</div>
+            </div>
+            <div class="overview-card">
+                <h4>About Riverside Cemetery</h4>
+                <p>Riverside Cemetery is Denver's oldest active cemetery, established in 1876. It is the final resting place of over 65,000 people, including Denver's founders, Civil War veterans, Sand Creek Massacre soldiers, and victims of frontier violence. The cemetery is maintained by a nonprofit preservation organization and is open to the public during daylight hours.</p>
+            </div>
+            <div class="overview-card">
+                <h4>Visiting Information</h4>
+                <p>Address: 5201 Brighton Blvd, Denver, CO 80216 | Open daily dawn to dusk | Free admission | Guided tours available seasonally | Photography permitted | Dogs on leash welcome (though some refuse to enter certain sections)</p>
+            </div>
+            <div class="cemetery-map-container" id="cemetery-map"></div>
+        </div>
+    </section>
+
+    <div class="container">
         <section id="gallery">
             <h2 id="gallery-title">Gallery</h2>
             <p id="gallery-desc">Route 66 adventures through photography</p>
@@ -802,6 +1169,40 @@
             document.getElementById(tabName).classList.add('active');
             document.querySelectorAll('#about .tab-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
+        }
+
+        function switchTabCemetery(tabName) {
+            document.querySelectorAll('#riverside .tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelectorAll('#riverside .tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            if (tabName === 'overview') {
+                setTimeout(initCemeteryMap, 100);
+            }
+        }
+
+        let cemeteryMap;
+        function initCemeteryMap() {
+            const mapEl = document.getElementById('cemetery-map');
+            if (!mapEl || mapEl.hasChildNodes()) return;
+            cemeteryMap = L.map('cemetery-map').setView([39.7915, -104.9580], 16);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors', maxZoom: 19
+            }).addTo(cemeteryMap);
+            const graves = [
+                { name: 'James Archer (1824–1882)', lat: 39.7920, lng: -104.9585, story: 'The Watcher — statue that shifts direction' },
+                { name: 'Nathan Baker & Frank (1843–1934)', lat: 39.7912, lng: -104.9575, story: 'The Horse That Would Not Leave' },
+                { name: 'Silas Soule (1838–1865)', lat: 39.7918, lng: -104.9570, story: 'The Murdered Witness — Sand Creek' },
+                { name: 'Marie Contassot (1871–1894)', lat: 39.7908, lng: -104.9590, story: 'The Strangler\'s Victim — broken angel' },
+                { name: 'Richard Whitsitt (1830–1881)', lat: 39.7922, lng: -104.9565, story: 'The Duelist — phantom pistol shot' },
+                { name: 'Civil War Veterans / Sand Creek', lat: 39.7925, lng: -104.9580, story: 'The Restless Regiment' },
+                { name: 'The Riverside River', lat: 39.7900, lng: -104.9560, story: 'La Llorona of Denver' }
+            ];
+            graves.forEach(g => {
+                L.circleMarker([g.lat, g.lng], {
+                    radius: 9, fillColor: '#8b0000', color: '#c8a96e', weight: 2, opacity: 1, fillOpacity: 0.85
+                }).bindPopup(`<b style="color:#8b0000">${g.name}</b><br><em>${g.story}</em>`).addTo(cemeteryMap);
+            });
         }
 
         function switchTabLocation(tabName) {
