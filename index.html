@@ -607,6 +607,14 @@
                 <button class="tab-btn" onclick="switchTabLocation('nelson')" id="btn-nelson">Nelson Ghost Town</button>
                 <button class="tab-btn" onclick="switchTabLocation('kingsman')" id="btn-kingsman">Kingman</button>
                 <button class="tab-btn" onclick="switchTabLocation('map')" id="btn-map">Map</button>
+                <button class="tab-btn" onclick="switchTabLocation('cathedral')" id="btn-cathedral">Cathedral Gorge</button>
+                <button class="tab-btn" onclick="switchTabLocation('goblin')" id="btn-goblin">Goblin Valley</button>
+                <button class="tab-btn" onclick="switchTabLocation('lakedolores')" id="btn-lakedolores">Lake Dolores</button>
+                <button class="tab-btn" onclick="switchTabLocation('lafayette')" id="btn-lafayette">Lafayette, CO</button>
+                <button class="tab-btn" onclick="switchTabLocation('bunkerville')" id="btn-bunkerville">Bunkerville, NV</button>
+                <button class="tab-btn" onclick="switchTabLocation('rushmore')" id="btn-rushmore">Mount Rushmore</button>
+                <button class="tab-btn" onclick="switchTabLocation('sturgis')" id="btn-sturgis">Sturgis, SD</button>
+                <button class="tab-btn" onclick="switchTabLocation('mormonrocks')" id="btn-mormonrocks">Mormon Rocks</button>
             </div>
 
             <!-- ===== ROUTE 66 TAB ===== -->
@@ -962,7 +970,364 @@
                 </div>
             </div>
 
-            <div id="map" class="tab-content">
+            <!-- ===== CATHEDRAL GORGE TAB ===== -->
+            <div id="cathedral" class="tab-content">
+                <h3 id="cathedral-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Cathedral Gorge State Park, Nevada</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="cathedral-tagline">🏜️ Maze-Like Spires · Ancient Clay · Eerie Silence</p>
+                <p id="cathedral-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Cathedral Gorge State Park in Lincoln County, Nevada, is a geological wonder sculpted over five million years from soft bentonite clay. Ancient volcanic ash settled in a prehistoric lake, compacted into the Panaca Formation, and was then carved by wind and rain into a haunting labyrinth of slot canyons, towering spires, and hoodoos. The Southern Paiute people knew this land long before European settlers arrived in the 1880s. Nevada Governor James Scrugham acquired the land in 1924, and it became one of Nevada's first four state parks in 1935, developed by the Civilian Conservation Corps.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="cathedral-card1">
+                        <h4 id="cathedral-card1-title">🏛️ The Geology</h4>
+                        <p id="cathedral-card1-body">Five million years ago, this valley was a freshwater lake. Volcanic ash and debris settled and compacted into soft bentonite clay — the Panaca Formation. As the lake drained, relentless erosion by wind and rain sculpted the maze of slot canyons, cathedral-like spires, and hoodoos you see today. The formations are constantly, slowly changing.</p>
+                    </div>
+                    <div class="info-card" id="cathedral-card2">
+                        <h4 id="cathedral-card2-title">🕳️ The Slot Canyons</h4>
+                        <p id="cathedral-card2-body">The park's most striking feature is its system of narrow, winding slot canyons. As you descend into these passages, the towering walls close in and the light dims to an eerie glow. The famous "Rabbit Hole" tunnel leads to a hidden chamber. Sound behaves strangely here — sometimes amplified, sometimes eerily absorbed. After dark, the canyons feel genuinely otherworldly.</p>
+                    </div>
+                    <div class="info-card" id="cathedral-card3">
+                        <h4 id="cathedral-card3-title">🌌 Dark Sky Stargazing</h4>
+                        <p id="cathedral-card3-body">Cathedral Gorge is a designated International Dark Sky Park. Far from city lights in the remote Nevada desert, the Milky Way blazes overhead on clear nights. The combination of the alien landscape below and the star-filled sky above creates an experience unlike anywhere else. Bring a blanket, lie on the desert floor, and let the universe swallow you whole.</p>
+                    </div>
+                    <div class="info-card" id="cathedral-card4">
+                        <h4 id="cathedral-card4-title">👻 Eerie Atmosphere</h4>
+                        <p id="cathedral-card4-body">No documented ghost stories — but Cathedral Gorge doesn't need them. The maze-like canyons disorient visitors. The silence is absolute. The clay walls seem to absorb sound. At dusk, the spires cast long, shifting shadows that resemble figures. The Piano Guys filmed their "Sweet Child O' Mine" video here, and the 2000 film "The Last Real Cowboys" used it as a backdrop.</p>
+                    </div>
+                    <div class="info-card" id="cathedral-card5">
+                        <h4 id="cathedral-card5-title">📍 How to Get There</h4>
+                        <p id="cathedral-card5-body">Located along <strong>U.S. Route 93</strong>, approximately 2 miles northwest of Panaca, Nevada. From Las Vegas: take I-15 North to US-93 North (about 2.5 hours). From Salt Lake City: take I-15 South to US-93 South. The park entrance is well-signed. Camping available on-site.</p>
+                    </div>
+                    <div class="info-card" id="cathedral-card6">
+                        <h4 id="cathedral-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="cathedral-card6-body">Spring and Fall for the most comfortable temperatures. Summer highs reach 95°F (35°C) but the canyon walls provide shade. Winter nights drop to 55°F (13°C). Dawn and dusk offer the most dramatic light on the formations. The park is open year-round, 24 hours a day.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px;">
+                    <h4 id="cathedral-videos-title" style="color:#8B4513; font-size:18px; margin-bottom:15px; font-family:'Playfair Display',serif;">🎥 Cathedral Gorge — Our Visit</h4>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+                        <div style="background:#f9f5f0; border-radius:8px; overflow:hidden; border:1px solid #e8ddd0;">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/W4Y2LnqS0ew" frameborder="0" allowfullscreen style="display:block;"></iframe>
+                            <div style="padding:12px;">
+                                <p id="cathedral-vid1-title" style="font-weight:700; color:#2c2c2c; margin:0 0 5px 0; font-size:14px;">Roadtrip EP.1 – Something Moved in the Dark: Cathedral Gorge</p>
+                                <p id="cathedral-vid1-desc" style="color:#777; font-size:12px; margin:0;">Something moved in the fog in the darkness — Roadtrip Day 1 at Cathedral Gorge, Nevada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== GOBLIN VALLEY TAB ===== -->
+            <div id="goblin" class="tab-content">
+                <h3 id="goblin-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Goblin Valley State Park, Utah</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="goblin-tagline">🛸 Alien Landscape · Mushroom Rocks · Dark Sky Park</p>
+                <p id="goblin-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Goblin Valley State Park, near Hanksville, Utah, is one of the most bizarre landscapes on Earth. Thousands of mushroom-shaped sandstone formations — called "goblins" — fill a hidden valley in the San Rafael Swell. Cowboys discovered it in the late 1920s; Arthur Chaffin photographed it in 1949 and called it the "Valley of the Mushrooms." It became a state park in 1964. In 2013, Boy Scout leaders deliberately toppled a 200-million-year-old hoodoo, sparking national outrage and criminal charges. The park is also an International Dark Sky Park.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="goblin-card1">
+                        <h4 id="goblin-card1-title">🍄 The Goblins</h4>
+                        <p id="goblin-card1-body">Unlike most parks where you stay on trails, Goblin Valley invites you to wander freely among the formations. The "goblins" — thousands of them — range from knee-height to towering 10-foot figures. Each one is unique, shaped by 200 million years of erosion. At sunset, they cast long shadows that make them look alive. Visitors consistently describe the valley as feeling like another planet.</p>
+                    </div>
+                    <div class="info-card" id="goblin-card2">
+                        <h4 id="goblin-card2-title">🌌 Dark Sky Stargazing</h4>
+                        <p id="goblin-card2-body">Goblin Valley is one of Utah's most remote locations, with virtually zero light pollution. The park is a certified International Dark Sky Park. On clear nights, the Milky Way is so bright it casts shadows among the goblins. The combination of the alien landscape and the star-filled sky is genuinely surreal — one of the most otherworldly experiences in the American West.</p>
+                    </div>
+                    <div class="info-card" id="goblin-card3">
+                        <h4 id="goblin-card3-title">🎬 Galaxy Quest & Hollywood</h4>
+                        <p id="goblin-card3-body">Goblin Valley was used as the alien planet in the 1999 film <em>Galaxy Quest</em>. Portions of <em>John Carter</em> and <em>City Slickers II</em> were also filmed in the area. The landscape is so otherworldly that filmmakers consistently use it to represent alien worlds. In 2013, a Scout leader's vandalism of a 200-million-year-old hoodoo made national headlines and resulted in criminal charges.</p>
+                    </div>
+                    <div class="info-card" id="goblin-card4">
+                        <h4 id="goblin-card4-title">🧗 Goblin's Lair</h4>
+                        <p id="goblin-card4-body">Beyond the main valley, adventurous visitors can rappel into "Goblin's Lair" — a hidden slot canyon accessible only by rope. The cave system beneath the valley is dark, narrow, and disorienting. Guided rappelling tours are available. The Three Valleys area offers miles of exploration among increasingly bizarre formations. Mountain biking and disc golf are also available in the park.</p>
+                    </div>
+                    <div class="info-card" id="goblin-card5">
+                        <h4 id="goblin-card5-title">📍 How to Get There</h4>
+                        <p id="goblin-card5-body">Located 12 miles south of Hanksville, Utah. From I-70, take Highway 24 south for 24 miles, then turn at the Temple Mountain junction and follow signs for 12 miles to the park. Approximately 216 miles southeast of Salt Lake City. Day use fee applies; camping available.</p>
+                    </div>
+                    <div class="info-card" id="goblin-card6">
+                        <h4 id="goblin-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="goblin-card6-body">Spring (March–May) and Fall (September–November) offer the best temperatures for exploring. Summer daytime highs reach 90–105°F (32–41°C) but evenings cool rapidly to 50°F (10°C). Winter offers solitude and occasional snow that makes the goblins look even more alien. The park is open year-round.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px;">
+                    <h4 id="goblin-videos-title" style="color:#8B4513; font-size:18px; margin-bottom:15px; font-family:'Playfair Display',serif;">🎥 Goblin Valley — Our Visit</h4>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+                        <div style="background:#f9f5f0; border-radius:8px; overflow:hidden; border:1px solid #e8ddd0;">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/tWD41OFy4Qg" frameborder="0" allowfullscreen style="display:block;"></iframe>
+                            <div style="padding:12px;">
+                                <p id="goblin-vid1-title" style="font-weight:700; color:#2c2c2c; margin:0 0 5px 0; font-size:14px;">Roadtrip Ep.2 — Lost in Goblin Valley, Utah</p>
+                                <p id="goblin-vid1-desc" style="color:#777; font-size:12px; margin:0;">Lost in the Valley of the Goblins — where the rocks are alive and the silence is absolute</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:20px;">
+                    <img src="images/locations_yt/tWD41OFy4Qg.jpg" alt="Goblin Valley Utah" style="width:100%; max-width:700px; border-radius:8px; display:block; margin:0 auto;">
+                </div>
+            </div>
+
+            <!-- ===== LAKE DOLORES TAB ===== -->
+            <div id="lakedolores" class="tab-content">
+                <h3 id="lakedolores-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Lake Dolores / Rock-A-Hoola Waterpark, California</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="lakedolores-tagline">💀 Abandoned · Cursed · Mojave Desert Ghost</p>
+                <p id="lakedolores-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">In the heart of the Mojave Desert near Newberry Springs, California, the skeletal ruins of Lake Dolores Waterpark rot under the desert sun. Built by Bob Byers for his wife Dolores in the early 1960s, the park opened in 1962 using underground springs from the Mojave Aquifer. It thrived through the 1970s and early 1980s before closing. Reopened as Rock-A-Hoola in 1998, it went bankrupt in 2000 after a paralysis lawsuit. Briefly reopened as Discovery Waterpark in 2002–2004, it has been abandoned ever since — vandalized, burned, and slowly consumed by the desert.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="lakedolores-card1">
+                        <h4 id="lakedolores-card1-title">💀 The Cursed History</h4>
+                        <p id="lakedolores-card1-body">The park has cycled through three names and three bankruptcies. In 1999, an employee was paralyzed in an accident, triggering a $4.4 million lawsuit that broke the park financially. Dolores Byers, the woman the park was named after, died in 2001 — one month after selling the property. In 2018, an arson fire destroyed the Lazy River Cafe and Arcade. Every attempt to revive it has ended in failure.</p>
+                    </div>
+                    <div class="info-card" id="lakedolores-card2">
+                        <h4 id="lakedolores-card2-title">👻 Haunted Ruins</h4>
+                        <p id="lakedolores-card2-body">The abandoned gift shop is rumored to be haunted by a painting of a woman that taggers cannot paint over — the paint never stays. Visitors have conducted séances between the former arcade and gift shop. An eerie, sudden cold wind has been reported even when the air was previously still and hot. The skeletal waterslides loom over the desert like the bones of a dead giant.</p>
+                    </div>
+                    <div class="info-card" id="lakedolores-card3">
+                        <h4 id="lakedolores-card3-title">🎬 Pop Culture</h4>
+                        <p id="lakedolores-card3-body">Boards of Canada debuted their album <em>Tomorrow\'s Harvest</em> here in 2013. Kesha filmed her "High Road" music video here in 2020. BTS filmed a mini concert here in 2022. Tony Hawk appeared in a Mini Cooper commercial filmed at the ruins. The site has been featured in <em>Abandoned</em> (Viceland), <em>Rob & Big</em> (MTV), and BuzzFeed Unsolved. The 1998 film <em>Desert Blue</em> was filmed here.</p>
+                    </div>
+                    <div class="info-card" id="lakedolores-card4">
+                        <h4 id="lakedolores-card4-title">📸 Urban Exploration</h4>
+                        <p id="lakedolores-card4-body">The ruins are a magnet for urban explorers and photographers. The graffiti-covered waterslides, the desolate lake bed, the burned-out arcade, and the post-apocalyptic aesthetic make it one of the most photogenic abandoned sites in California. The contrast of the colorful graffiti against the stark Mojave Desert is visually stunning. Note: the site is private property with "No Trespassing" signs.</p>
+                    </div>
+                    <div class="info-card" id="lakedolores-card5">
+                        <h4 id="lakedolores-card5-title">📍 How to Get There</h4>
+                        <p id="lakedolores-card5-body">Located off <strong>Interstate 15</strong> near Newberry Springs, California. Take the Hacienda Road exit from I-15. Approximately 27 miles northeast of Barstow and 100 miles southwest of Las Vegas. The ruins are visible from the highway. The property is privately owned — visit at your own risk.</p>
+                    </div>
+                    <div class="info-card" id="lakedolores-card6">
+                        <h4 id="lakedolores-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="lakedolores-card6-body">Late fall, winter, and early spring (November to April) to avoid the extreme Mojave summer heat which can exceed 115°F (46°C). Dawn and dusk offer the most dramatic light on the ruins. Night photography is particularly striking but the hazardous conditions of an abandoned site make daytime visits safer.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px;">
+                    <h4 id="lakedolores-videos-title" style="color:#8B4513; font-size:18px; margin-bottom:15px; font-family:'Playfair Display',serif;">🎥 Lake Dolores — Our Visit</h4>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+                        <div style="background:#f9f5f0; border-radius:8px; overflow:hidden; border:1px solid #e8ddd0;">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/arvxZ4sinfU" frameborder="0" allowfullscreen style="display:block;"></iframe>
+                            <div style="padding:12px;">
+                                <p id="lakedolores-vid1-title" style="font-weight:700; color:#2c2c2c; margin:0 0 5px 0; font-size:14px;">Lake Dolores — The Abandoned Water Park with a Cursed Past</p>
+                                <p id="lakedolores-vid1-desc" style="color:#777; font-size:12px; margin:0;">پارک آبی متروکه و رازهای نفرین‌شده‌اش در صحرای موهاوی</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:20px;">
+                    <img src="images/locations_yt/arvxZ4sinfU.jpg" alt="Lake Dolores Waterpark" style="width:100%; max-width:700px; border-radius:8px; display:block; margin:0 auto;">
+                </div>
+            </div>
+
+            <!-- ===== LAFAYETTE, CO TAB ===== -->
+            <div id="lafayette" class="tab-content">
+                <h3 id="lafayette-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Lafayette, Colorado — The Vampire's Town</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="lafayette-tagline">🧛 Coal Town · Transylvania · The Lafayette Vampire</p>
+                <p id="lafayette-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Lafayette, Colorado, 10 miles east of Boulder, was founded as a coal town in 1888 by Mary E. Miller, named after her late husband. Romanian and Eastern European immigrants flooded in to work the mines, bringing their Old World superstitions with them. When Theodore "Fodor" Glava — a gaunt Transylvanian coal miner — died in 1918 during the Spanish Flu epidemic, terrified locals convinced themselves he was a vampire. What followed was one of the strangest events in Colorado history.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="lafayette-card1">
+                        <h4 id="lafayette-card1-title">🧛 The Lafayette Vampire</h4>
+                        <p id="lafayette-card1-body">Theodore "Fodor" Glava arrived from Transylvania, Romania, and worked the coal mines. When he died in 1918 — gaunt, pale, and foreign — superstitious locals decided he was a vampire. After his burial in Lafayette Cemetery, rumors spread of livestock dying and a shadowy figure wandering the town. Terrified townsfolk dug up his grave, misread natural decomposition as vampirism, and drove a wooden stake through his heart. A tree now grows from the center of his grave — said to have sprouted from that very stake.</p>
+                    </div>
+                    <div class="info-card" id="lafayette-card2">
+                        <h4 id="lafayette-card2-title">⛏️ Coal Mining History</h4>
+                        <p id="lafayette-card2-body">Lafayette was built on coal. Miners from Romania, Italy, and Eastern Europe worked brutal underground conditions. The Coal Creek area is said to be haunted by the spirits of miners who perished underground. Ghost hunters report apparitions, sudden cold rushes of wind, and the feeling of being followed near the cemetery and old mining sites. The mine tunnels were also used for illicit Prohibition-era bootlegging.</p>
+                    </div>
+                    <div class="info-card" id="lafayette-card3">
+                        <h4 id="lafayette-card3-title">🌳 The Vampire's Grave</h4>
+                        <p id="lafayette-card3-body">Theodore Glava's grave in Lafayette Cemetery is marked by a tree growing directly from its center — the legendary stake that killed the vampire, now grown into a full tree. The grave is a pilgrimage site for paranormal enthusiasts. The cemetery itself is one of the most atmospheric in Colorado, with Victorian-era headstones, old mining family plots, and the lingering weight of a community that lived and died hard.</p>
+                    </div>
+                    <div class="info-card" id="lafayette-card4">
+                        <h4 id="lafayette-card4-title">👻 The Shadow That Never Died</h4>
+                        <p id="lafayette-card4-body">Our YouTube video "The Lafayette Shadow That Never Died" explores the full legend — from the Transylvanian connection to the coal mines to the grave with the tree. The shadow of Fodor Glava has never fully left Lafayette. Locals still tell the story. The cemetery still draws visitors who come to see the tree growing from the vampire's heart. The Coal Creek trail at night is not for the faint of heart.</p>
+                    </div>
+                    <div class="info-card" id="lafayette-card5">
+                        <h4 id="lafayette-card5-title">📍 How to Get There</h4>
+                        <p id="lafayette-card5-body">Lafayette is located approximately 22 miles northwest of Denver. From Denver: take I-25 North to US-36 West (Denver-Boulder Turnpike), then exit for CO-121/Wadsworth Parkway north, which becomes US-287 North into Lafayette. The <strong>Lafayette Cemetery</strong> is on Baseline Road, just east of US-287. Free and open to the public.</p>
+                    </div>
+                    <div class="info-card" id="lafayette-card6">
+                        <h4 id="lafayette-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="lafayette-card6-body">Late October evenings or foggy autumn mornings for the most atmospheric experience. The cemetery is most haunting at dawn or dusk when mist rises from Coal Creek. The Lafayette History Museum and historic downtown are worth visiting year-round. Ghost tours are available in October.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px;">
+                    <h4 id="lafayette-videos-title" style="color:#8B4513; font-size:18px; margin-bottom:15px; font-family:'Playfair Display',serif;">🎥 Lafayette — Our Visit</h4>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+                        <div style="background:#f9f5f0; border-radius:8px; overflow:hidden; border:1px solid #e8ddd0;">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/3UvAtbh3vzc" frameborder="0" allowfullscreen style="display:block;"></iframe>
+                            <div style="padding:12px;">
+                                <p id="lafayette-vid1-title" style="font-weight:700; color:#2c2c2c; margin:0 0 5px 0; font-size:14px;">The Lafayette Shadow That Never Died — Transylvania to Colorado</p>
+                                <p id="lafayette-vid1-desc" style="color:#777; font-size:12px; margin:0;">سایه‌ای که هیچ‌وقت نمرد — افسانه‌ای از ترنسیلوانیا تا کلرادو</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:20px;">
+                    <img src="images/locations_yt/3UvAtbh3vzc.jpg" alt="Lafayette Colorado" style="width:100%; max-width:700px; border-radius:8px; display:block; margin:0 auto;">
+                </div>
+            </div>
+
+            <!-- ===== BUNKERVILLE, NV TAB ===== -->
+            <div id="bunkerville" class="tab-content">
+                <h3 id="bunkerville-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Bunkerville, Nevada</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="bunkerville-tagline">🌵 Mormon Settlement · Nuclear Fallout · Virgin River Gorge</p>
+                <p id="bunkerville-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Bunkerville, Nevada, was settled in 1877 by Mormon pioneer Edward Bunker, who moved his polygamous family here after a communal settlement in Utah failed. The town sits along the Virgin River near the Nevada-Arizona border. In the 1950s, Bunkerville was directly downwind of nuclear test sites — residents recall playing in what they thought was snow, but was actually nuclear fallout. The legacy of childhood leukemia and government distrust runs deep. In 2014, the town made national news during the Bundy standoff.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="bunkerville-card1">
+                        <h4 id="bunkerville-card1-title">🏠 Mormon Pioneer History</h4>
+                        <p id="bunkerville-card1-body">Edward Bunker led his family here in 1877 with permission from Brigham Young to establish a new communal experiment — the United Order. Residents shared work, land, and the fruits of their labor. The experiment ended in 1880, but the Bunker family stayed. The Edward Bunker Home still stands as a historic landmark. The town retains its deep Mormon heritage and frontier character.</p>
+                    </div>
+                    <div class="info-card" id="bunkerville-card2">
+                        <h4 id="bunkerville-card2-title">☢️ Nuclear Downwinders</h4>
+                        <p id="bunkerville-card2-body">In the 1950s, the U.S. government conducted nuclear tests at the Nevada Test Site, 100 miles northwest. Bunkerville was directly in the fallout path. Residents — including children — played in the white powder that drifted down, not knowing it was radioactive. Childhood leukemia rates spiked. The community became known as "Downwinders" — citizens poisoned by their own government's secret tests. The distrust of federal authority that began then never fully healed.</p>
+                    </div>
+                    <div class="info-card" id="bunkerville-card3">
+                        <h4 id="bunkerville-card3-title">🔥 Little Finland & Devil's Throat</h4>
+                        <p id="bunkerville-card3-body">Near Bunkerville lies "Little Finland" (also called Hobgoblin's Playground and Devil's Fire) — a surreal landscape of red and orange sandstone formations that look like something from another world. Nearby, Devil's Throat is a massive sinkhole that drops 130 feet straight down into darkness. No one knows exactly how deep it goes. Both sites are accessible via dirt roads and are among the most otherworldly landscapes in Nevada.</p>
+                    </div>
+                    <div class="info-card" id="bunkerville-card4">
+                        <h4 id="bunkerville-card4-title">🤠 The Bundy Standoff (2014)</h4>
+                        <p id="bunkerville-card4-body">In April 2014, Bunkerville became the center of a national standoff when rancher Cliven Bundy refused to pay 20 years of federal grazing fees. Armed militia members from across the country converged on the town. Federal agents backed down. The standoff became a flashpoint in the ongoing conflict between Western ranchers and the federal government — a conflict with roots going back to the nuclear downwinder era and beyond.</p>
+                    </div>
+                    <div class="info-card" id="bunkerville-card5">
+                        <h4 id="bunkerville-card5-title">📍 How to Get There</h4>
+                        <p id="bunkerville-card5-body">Bunkerville is located in Clark County, Nevada, along the Virgin River near Mesquite. From Las Vegas: take I-15 North approximately 80 miles to the Mesquite/Bunkerville exit. Little Finland is accessible via dirt roads northeast of Bunkerville — a high-clearance vehicle is recommended. The Virgin River Gorge scenic drive on I-15 passes directly through the area.</p>
+                    </div>
+                    <div class="info-card" id="bunkerville-card6">
+                        <h4 id="bunkerville-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="bunkerville-card6-body">October through April to avoid the extreme desert heat. Summer temperatures regularly exceed 110°F (43°C). Little Finland and Devil's Throat are best visited in the morning before temperatures peak. The Virgin River Gorge is spectacular year-round, especially during spring wildflower season.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px;">
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/bunkerville/virgin_river.jpg" alt="Virgin River, Bunkerville NV" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="bunkerville-photo1-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Virgin River — Bunkerville, Nevada</p>
+                    </div>
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/bunkerville/landscape.jpg" alt="Bunkerville Nevada landscape" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="bunkerville-photo2-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Bunkerville Desert Landscape</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MOUNT RUSHMORE TAB ===== -->
+            <div id="rushmore" class="tab-content">
+                <h3 id="rushmore-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Mount Rushmore, South Dakota</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="rushmore-tagline">🗿 Sacred Lakota Land · Stolen Hills · Controversial Monument</p>
+                <p id="rushmore-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Mount Rushmore — originally Tunkasila Sakpe Paha (Six Grandfathers Mountain) to the Lakota people — stands in the sacred Black Hills of South Dakota. The 1868 Treaty of Fort Laramie guaranteed these hills to the Lakota forever. In 1877, after gold was discovered, the U.S. government seized the land. In 1927, sculptor Gutzon Borglum — who had documented ties to the Ku Klux Klan — began carving four presidents into the Lakota's sacred mountain. The Lakota sued, won $17.1 million in a 1980 Supreme Court ruling, and refused the money — they want their land back.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="rushmore-card1">
+                        <h4 id="rushmore-card1-title">🏔️ Six Grandfathers Mountain</h4>
+                        <p id="rushmore-card1-body">The Lakota, Cheyenne, and Arapaho peoples considered this mountain sacred — a spiritual center of the Black Hills. The 1868 Treaty of Fort Laramie guaranteed the Black Hills to the Lakota "for as long as the grass shall grow." Gold was discovered in 1874. By 1877, the U.S. government had seized the land. The carving of four American presidents into this sacred mountain remains one of the most controversial acts of cultural desecration in American history.</p>
+                    </div>
+                    <div class="info-card" id="rushmore-card2">
+                        <h4 id="rushmore-card2-title">🎨 The Sculptor's Dark Past</h4>
+                        <p id="rushmore-card2-body">Gutzon Borglum, who designed and led the carving from 1927 until his death in 1941, had documented ties to the Ku Klux Klan. He previously worked on Stone Mountain in Georgia — a Confederate monument — before being fired. His son Lincoln Borglum completed Mount Rushmore. The Hall of Records tunnel, intended to house American historical artifacts, was never completed. Borglum's unfinished vision adds an element of hidden secrets to the monument.</p>
+                    </div>
+                    <div class="info-card" id="rushmore-card3">
+                        <h4 id="rushmore-card3-title">🎬 North by Northwest & Pop Culture</h4>
+                        <p id="rushmore-card3-body">Alfred Hitchcock's 1959 thriller <em>North by Northwest</em> features the famous chase scene at Mount Rushmore — though much of it was filmed on a scaled replica after the National Park Service refused access. The monument also appears in <em>National Treasure: Book of Secrets</em>. The Presidents of the United States of America performed live here for MTV in 1996. It remains one of the most photographed monuments in America.</p>
+                    </div>
+                    <div class="info-card" id="rushmore-card4">
+                        <h4 id="rushmore-card4-title">👻 Black Hills Hauntings</h4>
+                        <p id="rushmore-card4-body">The Black Hills region surrounding Mount Rushmore is rich with paranormal activity. Keystone Cemetery, just miles away, is noted for ghost sightings. The Alex Johnson Hotel in Rapid City is famously haunted by a "Lady in White" and the ghost of Alex Johnson himself. Deadwood — 25 miles north — is legendary for hauntings: Wild Bill Hickok and Calamity Jane are said to haunt Mount Moriah Cemetery. The entire Black Hills region carries the weight of a violent, unresolved past.</p>
+                    </div>
+                    <div class="info-card" id="rushmore-card5">
+                        <h4 id="rushmore-card5-title">📍 How to Get There</h4>
+                        <p id="rushmore-card5-body">Located in the Black Hills, 25 miles southwest of Rapid City, South Dakota. From I-90, exit at Rapid City and follow U.S. Highway 16 to Keystone, then SD Highway 244 to the memorial. From the south, follow U.S. Highway 385 north to SD Highway 244. Parking fee applies; the monument itself is free to visit.</p>
+                    </div>
+                    <div class="info-card" id="rushmore-card6">
+                        <h4 id="rushmore-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="rushmore-card6-body">Spring through fall, especially September, for mild weather and fewer crowds. Visit before 9 AM or after 3:30 PM during peak summer months. The Evening Lighting Ceremony (Memorial Day through Labor Day) is spectacular — the faces are illuminated against the night sky. Winter visits offer solitude and dramatic snow-covered scenery.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px;">
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/mount_rushmore/rushmore.jpg" alt="Mount Rushmore National Memorial" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="rushmore-photo1-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Mount Rushmore National Memorial, Black Hills, South Dakota</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== STURGIS, SD TAB ===== -->
+            <div id="sturgis" class="tab-content">
+                <h3 id="sturgis-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Sturgis, South Dakota</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="sturgis-tagline">🏍️ Motorcycle Rally · Black Hills · Wild West · Bear Butte</p>
+                <p id="sturgis-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Sturgis, South Dakota, was founded in 1876 and named after Major Samuel D. Sturgis of Fort Meade Cavalry Post. The city is home to the world's largest motorcycle rally — the Sturgis Motorcycle Rally — which began in 1938 as a 9-person dirt track race and now draws hundreds of thousands annually. The Black Hills surrounding Sturgis are steeped in Wild West history, Native American legend, and the ghosts of gold rush towns. Nearby Deadwood is one of the most haunted cities in America.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="sturgis-card1">
+                        <h4 id="sturgis-card1-title">🏍️ The Motorcycle Rally</h4>
+                        <p id="sturgis-card1-body">The Sturgis Motorcycle Rally began on August 14, 1938, when Jackpine Gypsies Motorcycle Club member "Pappy" Hoel organized a race with just 9 participants. Today it draws 500,000+ riders annually, transforming the quiet Black Hills town into a roaring spectacle of chrome and leather. The rally runs for 10 days every August. Main Street becomes one of the most electric stretches of road in America — and one of the loudest.</p>
+                    </div>
+                    <div class="info-card" id="sturgis-card2">
+                        <h4 id="sturgis-card2-title">🐻 Bear Butte — Sacred Mountain</h4>
+                        <p id="sturgis-card2-body">Northeast of Sturgis rises Bear Butte — "Mato Paha" (Sleeping Bear) to the Lakota Sioux. This ancient volcanic formation is one of the most sacred sites in Native American culture. The Lakota believe it is the sleeping bear that made the scratches on Devil's Tower. Vision quests and ceremonies have been held here for thousands of years. Colorful prayer ties flutter from the trees on the summit trail. The spiritual weight of the place is palpable.</p>
+                    </div>
+                    <div class="info-card" id="sturgis-card3">
+                        <h4 id="sturgis-card3-title">💀 Deadwood — The Haunted City</h4>
+                        <p id="sturgis-card3-body">Just 14 miles from Sturgis, Deadwood is legendary for its lawless past and its ghosts. Wild Bill Hickok was shot in the back here in 1876 while holding "Dead Man's Hand" (aces and eights). He and Calamity Jane are buried at Mount Moriah Cemetery, where visitors report whispers and cold spots near their graves. Seth Bullock, Deadwood's first sheriff, is said to haunt the historic Bullock Hotel. The entire town is a living ghost story.</p>
+                    </div>
+                    <div class="info-card" id="sturgis-card4">
+                        <h4 id="sturgis-card4-title">🪖 Fort Meade & The Star-Spangled Banner</h4>
+                        <p id="sturgis-card4-body">Fort Meade, established in 1878 to protect Black Hills settlers, holds a remarkable distinction: the "Star-Spangled Banner" was first used for military ceremonies here in 1892, long before it became the national anthem. The fort also housed Comanche — the sole cavalry survivor of the Battle of Little Big Horn — for nine years. During WWII, some of its stone buildings were constructed by prisoners of war. The fort is now a Veterans Administration complex.</p>
+                    </div>
+                    <div class="info-card" id="sturgis-card5">
+                        <h4 id="sturgis-card5-title">📍 How to Get There</h4>
+                        <p id="sturgis-card5-body">Sturgis is located in Meade County, South Dakota, in the Black Hills region. From Rapid City: take I-90 West approximately 30 miles to Exit 32 or 30 for Sturgis. From Denver: take I-25 North to I-90 West (approximately 6 hours). Deadwood is 14 miles west on US-14A. Mount Rushmore is 25 miles south via US-385.</p>
+                    </div>
+                    <div class="info-card" id="sturgis-card6">
+                        <h4 id="sturgis-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="sturgis-card6-body">August for the Motorcycle Rally (second week of August). Late spring or early fall for milder weather, fewer crowds, and the full Black Hills experience. The Black Hills are spectacular in fall foliage (late September–October). Winter is cold but the snow-covered hills and empty roads have their own haunting beauty.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px;">
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/sturgis/rally.jpg" alt="Sturgis Motorcycle Rally" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="sturgis-photo1-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Sturgis Motorcycle Rally — Black Hills, South Dakota</p>
+                    </div>
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/sturgis/black_hills.jpg" alt="Black Hills Motorcycle Route" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="sturgis-photo2-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Black Hills Motorcycle Routes near Sturgis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MORMON ROCKS TAB ===== -->
+            <div id="mormonrocks" class="tab-content">
+                <h3 id="mormonrocks-title" style="color:#2c2c2c; margin-bottom:8px; font-size:28px; font-family:'Playfair Display',serif;">Mormon Rocks, California</h3>
+                <p style="color:#8B4513; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:15px;" id="mormonrocks-tagline">🪨 Cajon Pass · Chanting Winds · San Andreas Fault</p>
+                <p id="mormonrocks-desc" style="color:#555; line-height:1.8; margin-bottom:25px; max-width:800px;">Mormon Rocks are massive sandstone formations rising dramatically from the Cajon Pass in San Bernardino County, California. Named after the approximately 500 Mormon pioneers who passed through in 1851 en route to establish San Bernardino, these ancient rocks were uplifted by a sub-fault of the San Andreas Fault. Older maps called them the "Rock Candy Mountains." A Mormon Trail Monument (California Historic Landmark No. 577) stands nearby. Local legend calls them the "Chanting Rocks" — the wind passing through natural portholes creates sounds like low, eerie chanting.</p>
+                <div class="info-grid">
+                    <div class="info-card" id="mormonrocks-card1">
+                        <h4 id="mormonrocks-card1-title">🪨 The Geology</h4>
+                        <p id="mormonrocks-card1-body">Mormon Rocks are part of the Transverse Ranges, a region dramatically shaped by the San Andreas Fault system. The massive sandstone formations were uplifted by a sub-fault of the San Andreas — the same fault that will one day trigger the "Big One." The rocks show deep erosion grooves, natural portholes, and caves formed over millions of years. They sit directly on one of the most seismically active zones in North America.</p>
+                    </div>
+                    <div class="info-card" id="mormonrocks-card2">
+                        <h4 id="mormonrocks-card2-title">🎵 The Chanting Rocks</h4>
+                        <p id="mormonrocks-card2-body">Local legend calls Mormon Rocks the "Chanting Rocks." Wind passing through the natural portholes and caves in the sandstone creates sounds akin to low chanting or singing — an eerie, rhythmic sound that visitors describe as both beautiful and unsettling. UFO sightings have been reported in the area. Whispers of ancient spirits persist among local hikers. The rocks seem to have a voice of their own.</p>
+                    </div>
+                    <div class="info-card" id="mormonrocks-card3">
+                        <h4 id="mormonrocks-card3-title">⛪ Mormon Pioneer History</h4>
+                        <p id="mormonrocks-card3-body">In June 1851, approximately 500 Mormon pioneers passed through Cajon Pass, guided by Amasa Lyman and Charles Rich, to establish a new settlement in San Bernardino. The Mormon Trail Monument (California Historic Landmark No. 577) stands on CA-138, 3.6 miles west of I-15. In 1857, during the Utah War, Brigham Young ordered roughly half of the San Bernardino settlers to return to Utah — a mass abandonment that left the community fractured.</p>
+                    </div>
+                    <div class="info-card" id="mormonrocks-card4">
+                        <h4 id="mormonrocks-card4-title">🦅 Wildlife & Nature</h4>
+                        <p id="mormonrocks-card4-body">Mormon Rocks are a birdwatcher's paradise. White-throated Swifts nest in the rock faces. Hawks and ravens circle overhead. California Thrashers, Western Kingbirds, and Coast Horned Lizards inhabit the chaparral below. The Mormon Rocks Interpretive Trail winds through the formations, offering close-up views of the sandstone faces, natural caves, and the dramatic Cajon Pass landscape.</p>
+                    </div>
+                    <div class="info-card" id="mormonrocks-card5">
+                        <h4 id="mormonrocks-card5-title">📍 How to Get There</h4>
+                        <p id="mormonrocks-card5-body">Located in Cajon Pass, approximately 1 mile west of Interstate 15, north of Highway 138. The Mormon Rocks Interpretive Trailhead is at the Mormon Rocks Fire Station on Highway 138, just west of I-15. From San Bernardino: take I-15 North to the Highway 138 exit. From Los Angeles: take I-15 North approximately 60 miles. Free parking at the trailhead.</p>
+                    </div>
+                    <div class="info-card" id="mormonrocks-card6">
+                        <h4 id="mormonrocks-card6-title">🗓️ Best Time to Visit</h4>
+                        <p id="mormonrocks-card6-body">Spring (March–May) and Fall (September–November) for the most comfortable hiking temperatures. Summer can be hot but the elevation moderates the heat. The rocks are particularly dramatic at golden hour — sunrise and sunset paint the sandstone in deep reds and oranges. The Cajon Pass is accessible year-round; occasional winter snow dusts the formations beautifully.</p>
+                    </div>
+                </div>
+                <div style="margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px;">
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/mormon_rocks/rocks1.jpg" alt="Mormon Rocks Cajon Pass" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="mormonrocks-photo1-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Mormon Rocks — Cajon Pass, California</p>
+                    </div>
+                    <div onclick="openModal(this)" style="cursor:pointer; border-radius:8px; overflow:hidden;">
+                        <img src="images/mormon_rocks/rocks2.jpg" alt="Mormon Rocks formations" style="width:100%; height:200px; object-fit:cover;">
+                        <p id="mormonrocks-photo2-label" style="text-align:center; font-size:12px; color:#888; padding:5px;">Sandstone Formations — Mormon Rocks</p>
+                    </div>
+                </div>
+            </div>
+
+                        <div id="map" class="tab-content">
                 <h3 style="color: #2c2c2c; margin-bottom: 15px; font-size: 24px; font-family: 'Playfair Display', serif;">Route 66 Map</h3>
                 <p id="map-desc">Interactive map showing the locations we explore</p>
                 <div class="map-container" id="map"></div>
@@ -1528,7 +1893,170 @@
                 'seligman-vid3-title': 'تور کامل سلیگمن — قسمت ۱',
                 'seligman-vid3-desc': 'گشت کامل محله تاریخی سلیگمن، Snow Cap Drive-In، و نقاط دیدنی Route 66',
                 'seligman-vid4-title': 'تور کامل سلیگمن — قسمت ۲',
-                'seligman-vid4-desc': 'جواهرات پنهان سلیگمن، فروشگاه‌های قدیمی، آرایشگاه آنجل دلگادیلو، و فرهنگ ماشین‌های کلاسیک'
+                'seligman-vid4-desc': 'جواهرات پنهان سلیگمن، فروشگاه‌های قدیمی، آرایشگاه آنجل دلگادیلو، و فرهنگ ماشین‌های کلاسیک',
+
+                // ===== CATHEDRAL GORGE =====
+                'btn-cathedral': 'دره کلیسای جامع',
+                'cathedral-title': 'پارک ایالتی دره کلیسای جامع، نوادا',
+                'cathedral-tagline': '🏜️ مناره‌های هزارتویی · خاک رس باستانی · سکوت وهم‌آور',
+                'cathedral-desc': 'پارک ایالتی دره کلیسای جامع در شهرستان لینکلن، نوادا، یک شگفتی زمین‌شناختی است که طی پنج میلیون سال از خاک رس بنتونیتی نرم شکل گرفته. خاکستر آتشفشانی باستانی در دریاچه‌ای پیش‌تاریخی رسوب کرد، به تشکیل پاناکا فشرده شد، و سپس توسط باد و باران به هزارتویی شگفت‌انگیز از دره‌های باریک، مناره‌های بلند و هودوها تراشیده شد.',
+                'cathedral-card1-title': '🏛️ زمین‌شناسی',
+                'cathedral-card1-body': 'پنج میلیون سال پیش، این دره یک دریاچه آب شیرین بود. خاکستر آتشفشانی رسوب کرد و به خاک رس بنتونیتی نرم — تشکیل پاناکا — فشرده شد. با تخلیه دریاچه، فرسایش بی‌امان باد و باران هزارتوی دره‌های باریک، مناره‌های کلیسایی و هودوهایی را که امروز می‌بینید شکل داد.',
+                'cathedral-card2-title': '🕳️ دره‌های باریک',
+                'cathedral-card2-body': 'بارزترین ویژگی پارک، سیستم دره‌های باریک پیچ‌وخم است. وقتی وارد این گذرگاه‌ها می‌شوید، دیوارهای بلند بسته می‌شوند و نور به درخشش وهم‌آوری تبدیل می‌شود. تونل معروف "سوراخ خرگوش" به اتاقکی پنهان منتهی می‌شود. صدا اینجا عجیب رفتار می‌کند — گاهی تقویت می‌شود، گاهی به‌طرز ترسناکی جذب می‌شود.',
+                'cathedral-card3-title': '🌌 ستاره‌شناسی آسمان تاریک',
+                'cathedral-card3-body': 'دره کلیسای جامع یک پارک آسمان تاریک بین‌المللی است. دور از چراغ‌های شهر در بیابان دورافتاده نوادا، کهکشان راه شیری در شب‌های صاف می‌درخشد. ترکیب چشم‌انداز بیگانه‌وار زیر و آسمان پر ستاره بالا تجربه‌ای بی‌نظیر ایجاد می‌کند.',
+                'cathedral-card4-title': '👻 اتمسفر وهم‌آور',
+                'cathedral-card4-body': 'هیچ داستان روح مستندی وجود ندارد — اما دره کلیسای جامع به آن‌ها نیاز ندارد. دره‌های هزارتویی بازدیدکنندگان را گیج می‌کنند. سکوت مطلق است. دیوارهای خاک رس به نظر می‌رسد صدا را جذب می‌کنند. در غروب، مناره‌ها سایه‌های بلند و متحرکی می‌اندازند که شبیه اشکال انسانی هستند.',
+                'cathedral-card5-title': '📍 چطور برسید',
+                'cathedral-card5-body': 'در امتداد مسیر ۹۳ ایالات متحده، تقریباً ۳ کیلومتر شمال‌غرب پاناکا، نوادا. از لاس وگاس: I-15 شمال را تا US-93 شمال بگیرید (حدود ۲.۵ ساعت). ورودی پارک به خوبی علامت‌گذاری شده. کمپینگ در محل موجود است.',
+                'cathedral-card6-title': '🗓️ بهترین زمان بازدید',
+                'cathedral-card6-body': 'بهار و پاییز برای مناسب‌ترین دماها. تابستان تا ۳۵ درجه سانتیگراد می‌رسد. زمستان شب‌ها تا ۱۳ درجه سانتیگراد خنک می‌شود. سپیده‌دم و غروب آفتاب درام‌آمیزترین نور را روی سازه‌ها ارائه می‌دهند.',
+                'cathedral-videos-title': '🎥 دره کلیسای جامع — بازدید ما',
+                'cathedral-vid1-title': 'سفر جاده‌ای قسمت ۱ — چیزی در تاریکی حرکت کرد: دره کلیسای جامع',
+                'cathedral-vid1-desc': 'چیزی شبیه مه در تاریکی حرکت کرد — روز اول سفر جاده‌ای در دره کلیسای جامع، نوادا',
+
+                // ===== GOBLIN VALLEY =====
+                'btn-goblin': 'دره گابلین',
+                'goblin-title': 'پارک ایالتی دره گابلین، یوتا',
+                'goblin-tagline': '🛸 چشم‌انداز بیگانه‌وار · صخره‌های قارچی · پارک آسمان تاریک',
+                'goblin-desc': 'پارک ایالتی دره گابلین، نزدیک هنکسویل، یوتا، یکی از عجیب‌ترین چشم‌اندازهای روی زمین است. هزاران سازه ماسه‌سنگی قارچی‌شکل — به نام "گوبلین" — یک دره پنهان در سان رافائل سول را پر کرده‌اند. گاوچران‌ها آن را در دهه ۱۹۲۰ کشف کردند؛ آرتور چافین آن را در ۱۹۴۹ عکاسی کرد و "دره قارچ‌ها" نامید.',
+                'goblin-card1-title': '🍄 گوبلین‌ها',
+                'goblin-card1-body': 'برخلاف اکثر پارک‌ها که باید در مسیر بمانید، دره گابلین شما را دعوت می‌کند تا آزادانه بین سازه‌ها بگردید. گوبلین‌ها — هزاران تای آن‌ها — از ارتفاع زانو تا اشکال ۳ متری متفاوتند. هر کدام منحصربه‌فرد است، توسط ۲۰۰ میلیون سال فرسایش شکل گرفته. در غروب، سایه‌های بلندی می‌اندازند که زنده به نظر می‌رسند.',
+                'goblin-card2-title': '🌌 ستاره‌شناسی آسمان تاریک',
+                'goblin-card2-body': 'دره گابلین یکی از دورافتاده‌ترین مکان‌های یوتا است، با تقریباً صفر آلودگی نوری. پارک یک پارک آسمان تاریک بین‌المللی معتبر است. در شب‌های صاف، کهکشان راه شیری آنقدر روشن است که بین گوبلین‌ها سایه می‌اندازد.',
+                'goblin-card3-title': '🎬 Galaxy Quest و هالیوود',
+                'goblin-card3-body': 'دره گابلین به عنوان سیاره بیگانه در فیلم Galaxy Quest (1999) استفاده شد. بخش‌هایی از John Carter و City Slickers II نیز در این منطقه فیلمبرداری شدند. در ۲۰۱۳، خرابکاری یک رهبر پیشاهنگ از یک هودوی ۲۰۰ میلیون ساله تیتر اخبار ملی شد.',
+                'goblin-card4-title': '🧗 مغاره گوبلین',
+                'goblin-card4-body': 'فراتر از دره اصلی، بازدیدکنندگان ماجراجو می‌توانند به "مغاره گوبلین" — یک دره باریک پنهان که فقط با طناب قابل دسترسی است — فرود آیند. سیستم غار زیر دره تاریک، باریک و گیج‌کننده است. تورهای راهنمای فرود موجود است.',
+                'goblin-card5-title': '📍 چطور برسید',
+                'goblin-card5-body': '۱۹ کیلومتر جنوب هنکسویل، یوتا. از I-70، بزرگراه ۲۴ جنوب را ۳۹ کیلومتر بگیرید، سپس در تقاطع Temple Mountain بپیچید و ۱۹ کیلومتر تا پارک دنبال کنید. تقریباً ۳۴۸ کیلومتر جنوب‌شرق سالت لیک سیتی.',
+                'goblin-card6-title': '🗓️ بهترین زمان بازدید',
+                'goblin-card6-body': 'بهار (مارس–مه) و پاییز (سپتامبر–نوامبر) بهترین دماها را دارند. تابستان روز تا ۴۱ درجه سانتیگراد می‌رسد اما شب‌ها سریع خنک می‌شود. زمستان تنهایی و برف گاه‌به‌گاه ارائه می‌دهد که گوبلین‌ها را حتی بیگانه‌وارتر نشان می‌دهد.',
+                'goblin-videos-title': '🎥 دره گابلین — بازدید ما',
+                'goblin-vid1-title': 'سفر جاده‌ای قسمت ۲ — گم شده در دره گابلین، یوتا',
+                'goblin-vid1-desc': 'گم شده در دره گوبلین‌ها — جایی که سنگ‌ها زنده‌اند و سکوت مطلق است',
+
+                // ===== LAKE DOLORES =====
+                'btn-lakedolores': 'دریاچه دولورس',
+                'lakedolores-title': 'دریاچه دولورس / پارک آبی Rock-A-Hoola، کالیفرنیا',
+                'lakedolores-tagline': '💀 متروکه · نفرین‌شده · روح صحرای موهاوی',
+                'lakedolores-desc': 'در قلب صحرای موهاوی نزدیک نیوبری اسپرینگز، کالیفرنیا، بقایای اسکلتی پارک آبی دریاچه دولورس زیر آفتاب بیابان می‌پوسند. باب بایرز آن را در اوایل دهه ۱۹۶۰ برای همسرش دولورس ساخت. در ۱۹۹۸ به عنوان Rock-A-Hoola بازگشایی شد، در ۲۰۰۰ ورشکست شد، و از ۲۰۰۴ متروکه مانده.',
+                'lakedolores-card1-title': '💀 تاریخ نفرین‌شده',
+                'lakedolores-card1-body': 'پارک سه بار نام عوض کرده و سه بار ورشکسته شده. در ۱۹۹۹، یک کارمند در حادثه‌ای فلج شد که دعوای ۴.۴ میلیون دلاری به راه انداخت. دولورس بایرز — زنی که پارک به نامش بود — در ۲۰۰۱ درگذشت، یک ماه بعد از فروش ملک. در ۲۰۱۸، آتش‌سوزی عمدی کافه و آرکید را نابود کرد.',
+                'lakedolores-card2-title': '👻 ویرانه‌های تسخیرشده',
+                'lakedolores-card2-body': 'فروشگاه هدایا متروکه گفته می‌شود توسط نقاشی زنی تسخیر شده که تگرها نمی‌توانند روی آن رنگ بزنند — رنگ هرگز نمی‌ماند. بازدیدکنندگان بین آرکید سابق و فروشگاه هدایا جلسات احضار روح برگزار کرده‌اند. یک باد سرد ناگهانی حتی وقتی هوا قبلاً ساکن و گرم بوده گزارش شده.',
+                'lakedolores-card3-title': '🎬 فرهنگ پاپ',
+                'lakedolores-card3-body': 'Boards of Canada آلبوم Tomorrow\'s Harvest را اینجا در ۲۰۱۳ رونمایی کرد. کشا ویدیوی "High Road" را اینجا در ۲۰۲۰ فیلمبرداری کرد. BTS یک کنسرت مینی اینجا در ۲۰۲۲ فیلمبرداری کرد. تونی هاوک در تبلیغ Mini Cooper اینجا ظاهر شد.',
+                'lakedolores-card4-title': '📸 کاوش شهری',
+                'lakedolores-card4-body': 'ویرانه‌ها آهنربایی برای کاوشگران شهری و عکاسان هستند. اسلایدهای آبی پوشیده از گرافیتی، بستر دریاچه متروکه، آرکید سوخته، و زیبایی‌شناسی پس‌آخرالزمانی آن را یکی از فتوژنیک‌ترین مکان‌های متروکه در کالیفرنیا می‌کند.',
+                'lakedolores-card5-title': '📍 چطور برسید',
+                'lakedolores-card5-body': 'در امتداد بزرگراه ۱۵ بین‌ایالتی نزدیک نیوبری اسپرینگز، کالیفرنیا. خروجی Hacienda Road را از I-15 بگیرید. تقریباً ۴۳ کیلومتر شمال‌شرق بارستو و ۱۶۰ کیلومتر جنوب‌غرب لاس وگاس. ملک خصوصی است — با احتیاط بازدید کنید.',
+                'lakedolores-card6-title': '🗓️ بهترین زمان بازدید',
+                'lakedolores-card6-body': 'اواخر پاییز، زمستان و اوایل بهار (نوامبر تا آوریل) برای اجتناب از گرمای شدید تابستان موهاوی که می‌تواند از ۴۶ درجه سانتیگراد فراتر رود.',
+                'lakedolores-videos-title': '🎥 دریاچه دولورس — بازدید ما',
+                'lakedolores-vid1-title': 'دریاچه دولورس — پارک آبی متروکه با گذشته نفرین‌شده',
+                'lakedolores-vid1-desc': 'پارک آبی متروکه و رازهای نفرین‌شده‌اش در صحرای موهاوی',
+
+                // ===== LAFAYETTE, CO =====
+                'btn-lafayette': 'لافایت، کلرادو',
+                'lafayette-title': 'لافایت، کلرادو — شهر خون‌آشام',
+                'lafayette-tagline': '🧛 شهر زغال سنگ · ترنسیلوانیا · خون‌آشام لافایت',
+                'lafayette-desc': 'لافایت، کلرادو، ۱۶ کیلومتر شرق بولدر، در ۱۸۸۸ به عنوان شهر زغال سنگ توسط مری ای. میلر تأسیس شد. مهاجران رومانیایی و اروپای شرقی برای کار در معادن سرازیر شدند و خرافات دنیای قدیم را با خود آوردند. وقتی تئودور "فودور" گلاوا — یک معدنچی ترنسیلوانیایی لاغر — در ۱۹۱۸ در طی اپیدمی آنفلوانزای اسپانیایی مرد، ساکنان ترسیده خود را متقاعد کردند که او یک خون‌آشام است.',
+                'lafayette-card1-title': '🧛 خون‌آشام لافایت',
+                'lafayette-card1-body': 'تئودور "فودور" گلاوا از ترنسیلوانیا، رومانی آمد و در معادن زغال کار کرد. وقتی در ۱۹۱۸ مرد — لاغر، رنگ‌پریده، و خارجی — ساکنان خرافاتی تصمیم گرفتند که او یک خون‌آشام است. پس از دفن در گورستان لافایت، شایعاتی درباره مرگ دام و حیوانات و یک شبح سرگردان پخش شد. ساکنان ترسیده قبرش را کندند و یک میخ چوبی از قلبش گذراندند. یک درخت اکنون از مرکز قبرش می‌روید.',
+                'lafayette-card2-title': '⛏️ تاریخ معدن زغال',
+                'lafayette-card2-body': 'لافایت روی زغال ساخته شد. معدنچیان از رومانی، ایتالیا و اروپای شرقی در شرایط زیرزمینی وحشتناک کار کردند. منطقه Coal Creek گفته می‌شود توسط ارواح معدنچیانی که زیرزمین جان دادند تسخیر شده. شکارچیان روح از اشباح، بادهای سرد ناگهانی و احساس تعقیب شدن گزارش می‌دهند.',
+                'lafayette-card3-title': '🌳 قبر خون‌آشام',
+                'lafayette-card3-body': 'قبر تئودور گلاوا در گورستان لافایت با درختی که مستقیماً از مرکزش می‌روید مشخص شده — میخ افسانه‌ای که خون‌آشام را کشت، اکنون به درختی کامل تبدیل شده. قبر یک مکان زیارتی برای علاقه‌مندان به پارانرمال است.',
+                'lafayette-card4-title': '👻 سایه‌ای که هرگز نمرد',
+                'lafayette-card4-body': 'ویدیوی یوتیوب ما "سایه‌ای که هیچ‌وقت نمرد" افسانه کامل را کاوش می‌کند — از ارتباط ترنسیلوانیا تا معادن زغال تا قبر با درخت. سایه فودور گلاوا هرگز کاملاً لافایت را ترک نکرده.',
+                'lafayette-card5-title': '📍 چطور برسید',
+                'lafayette-card5-body': 'لافایت تقریباً ۳۵ کیلومتر شمال‌غرب دنور قرار دارد. از دنور: I-25 شمال را به US-36 غرب بگیرید، سپس از CO-121/Wadsworth Parkway خارج شوید که به US-287 شمال به لافایت تبدیل می‌شود. گورستان لافایت در Baseline Road، شرق US-287 است.',
+                'lafayette-card6-title': '🗓️ بهترین زمان بازدید',
+                'lafayette-card6-body': 'عصرهای اواخر اکتبر یا صبح‌های مه‌آلود پاییزی برای جوی‌ترین تجربه. گورستان در سپیده‌دم یا غروب وقتی مه از Coal Creek بلند می‌شود ترسناک‌ترین است.',
+                'lafayette-videos-title': '🎥 لافایت — بازدید ما',
+                'lafayette-vid1-title': 'سایه‌ای که هیچ‌وقت نمرد — از ترنسیلوانیا تا کلرادو',
+                'lafayette-vid1-desc': 'سایه‌ای که هیچ‌وقت نمرد — افسانه‌ای از ترنسیلوانیا تا کلرادو',
+
+                // ===== BUNKERVILLE, NV =====
+                'btn-bunkerville': 'بنکرویل، نوادا',
+                'bunkerville-title': 'بنکرویل، نوادا',
+                'bunkerville-tagline': '🌵 سکونتگاه مورمون · تابش هسته‌ای · دره رودخانه ویرجین',
+                'bunkerville-desc': 'بنکرویل، نوادا، در ۱۸۷۷ توسط پیشگام مورمون ادوارد بانکر تأسیس شد. در دهه ۱۹۵۰، بنکرویل مستقیماً در مسیر باد از محل‌های آزمایش هسته‌ای بود — ساکنان از بازی در آنچه فکر می‌کردند برف است یاد می‌کنند، اما در واقع تابش هسته‌ای بود. در ۲۰۱۴، شهر در جریان بن‌بست باندی به اخبار ملی رسید.',
+                'bunkerville-card1-title': '🏠 تاریخ پیشگامان مورمون',
+                'bunkerville-card1-body': 'ادوارد بانکر خانواده‌اش را در ۱۸۷۷ با اجازه بریگام یانگ به اینجا آورد تا یک آزمایش اشتراکی جدید — نظام متحد — برپا کند. ساکنان کار، زمین و محصولات را به اشتراک می‌گذاشتند. آزمایش در ۱۸۸۰ پایان یافت، اما خانواده بانکر ماند.',
+                'bunkerville-card2-title': '☢️ قربانیان تابش هسته‌ای',
+                'bunkerville-card2-body': 'در دهه ۱۹۵۰، دولت آمریکا آزمایش‌های هسته‌ای در محل آزمایش نوادا انجام داد. بنکرویل مستقیماً در مسیر تابش بود. ساکنان — از جمله کودکان — در پودر سفیدی که می‌ریخت بازی می‌کردند، بدون اینکه بدانند رادیواکتیو است. نرخ لوسمی کودکان افزایش یافت. این جامعه به "قربانیان تابش" معروف شد.',
+                'bunkerville-card3-title': '🔥 فنلاند کوچک و گلوی شیطان',
+                'bunkerville-card3-body': 'نزدیک بنکرویل "فنلاند کوچک" قرار دارد — یک چشم‌انداز فراواقعی از سازه‌های ماسه‌سنگی قرمز و نارنجی که شبیه دنیای دیگری به نظر می‌رسند. در نزدیکی، "گلوی شیطان" یک چاه عمیق است که ۴۰ متر مستقیم به پایین می‌رود. هیچ‌کس نمی‌داند دقیقاً چقدر عمیق است.',
+                'bunkerville-card4-title': '🤠 بن‌بست باندی (۲۰۱۴)',
+                'bunkerville-card4-body': 'در آوریل ۲۰۱۴، بنکرویل مرکز یک بن‌بست ملی شد وقتی کلیون باندی از پرداخت ۲۰ سال هزینه چرا در اراضی فدرال امتناع کرد. اعضای میلیشیای مسلح از سراسر کشور به شهر رسیدند. عوامل فدرال عقب نشینی کردند.',
+                'bunkerville-card5-title': '📍 چطور برسید',
+                'bunkerville-card5-body': 'بنکرویل در شهرستان کلارک، نوادا، در امتداد رودخانه ویرجین نزدیک مسکوئیت قرار دارد. از لاس وگاس: I-15 شمال را تقریباً ۱۳۰ کیلومتر تا خروجی مسکوئیت/بنکرویل بگیرید.',
+                'bunkerville-card6-title': '🗓️ بهترین زمان بازدید',
+                'bunkerville-card6-body': 'اکتبر تا آوریل برای اجتناب از گرمای شدید بیابان. دمای تابستان به طور منظم از ۴۳ درجه سانتیگراد فراتر می‌رود.',
+                'bunkerville-photo1-label': 'رودخانه ویرجین — بنکرویل، نوادا',
+                'bunkerville-photo2-label': 'چشم‌انداز بیابانی بنکرویل',
+
+                // ===== MOUNT RUSHMORE =====
+                'btn-rushmore': 'کوه راشمور',
+                'rushmore-title': 'کوه راشمور، داکوتای جنوبی',
+                'rushmore-tagline': '🗿 زمین مقدس لاکوتا · تپه‌های دزدیده شده · یادبود بحث‌برانگیز',
+                'rushmore-desc': 'کوه راشمور — در اصل تونکاسیلا ساکپه پاها (کوه شش پدربزرگ) برای مردم لاکوتا — در تپه‌های مقدس سیاه داکوتای جنوبی قرار دارد. معاهده فورت لارامی ۱۸۶۸ این تپه‌ها را برای همیشه به لاکوتا تضمین کرد. در ۱۸۷۷، پس از کشف طلا، دولت آمریکا زمین را تصرف کرد. در ۱۹۲۷، مجسمه‌ساز گوتزون بورگلوم — که ارتباط مستند با کوکلاکس‌کلان داشت — شروع به حک کردن چهار رئیس‌جمهور در کوه مقدس لاکوتا کرد.',
+                'rushmore-card1-title': '🏔️ کوه شش پدربزرگ',
+                'rushmore-card1-body': 'مردم لاکوتا، شایان و آراپاهو این کوه را مقدس می‌دانستند — مرکز معنوی تپه‌های سیاه. معاهده ۱۸۶۸ تپه‌های سیاه را به لاکوتا "تا زمانی که علف رشد کند" تضمین کرد. طلا در ۱۸۷۴ کشف شد. تا ۱۸۷۷، دولت آمریکا زمین را تصرف کرده بود. حک کردن چهار رئیس‌جمهور آمریکایی در این کوه مقدس یکی از بحث‌برانگیزترین اعمال تخریب فرهنگی در تاریخ آمریکا است.',
+                'rushmore-card2-title': '🎨 گذشته تاریک مجسمه‌ساز',
+                'rushmore-card2-body': 'گوتزون بورگلوم، که حکاکی را از ۱۹۲۷ تا مرگش در ۱۹۴۱ طراحی و رهبری کرد، ارتباط مستند با کوکلاکس‌کلان داشت. او قبلاً روی Stone Mountain در جورجیا — یک یادبود کنفدراسیون — کار کرده بود. تونل Hall of Records، که قرار بود مصنوعات تاریخی آمریکایی را نگه دارد، هرگز تکمیل نشد.',
+                'rushmore-card3-title': '🎬 North by Northwest و فرهنگ پاپ',
+                'rushmore-card3-body': 'فیلم هیجان‌انگیز آلفرد هیچکاک در ۱۹۵۹ North by Northwest صحنه تعقیب معروف در کوه راشمور را دارد — هرچند بیشتر آن روی یک ماکت مقیاس فیلمبرداری شد. یادبود همچنین در National Treasure: Book of Secrets ظاهر می‌شود.',
+                'rushmore-card4-title': '👻 تسخیرشده‌های تپه‌های سیاه',
+                'rushmore-card4-body': 'منطقه تپه‌های سیاه اطراف کوه راشمور سرشار از فعالیت پارانرمال است. گورستان کیستون، چند کیلومتر دورتر، برای مشاهده اشباح شناخته شده. هتل الکس جانسون در رپید سیتی به "بانوی سفیدپوش" و روح خود الکس جانسون معروف است.',
+                'rushmore-card5-title': '📍 چطور برسید',
+                'rushmore-card5-body': 'در تپه‌های سیاه، ۴۰ کیلومتر جنوب‌غرب رپید سیتی، داکوتای جنوبی. از I-90، در رپید سیتی خارج شوید و بزرگراه ۱۶ ایالات متحده را به کیستون، سپس SD بزرگراه ۲۴۴ به یادبود دنبال کنید.',
+                'rushmore-card6-title': '🗓️ بهترین زمان بازدید',
+                'rushmore-card6-body': 'بهار تا پاییز، به خصوص سپتامبر، برای آب‌وهوای معتدل و جمعیت کمتر. مراسم روشنایی شبانه (روز یادبود تا روز کار) شگفت‌انگیز است — چهره‌ها در برابر آسمان شب روشن می‌شوند.',
+                'rushmore-photo1-label': 'یادبود ملی کوه راشمور، تپه‌های سیاه، داکوتای جنوبی',
+
+                // ===== STURGIS, SD =====
+                'btn-sturgis': 'استورگیس، داکوتای جنوبی',
+                'sturgis-title': 'استورگیس، داکوتای جنوبی',
+                'sturgis-tagline': '🏍️ رالی موتورسیکلت · تپه‌های سیاه · غرب وحشی · کوه خرس',
+                'sturgis-desc': 'استورگیس، داکوتای جنوبی، در ۱۸۷۶ تأسیس شد و به نام سرگرد ساموئل دی. استورگیس از پادگان فورت مید نامگذاری شد. این شهر میزبان بزرگترین رالی موتورسیکلت جهان است — رالی موتورسیکلت استورگیس — که در ۱۹۳۸ با ۹ شرکت‌کننده شروع شد و اکنون صدها هزار نفر را جذب می‌کند.',
+                'sturgis-card1-title': '🏍️ رالی موتورسیکلت',
+                'sturgis-card1-body': 'رالی موتورسیکلت استورگیس در ۱۴ اوت ۱۹۳۸ آغاز شد، وقتی عضو باشگاه موتورسیکلت Jackpine Gypsies "پاپی" هوئل یک مسابقه با فقط ۹ شرکت‌کننده برگزار کرد. امروز بیش از ۵۰۰,۰۰۰ راکب سالانه جذب می‌کند و شهر آرام تپه‌های سیاه را به نمایشی خروشان از کروم و چرم تبدیل می‌کند.',
+                'sturgis-card2-title': '🐻 کوه خرس — کوه مقدس',
+                'sturgis-card2-body': 'شمال‌شرق استورگیس کوه خرس بلند می‌شود — "ماتو پاها" (خرس خوابیده) برای لاکوتا سیو. این سازه آتشفشانی باستانی یکی از مقدس‌ترین مکان‌ها در فرهنگ بومیان آمریکا است. جست‌وجوهای رویا و مراسم هزاران سال است اینجا برگزار می‌شود. ریسمان‌های دعای رنگارنگ از درختان مسیر قله می‌آویزند.',
+                'sturgis-card3-title': '💀 دِدوود — شهر تسخیرشده',
+                'sturgis-card3-body': 'فقط ۲۲ کیلومتر از استورگیس، دِدوود برای گذشته قانون‌شکنانه و اشباحش افسانه‌ای است. وایلد بیل هیکاک در ۱۸۷۶ اینجا از پشت تیر خورد در حالی که "دست مرد مرده" (آس‌ها و هشت‌ها) داشت. او و کالامیتی جین در گورستان مانت موریا دفن شده‌اند، جایی که بازدیدکنندگان از زمزمه‌ها و نقاط سرد نزدیک قبرهایشان گزارش می‌دهند.',
+                'sturgis-card4-title': '🪖 فورت مید و سرود ملی',
+                'sturgis-card4-body': 'فورت مید، که در ۱۸۷۸ برای حفاظت از ساکنان تپه‌های سیاه تأسیس شد، یک تمایز قابل توجه دارد: "ستاره‌های درخشان بر پرچم" برای اولین بار در ۱۸۹۲ اینجا برای مراسم نظامی استفاده شد، خیلی قبل از اینکه سرود ملی شود.',
+                'sturgis-card5-title': '📍 چطور برسید',
+                'sturgis-card5-body': 'استورگیس در شهرستان مید، داکوتای جنوبی، در منطقه تپه‌های سیاه قرار دارد. از رپید سیتی: I-90 غرب را تقریباً ۴۸ کیلومتر تا خروجی ۳۲ یا ۳۰ برای استورگیس بگیرید.',
+                'sturgis-card6-title': '🗓️ بهترین زمان بازدید',
+                'sturgis-card6-body': 'اوت برای رالی موتورسیکلت (هفته دوم اوت). اواخر بهار یا اوایل پاییز برای آب‌وهوای معتدل‌تر. تپه‌های سیاه در پاییز (اواخر سپتامبر–اکتبر) با برگ‌های رنگارنگ شگفت‌انگیز هستند.',
+                'sturgis-photo1-label': 'رالی موتورسیکلت استورگیس — تپه‌های سیاه، داکوتای جنوبی',
+                'sturgis-photo2-label': 'مسیرهای موتورسیکلت تپه‌های سیاه نزدیک استورگیس',
+
+                // ===== MORMON ROCKS =====
+                'btn-mormonrocks': 'مورمون راکس',
+                'mormonrocks-title': 'مورمون راکس، کالیفرنیا',
+                'mormonrocks-tagline': '🪨 گذرگاه کاجون · بادهای زمزمه‌کننده · گسل سان آندریاس',
+                'mormonrocks-desc': 'مورمون راکس سازه‌های ماسه‌سنگی عظیمی هستند که به‌طور چشمگیری از گذرگاه کاجون در شهرستان سن برناردینو، کالیفرنیا بلند می‌شوند. به نام تقریباً ۵۰۰ پیشگام مورمونی که در ۱۸۵۱ از اینجا گذشتند نامگذاری شده، این صخره‌های باستانی توسط یک زیرگسل گسل سان آندریاس بلند شدند. افسانه محلی آن‌ها را "صخره‌های زمزمه‌کننده" می‌نامد.',
+                'mormonrocks-card1-title': '🪨 زمین‌شناسی',
+                'mormonrocks-card1-body': 'مورمون راکس بخشی از رشته کوه‌های عرضی هستند، منطقه‌ای که به‌طور چشمگیری توسط سیستم گسل سان آندریاس شکل گرفته. سازه‌های ماسه‌سنگی عظیم توسط یک زیرگسل گسل سان آندریاس بلند شدند — همان گسلی که روزی "بزرگ" را تحریک خواهد کرد. صخره‌ها شیارهای فرسایش عمیق، سوراخ‌های طبیعی و غارهایی را نشان می‌دهند.',
+                'mormonrocks-card2-title': '🎵 صخره‌های زمزمه‌کننده',
+                'mormonrocks-card2-body': 'افسانه محلی مورمون راکس را "صخره‌های زمزمه‌کننده" می‌نامد. باد که از سوراخ‌های طبیعی و غارهای ماسه‌سنگ عبور می‌کند صداهایی شبیه زمزمه یا آواز کم‌صدا ایجاد می‌کند — صدایی وهم‌آور و ریتمیک که بازدیدکنندگان آن را هم زیبا و هم ناراحت‌کننده توصیف می‌کنند. مشاهدات یوفو در منطقه گزارش شده.',
+                'mormonrocks-card3-title': '⛪ تاریخ پیشگامان مورمون',
+                'mormonrocks-card3-body': 'در ژوئن ۱۸۵۱، تقریباً ۵۰۰ پیشگام مورمون از گذرگاه کاجون گذشتند تا یک سکونتگاه جدید در سن برناردینو تأسیس کنند. یادبود مسیر مورمون (نشانه تاریخی کالیفرنیا شماره ۵۷۷) در CA-138، ۵.۸ کیلومتر غرب I-15 قرار دارد. در ۱۸۵۷، بریگام یانگ تقریباً نیمی از ساکنان سن برناردینو را دستور داد به یوتا بازگردند.',
+                'mormonrocks-card4-title': '🦅 حیات وحش و طبیعت',
+                'mormonrocks-card4-body': 'مورمون راکس بهشت پرنده‌شناسان است. پرستوهای سفیدگلو در صخره‌ها لانه می‌کنند. شاهین‌ها و کلاغ‌ها بالای سر می‌چرخند. مسیر تفسیری مورمون راکس از میان سازه‌ها می‌گذرد و نماهای نزدیک از صخره‌های ماسه‌سنگی، غارهای طبیعی و چشم‌انداز چشمگیر گذرگاه کاجون ارائه می‌دهد.',
+                'mormonrocks-card5-title': '📍 چطور برسید',
+                'mormonrocks-card5-body': 'در گذرگاه کاجون، تقریباً ۱.۶ کیلومتر غرب بزرگراه ۱۵ بین‌ایالتی، شمال بزرگراه ۱۳۸. نقطه شروع مسیر تفسیری مورمون راکس در ایستگاه آتش‌نشانی مورمون راکس در بزرگراه ۱۳۸ است. از سن برناردینو: I-15 شمال را به خروجی بزرگراه ۱۳۸ بگیرید.',
+                'mormonrocks-card6-title': '🗓️ بهترین زمان بازدید',
+                'mormonrocks-card6-body': 'بهار (مارس–مه) و پاییز (سپتامبر–نوامبر) برای راحت‌ترین دماهای پیاده‌روی. صخره‌ها در ساعت طلایی — طلوع و غروب آفتاب — به‌ویژه چشمگیر هستند.',
+                'mormonrocks-photo1-label': 'مورمون راکس — گذرگاه کاجون، کالیفرنیا',
+                'mormonrocks-photo2-label': 'سازه‌های ماسه‌سنگی — مورمون راکس'
             }
         };
 
